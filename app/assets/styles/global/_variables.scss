@@ -1,0 +1,27 @@
+// Colors
+
+$background-color: #ffffff;
+$text-color: rgba(0, 44, 62, 1);
+$text-secondary-color: rgba(90, 118, 130, 1);
+$danger-color: rgba(217, 45, 32, 1);
+$primary-background-color: rgba(230, 248, 252, 1);
+$primary-accent-color: rgba(51, 196, 233, 1);
+$primary-button-color: linear-gradient(
+                149.28deg,
+                rgba(60, 195, 231, 1),
+                rgba(25, 202, 228, 1) 11%,
+                rgba(96, 252, 208, 1) 100%
+);
+
+// Typography
+
+$ff-mulish: "Mulish", "Arial", sans-serif;
+
+// Viewport
+
+$vp-tablet: 1023px;
+$vp-mobile: 767px;
+
+// Transition
+
+$transition: ease-in 0.3s;
