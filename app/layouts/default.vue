@@ -1,14 +1,13 @@
 <script setup lang="ts">
-import FooterView from "~/components/FooterView.vue";
 </script>
 
 <template>
   <div>
-    <HeaderView />
+    <TheHeader />
     <main>
       <slot />
     </main>
-    <FooterView />
+    <TheFooter />
   </div>
 </template>
 

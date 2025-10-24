@@ -1,0 +1,74 @@
+<script setup lang="ts">
+import UiBaseButton from "~/components/ui/UiBaseButton.vue";
+import UiBaseMenu from "~/components/ui/UiBaseMenu.vue";
+import {useMediaQuery} from "@vueuse/core"; // библиотека хуков(отслеживание размера экрана,  положение курсора и тд)
+import TheNavigation from "~/components/navigation/TheNavigation.vue";
+
+const mediaQuery = useMediaQuery('(max-width: 1023px)');
+const isTabletOrMobile = ref<boolean>(false);
+const isOpen = ref<boolean>(false);
+
+const toggleMenu = () => {
+  isOpen.value = !isOpen.value;
+}
+
+onMounted(() => {
+  // при загрузке клиента устанавливаем размер экрана
+  isTabletOrMobile.value = mediaQuery.value;
+  // следим за изменениями размера экрана
+  watch(mediaQuery,
+      (newValue) => (isTabletOrMobile.value = newValue));
+})
+</script>
+
+<template>
+  <header class="header">
+    <NuxtLink to="/" class="header__logo-link">
+      <svg class="header__logo" width="210" height="37" aria-hidden="true">
+        <use xlink:href="assets/images/sprite.svg#logo-icon"></use>
+      </svg>
+    </NuxtLink>
+    <TheNavigation v-show="!isTabletOrMobile"/>
+    <div class="header__cta">
+      <UiBaseButton v-if="!isTabletOrMobile">Записаться</UiBaseButton>
+      <button v-else class="header__menu-button" type="button" aria-label="Меню" @click="toggleMenu">
+        <svg class="header__menu-icon" width="40" height="40" aria-hidden="true">
+          <use xlink:href="assets/images/sprite.svg#menu-icon"></use>
+        </svg>
+      </button>
+    </div>
+  </header>
+  <UiBaseMenu :isOpen="isOpen" @close-menu="isOpen = false"/>
+</template>
+
+<style scoped lang="scss">
+.header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: calc(100% - 40px);
+  padding: 12px;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 3000px;
+  background: $background-color;
+  &__logo {
+    @include vp-767 {
+      width: 165px;
+      height: 29px;
+    }
+  }
+  &__menu-button {
+    border: none;
+    background: inherit;
+    @include vp-767 {
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
+</style>
