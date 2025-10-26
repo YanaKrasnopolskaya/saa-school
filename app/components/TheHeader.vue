@@ -4,21 +4,12 @@ import UiBaseMenu from "~/components/ui/UiBaseMenu.vue";
 import {useMediaQuery} from "@vueuse/core"; // библиотека хуков(отслеживание размера экрана,  положение курсора и тд)
 import TheNavigation from "~/components/navigation/TheNavigation.vue";
 
-const mediaQuery = useMediaQuery('(max-width: 1023px)');
-const isTabletOrMobile = ref<boolean>(false);
 const isOpen = ref<boolean>(false);
 
 const toggleMenu = () => {
   isOpen.value = !isOpen.value;
 }
 
-onMounted(() => {
-  // при загрузке клиента устанавливаем размер экрана
-  isTabletOrMobile.value = mediaQuery.value;
-  // следим за изменениями размера экрана
-  watch(mediaQuery,
-      (newValue) => (isTabletOrMobile.value = newValue));
-})
 </script>
 
 <template>
@@ -28,10 +19,10 @@ onMounted(() => {
         <use xlink:href="assets/images/sprite.svg#logo-icon"></use>
       </svg>
     </NuxtLink>
-    <TheNavigation v-show="!isTabletOrMobile"/>
+    <TheNavigation class="header__nav"/>
     <div class="header__cta">
-      <UiBaseButton v-if="!isTabletOrMobile">Записаться</UiBaseButton>
-      <button v-else class="header__menu-button" type="button" aria-label="Меню" @click="toggleMenu">
+      <UiBaseButton class="header__cta-button">Записаться</UiBaseButton>
+      <button class="header__menu-button" type="button" aria-label="Меню" @click="toggleMenu">
         <svg class="header__menu-icon" width="40" height="40" aria-hidden="true">
           <use xlink:href="assets/images/sprite.svg#menu-icon"></use>
         </svg>
@@ -62,12 +53,24 @@ onMounted(() => {
       height: 29px;
     }
   }
+  &__nav {
+    @include vp-1023 {
+      display: none;
+    }
+  }
+  &__cta-button {
+    @include vp-1023 {
+      display: none;
+    }
+  }
   &__menu-button {
     border: none;
     background: inherit;
-    @include vp-767 {
+    display: none;
+    @include vp-1023 {
       width: 36px;
       height: 36px;
+      display: block;
     }
   }
 }
