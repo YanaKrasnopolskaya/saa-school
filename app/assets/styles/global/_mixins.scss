@@ -11,3 +11,9 @@
     @content;
   }
 }
+
+@mixin vp-1440 {
+  @media (max-width: $vp-desktop) {
+    @content;
+  }
+}

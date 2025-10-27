@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import UiBaseButton from "~/components/ui/UiBaseButton.vue";
-import UiBaseMenu from "~/components/ui/UiBaseMenu.vue";
-import {useMediaQuery} from "@vueuse/core"; // библиотека хуков(отслеживание размера экрана,  положение курсора и тд)
-import TheNavigation from "~/components/navigation/TheNavigation.vue";
+import TheMenu from "~/components/TheMenu.vue";
+import TheNavigation from "~/components/TheNavigation.vue";
 
 const isOpen = ref<boolean>(false);
 
@@ -29,7 +28,7 @@ const toggleMenu = () => {
       </button>
     </div>
   </header>
-  <UiBaseMenu :isOpen="isOpen" @close-menu="isOpen = false"/>
+  <TheMenu class="header__menu" :isOpen="isOpen" @close-menu="isOpen = false"/>
 </template>
 
 <style scoped lang="scss">
@@ -39,6 +38,7 @@ const toggleMenu = () => {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
+  height: 72px;
   max-width: calc(100% - 40px);
   padding: 12px;
   margin-top: 16px;
@@ -47,6 +47,12 @@ const toggleMenu = () => {
   justify-content: space-between;
   border-radius: 3000px;
   background: $background-color;
+  @include vp-1023 {
+    height: 64px;
+  }
+  @include vp-767 {
+    height: 48px;
+  }
   &__logo {
     @include vp-767 {
       width: 165px;

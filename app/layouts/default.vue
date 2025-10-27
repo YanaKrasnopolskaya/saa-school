@@ -3,11 +3,11 @@
 
 <template>
   <div>
-    <TheHeader />
+    <AppHeader />
     <main>
       <slot />
     </main>
-    <TheFooter />
+    <AppFooter />
   </div>
 </template>
 

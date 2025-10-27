@@ -3,7 +3,6 @@
 
 <template>
   <div>
-    Component: FooterView
   </div>
 </template>
 

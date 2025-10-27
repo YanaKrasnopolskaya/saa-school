@@ -31,7 +31,7 @@ withDefaults(defineProps<ButtonProps>(), {
     &:hover {
       background: $primary-button-color-hover;
     }
-    &:focus {
+    &:focus-visible {
       background: $primary-button-color-focus;
     }
     &:disabled {
@@ -47,7 +47,7 @@ withDefaults(defineProps<ButtonProps>(), {
       border: 1px solid $secondary-color;
       color: $secondary-color;
     }
-    &:focus {
+    &:focus-visible {
       border: 1px solid $secondary-color-focus;
       color: $secondary-color-focus;
     }

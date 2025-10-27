@@ -6,5 +6,5 @@
   </div>
 </template>
 <script setup lang="ts">
-import TheHeader from "~/components/TheHeader.vue";
+import AppHeader from "~/components/AppHeader.vue";
 </script>
