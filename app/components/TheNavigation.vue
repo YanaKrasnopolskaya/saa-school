@@ -13,7 +13,7 @@
 <style scoped lang="scss">
 .nav-list {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 40px;
@@ -41,10 +41,13 @@
       color: rgba(0, 44, 62, 0.3);
     }
   }
-  @include vp-1023 {
-    flex-direction: column;
+  &__item--hide-mobile {
+    display: none;
+  }
+  @include desktop {
+    flex-direction: row;
     .nav-list__item--hide-mobile {
-      display: none;
+      display: block;
     }
   }
 }

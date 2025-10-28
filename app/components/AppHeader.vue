@@ -14,7 +14,7 @@ const toggleMenu = () => {
 <template>
   <header class="header">
     <NuxtLink to="/" class="header__logo-link">
-      <svg class="header__logo" width="210" height="37" aria-hidden="true">
+      <svg class="header__logo" width="165" height="29" aria-hidden="true">
         <use xlink:href="assets/images/sprite.svg#logo-icon"></use>
       </svg>
     </NuxtLink>
@@ -22,7 +22,7 @@ const toggleMenu = () => {
     <div class="header__cta">
       <UiBaseButton class="header__cta-button">Записаться</UiBaseButton>
       <button class="header__menu-button" type="button" aria-label="Меню" @click="toggleMenu">
-        <svg class="header__menu-icon" width="40" height="40" aria-hidden="true">
+        <svg class="header__menu-icon" width="36" height="36" aria-hidden="true">
           <use xlink:href="assets/images/sprite.svg#menu-icon"></use>
         </svg>
       </button>
@@ -38,7 +38,7 @@ const toggleMenu = () => {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  height: 72px;
+  height: 48px;
   max-width: calc(100% - 40px);
   padding: 12px;
   margin-top: 16px;
@@ -47,36 +47,40 @@ const toggleMenu = () => {
   justify-content: space-between;
   border-radius: 3000px;
   background: $background-color;
-  @include vp-1023 {
+  @include tablet {
     height: 64px;
   }
-  @include vp-767 {
-    height: 48px;
+  @include desktop {
+    height: 72px;
   }
   &__logo {
-    @include vp-767 {
-      width: 165px;
-      height: 29px;
+    @include tablet-desktop {
+      width: 210px;
+      height: 37px;
     }
   }
   &__nav {
-    @include vp-1023 {
-      display: none;
+    display: none;
+    @include desktop {
+      display: block;
     }
   }
   &__cta-button {
-    @include vp-1023 {
-      display: none;
+    display: none;
+    @include desktop {
+      display: block;
     }
   }
   &__menu-button {
     border: none;
     background: inherit;
-    display: none;
-    @include vp-1023 {
-      width: 36px;
-      height: 36px;
-      display: block;
+    width: 36px;
+    height: 36px;
+    display: block;
+    @include desktop {
+      width: 40px;
+      height: 40px;
+      display: none;
     }
   }
 }

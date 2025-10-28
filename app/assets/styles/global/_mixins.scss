@@ -1,19 +1,28 @@
 @use "variables" as *;
 
-@mixin vp-1023 {
-  @media (max-width: $vp-tablet) {
+@mixin tablet {
+  @media (min-width: $vp-tablet) {
     @content;
   }
 }
 
-@mixin vp-767 {
-  @media (max-width: $vp-mobile) {
+@mixin mobile {
+  @media (min-width: $vp-mobile) {
     @content;
   }
 }
 
-@mixin vp-1440 {
-  @media (max-width: $vp-desktop) {
+@mixin desktop {
+  @media (min-width: $vp-desktop) {
+    @content;
+  }
+}
+
+@mixin tablet-desktop {
+  @include tablet {
+    @content;
+  }
+  @include desktop {
     @content;
   }
 }

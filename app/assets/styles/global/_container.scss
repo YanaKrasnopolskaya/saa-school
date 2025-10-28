@@ -4,17 +4,11 @@
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding-inline: 137px;
-}
-
-@include vp-1023 {
-  .container {
-    padding-inline: 16px;
+  padding: 12px;
+  @include tablet {
+    padding: 16px;
   }
-}
-
-@include vp-767 {
-  .container {
-    padding-inline: 12px;
+  @include desktop {
+    padding: 137px;
   }
 }

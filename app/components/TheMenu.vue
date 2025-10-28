@@ -50,7 +50,7 @@ const closeMenu = () => {
   position: fixed;
   top: 0;
   right: calc(-1 * 100%);
-  width: 400px;
+  width: 100vw;
   height: 100vh;
   transition: right 0.4s ease;
   z-index: 20;
@@ -60,8 +60,8 @@ const closeMenu = () => {
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  @include vp-767 {
-    width: 100vw;
+  @include tablet {
+    width: 400px;
   }
   &__open {
     right: 0;
