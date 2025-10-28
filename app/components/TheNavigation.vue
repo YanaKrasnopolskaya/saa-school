@@ -3,20 +3,21 @@
 
 <template>
   <nav class="nav">
-    <ul class="nav-list">
-      <li class="nav-list__item"><a href="#program" class="nav-list__link" aria-disabled="true">Программа курса</a></li>
-      <li class="nav-list__item"><a href="#cost" class="nav-list__link">Стоимость</a></li>
-      <li class="nav-list__item nav-list__item--hide-mobile"><a href="#contacts" class="nav-list__link">Контакты</a></li>
-    </ul>
+      <a href="#program" class="nav__link" aria-disabled="true">Программа курса</a>
+    <a href="#cost" class="nav__link">Стоимость</a>
+    <a href="#contacts" class="nav__link nav__link--hide-mobile">Контакты</a>
   </nav>
 </template>
 <style scoped lang="scss">
-.nav-list {
+.nav {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 20px;
+  @include desktop {
+    flex-direction: row;
+  }
   &__link {
     font-weight: 700;
     line-height: 110%;
@@ -41,14 +42,12 @@
       color: rgba(0, 44, 62, 0.3);
     }
   }
-  &__item--hide-mobile {
+  &__link--hide-mobile {
     display: none;
-  }
-  @include desktop {
-    flex-direction: row;
-    .nav-list__item--hide-mobile {
+    @include desktop {
       display: block;
     }
   }
+
 }
 </style>

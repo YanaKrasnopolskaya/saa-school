@@ -15,7 +15,7 @@ const toggleMenu = () => {
   <header class="header">
     <NuxtLink to="/" class="header__logo-link">
       <svg class="header__logo" width="165" height="29" aria-hidden="true">
-        <use xlink:href="assets/images/sprite.svg#logo-icon"></use>
+        <use href="assets/images/sprite.svg#logo-icon"></use>
       </svg>
     </NuxtLink>
     <TheNavigation class="header__nav"/>
@@ -23,7 +23,7 @@ const toggleMenu = () => {
       <UiBaseButton class="header__cta-button">Записаться</UiBaseButton>
       <button class="header__menu-button" type="button" aria-label="Меню" @click="toggleMenu">
         <svg class="header__menu-icon" width="36" height="36" aria-hidden="true">
-          <use xlink:href="assets/images/sprite.svg#menu-icon"></use>
+          <use href="assets/images/sprite.svg#menu-icon"></use>
         </svg>
       </button>
     </div>
@@ -34,6 +34,7 @@ const toggleMenu = () => {
 <style scoped lang="scss">
 .header {
   position: fixed;
+  z-index: 10000000;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -62,7 +63,7 @@ const toggleMenu = () => {
   &__nav {
     display: none;
     @include desktop {
-      display: block;
+      display: flex;
     }
   }
   &__cta-button {
