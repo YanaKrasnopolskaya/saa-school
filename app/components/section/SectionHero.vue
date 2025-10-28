@@ -1,5 +1,86 @@
 <script setup lang="ts">
-
+interface FeatureCard {
+  title: string,
+  description: string,
+  image: {
+    src: string,
+    alt: string,
+    width: number,
+    height: number,
+  },
+  reversed?: boolean
+  horizontal?: boolean
+  more?: string
+  differentBg?: boolean
+}
+const featureCards: FeatureCard[] = [
+  {
+    title: "Небольшие группы",
+    description: "Поддерживаем каждого студента и всегда рядом, если что-то не понятно",
+    image: {
+      src: "/images/hero-img-1.png",
+      alt: "",
+      width: 120,
+      height: 79,
+    },
+    reversed: false,
+    horizontal: false,
+    more: "до 10 человек",
+    differentBg: false
+  },
+  {
+    title: "AI ассистенты",
+    description: "Учим использовать искусственный интеллект для автоматизации процессов",
+    image: {
+      src: "/images/hero-img-2.png",
+      alt: "AI ассистенты фото",
+      width: 104,
+      height: 61,
+    },
+    reversed: false,
+    horizontal: false,
+    differentBg: false
+  },
+  {
+    title: "Как в настоящем проекте",
+    description: "На курсе полностью повторяем рабочие процессы и задачи",
+    image: {
+      src: "/images/hero-img-3.png",
+      alt: "Настоящий проект фото",
+      width: 118,
+      height: 91,
+    },
+    reversed: false,
+    horizontal: true,
+    differentBg: false
+  },
+  {
+    title: "Помогаем с поиском работы",
+    description: "Вместе составляем резюме и проводим тестовое собеседование",
+    image: {
+      src: "/images/hero-img-4.png",
+      alt: "Поиск работы фото",
+      width: 78,
+      height: 78,
+    },
+    reversed: true,
+    horizontal: true,
+    differentBg: true
+  },
+  {
+    title: "Сертификат Минцифры",
+    description: "Помогаем получить сертификат, который подтвердит твои навыки",
+    image: {
+      src: "/images/hero-img-5.png",
+      alt: "Сертификат Минцифры фото",
+      width: 96,
+      height: 78,
+    },
+    reversed: false,
+    horizontal: true,
+    differentBg: true
+  },
+]
 </script>
 
 <template>
@@ -10,32 +91,20 @@
         <p class="hero-content__description">Путь в&nbsp;профессию с&nbsp;аккредитованной IT-компанией</p>
       </div>
       <div class="hero-features">
-        <UiBenefitsCard class="hero-features__item" title="Небольшие группы" description="Поддерживаем каждого студента и&nbsp;всегда рядом, если что-то не&nbsp;понятно" :reversed="false" :horizontal="false">
+        <UiBenefitsCard v-for="(card, index) in featureCards"
+                        :key="index"
+                        class="hero-features__item"
+                        :class="{'hero-features__item-horizontal': card.horizontal, 'hero-features__item--different-bg': card.differentBg}"
+                        :title="card.title"
+                        :description="card.description"
+                        :reversed="card.reversed"
+                        :horizontal="card.horizontal"
+        >
           <template #image>
-            <img src="~/assets/images/hero-img-1.png" alt="Небольшие группы фото" width="120" height="79"/>
+            <img class="hero-features__img" :src="card.image.src" :alt="card.image.alt" :width="card.image.width" :height="card.image.height"/>
           </template>
-          <template #more>
-            <span class="hero-features__more">до&nbsp;10&nbsp;человек</span>
-          </template>
-        </UiBenefitsCard>
-        <UiBenefitsCard class="hero-features__item" title="AI ассистенты" description="Учим использовать искусственный интеллект для автоматизации процессов" :reversed="false" :horizontal="false">
-          <template #image>
-            <img src="~/assets/images/hero-img-2.png" alt="AI ассистенты фото" width="104" height="61"/>
-          </template>
-        </UiBenefitsCard>
-        <UiBenefitsCard class="hero-features__item hero-features__horizontal-item" title="Как в&nbsp;настоящем проекте" description="На&nbsp;курсе полностью повторяем рабочие процессы и&nbsp;задачи" :reversed="false" :horizontal="true">
-          <template #image>
-            <img src="~/assets/images/hero-img-3.png" alt="Настоящий проект фото" width="118" height="91"/>
-          </template>
-        </UiBenefitsCard>
-        <UiBenefitsCard class="hero-features__item hero-features__horizontal-item hero-features__item--different-bg" title="Помогаем с&nbsp;поиском работы" description="Вместе составляем резюме и&nbsp;проводим тестовое собеседование" :reversed="true" :horizontal="true">
-          <template #image>
-            <img src="~/assets/images/hero-img-4.png" alt="Поиск работы фото" width="78" height="78"/>
-          </template>
-        </UiBenefitsCard>
-        <UiBenefitsCard class="hero-features__item hero-features__horizontal-item hero-features__item--different-bg" title="Сертификат Минцифры" description="Помогаем получить сертификат, который подтвердит твои навыки" :reversed="false" :horizontal="true">
-          <template #image>
-            <img src="~/assets/images/hero-img-5.png" alt="Сертификат Минцифры фото" width="96" height="78"/>
+          <template #more v-if="card.more">
+            <span class="hero-features__more">{{card.more}}</span>
           </template>
         </UiBenefitsCard>
       </div>
@@ -45,7 +114,7 @@
 
 <style scoped lang="scss">
 .hero {
-  background-image: url("~/assets/images/hero-mobile-bg.png");
+  background-image: url("/images/hero-mobile-bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -53,10 +122,10 @@
   display: flex;
   flex-direction: column;
   @include tablet {
-    background-image: url("~/assets/images/hero-tablet-bg.png");
+    background-image: url("/images/hero-tablet-bg.png");
   }
   @include desktop {
-    background-image: url("~/assets/images/hero-desktop-bg.png");
+    background-image: url("/images/hero-desktop-bg.png");
   }
   @include tablet-desktop {
     padding-top: 140px;
@@ -104,10 +173,10 @@
     margin-bottom: 36px;
     max-width: 286px;
     background: rgba(230, 248, 252, 0.08);
-    background-image: url("~/assets/images/hero-description-mobile-bg.svg");
+    background-image: url("/images/hero-description-mobile-bg.svg");
     background-size: cover;
     @include tablet-desktop {
-      background-image: url("~/assets/images/hero-description-tablet-bg.svg");
+      background-image: url("/images/hero-description-tablet-bg.svg");
       padding: 12px 24px;
       font-size: 1.25em;
       line-height: 25px;
@@ -122,12 +191,12 @@
   gap: 9px;
   @include tablet-desktop {
     grid-template-columns: repeat(3, 1fr);
-    &__horizontal-item:nth-child(3) {
+    &__item-horizontal:nth-child(3) {
       grid-column: auto;
       flex-direction: column !important;
     }
   }
-  &__horizontal-item {
+  &__item-horizontal {
     grid-column: span 2;
     @include tablet-desktop {
       grid-column: span 3;

@@ -55,7 +55,7 @@ const closeMenu = () => {
   transition: right 0.4s ease;
   z-index: 20;
   background-color: $background-color;
-  background-image: url("~/assets/images/cta-bg-2.png"), url("~/assets/images/cta-bg-1.png");
+  background-image: url("~~/public/images/cta-bg-2.png"), url("~~/public/images/cta-bg-1.png");
   background-position: left -400px, center bottom -500px;
   background-repeat: no-repeat;
   display: flex;
