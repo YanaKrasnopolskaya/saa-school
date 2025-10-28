@@ -1,18 +1,6 @@
 <script setup lang="ts">
-interface FeatureCard {
-  title: string,
-  description: string,
-  image: {
-    src: string,
-    alt: string,
-    width: number,
-    height: number,
-  },
-  reversed?: boolean
-  horizontal?: boolean
-  more?: string
-  differentBg?: boolean
-}
+import type {FeatureCard} from "~/types/features-card";
+
 const featureCards: FeatureCard[] = [
   {
     title: "Небольшие группы",
