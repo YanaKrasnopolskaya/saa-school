@@ -1,78 +1,9 @@
 <script setup lang="ts">
-import type {FeatureCard} from "~/types/features-card";
-
-const featureCards: FeatureCard[] = [
-  {
-    title: "Небольшие группы",
-    description: "Поддерживаем каждого студента и всегда рядом, если что-то не понятно",
-    image: {
-      src: "/images/hero-img-1.png",
-      alt: "",
-      width: 120,
-      height: 79,
-    },
-    reversed: false,
-    horizontal: false,
-    more: "до 10 человек",
-    differentBg: false
-  },
-  {
-    title: "AI ассистенты",
-    description: "Учим использовать искусственный интеллект для автоматизации процессов",
-    image: {
-      src: "/images/hero-img-2.png",
-      alt: "AI ассистенты фото",
-      width: 104,
-      height: 61,
-    },
-    reversed: false,
-    horizontal: false,
-    differentBg: false
-  },
-  {
-    title: "Как в настоящем проекте",
-    description: "На курсе полностью повторяем рабочие процессы и задачи",
-    image: {
-      src: "/images/hero-img-3.png",
-      alt: "Настоящий проект фото",
-      width: 118,
-      height: 91,
-    },
-    reversed: false,
-    horizontal: true,
-    differentBg: false
-  },
-  {
-    title: "Помогаем с поиском работы",
-    description: "Вместе составляем резюме и проводим тестовое собеседование",
-    image: {
-      src: "/images/hero-img-4.png",
-      alt: "Поиск работы фото",
-      width: 78,
-      height: 78,
-    },
-    reversed: true,
-    horizontal: true,
-    differentBg: true
-  },
-  {
-    title: "Сертификат Минцифры",
-    description: "Помогаем получить сертификат, который подтвердит твои навыки",
-    image: {
-      src: "/images/hero-img-5.png",
-      alt: "Сертификат Минцифры фото",
-      width: 96,
-      height: 78,
-    },
-    reversed: false,
-    horizontal: true,
-    differentBg: true
-  },
-]
+import { featureCards } from "~/composables/featureCards";
 </script>
 
 <template>
-  <section class="hero">
+  <section class="section-hero">
     <div class="container">
       <div class="hero-content">
         <h1 class="hero-content__title">Стань тестировщиком <span class="hero-content__title-accent">за&nbsp;3&nbsp;месяца</span></h1>
@@ -101,7 +32,7 @@ const featureCards: FeatureCard[] = [
 </template>
 
 <style scoped lang="scss">
-.hero {
+.section-hero {
   background-image: url("/images/hero-mobile-bg.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -174,15 +105,32 @@ const featureCards: FeatureCard[] = [
   }
 }
 .hero-features {
+  position: relative;
+  z-index: 10;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 9px;
+  margin-bottom: -28px;
+  @include tablet {
+    margin-bottom: -64px;
+  }
+  @include desktop {
+    margin-bottom: -94px;
+  }
   @include tablet-desktop {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    &__item {
+      grid-column: span 2;
+    }
     &__item-horizontal:nth-child(3) {
-      grid-column: auto;
+      grid-column: span 2;
       flex-direction: column !important;
     }
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
   &__item-horizontal {
     grid-column: span 2;

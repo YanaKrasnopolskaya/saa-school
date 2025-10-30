@@ -32,15 +32,18 @@ const props = defineProps({
   align-items: center;
   padding: 10px 10px 24px;
   &__img {
+    overflow: hidden;
+    width: 120px;
+    height: 79px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0; // не сжимается
-    &include tablet {
+    @include tablet {
       width: 166px;
       height: 110px;
     }
-    &include desktop {
+    @include desktop {
       width: 200px;
       height: 132px;
     }
