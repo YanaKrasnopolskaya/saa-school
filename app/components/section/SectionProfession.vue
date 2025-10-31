@@ -110,6 +110,7 @@
     line-height: 112%;
     letter-spacing: 0;
     text-align: left;
+    max-width: 274px;
     @include tablet {
       font-size: 1.25rem;
       max-width: 403px;
