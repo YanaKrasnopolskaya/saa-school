@@ -1,6 +1,6 @@
 export interface PerspectiveCard {
-    name: String,
-    period: String,
-    priceMin?: String,
-    priceMax?: String
+    name: string,
+    period: string,
+    minPrice?: string,
+    maxPrice?: string
 }
