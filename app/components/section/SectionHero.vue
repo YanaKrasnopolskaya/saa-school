@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { featureCards } from "~/composables/featureCards";
+import { featureCards } from "~/composables/constants/featureCards";
 </script>
 
 <template>

@@ -53,7 +53,7 @@ const closeMenu = () => {
   width: 100vw;
   height: 100vh;
   transition: right 0.4s ease;
-  z-index: 20;
+  z-index: 100000;
   background-color: $background-color;
   background-image: url("~~/public/images/cta-bg-2.png"), url("~~/public/images/cta-bg-1.png");
   background-position: left -400px, center bottom -500px;
@@ -131,7 +131,7 @@ const closeMenu = () => {
   top: 0;
   left: 0;
   width: 100vw;
-  z-index: 10;
+  z-index: 10000;
   height: 100vh;
   inset: 0;
   backdrop-filter: blur(2px);

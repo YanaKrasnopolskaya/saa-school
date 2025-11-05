@@ -18,7 +18,10 @@ const props = defineProps({
       <span class="perspectives-card__price-min">
         <slot  name="min-price"></slot>
       </span>
-      <p class="perspectives-card__price-max">{{maxPrice}}</p>
+      <span class="perspectives-card__price-max">{{maxPrice}}</span>
+      <span class="perspectives-card__more-info">
+        <slot name="more-info"></slot>
+      </span>
     </div>
   </div>
 </template>
@@ -124,6 +127,21 @@ const props = defineProps({
     @include desktop{
       font-size: 1.5rem;
     }
+  }
+  &__more-info {
+    position: absolute;
+    bottom: -18px;
+    right: 26px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0;
+    text-align: center;
+    transform: rotate(-2.47deg);
+    border-radius: 300px;
+    background: $background-color;
+    box-shadow: 0 4px 16px 0 rgba(0, 44, 62, 0.08);
+    padding: 2px 10px;
   }
 }
 .perspectives-card--junior {

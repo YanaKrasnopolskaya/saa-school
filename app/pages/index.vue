@@ -4,8 +4,9 @@
 <template>
   <div>
     <SectionHero />
-    <SectionProfession></SectionProfession>
-    <SectionPerspectives></SectionPerspectives>
+    <SectionProfession />
+    <SectionPerspectives />
+    <SectionCourseProgram />
   </div>
 </template>
 

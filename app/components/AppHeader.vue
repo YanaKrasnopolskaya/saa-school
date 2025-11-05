@@ -34,7 +34,7 @@ const toggleMenu = () => {
 <style scoped lang="scss">
 .header {
   position: fixed;
-  z-index: 10000000;
+  z-index: 1000;
   top: 0;
   left: 50%;
   transform: translateX(-50%);

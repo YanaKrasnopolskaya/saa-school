@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {perspectivesCards} from "~/composables/perspectivesCards";
+import {perspectivesCards} from "~/composables/constants/perspectivesCards";
 </script>
 
 <template>
@@ -35,6 +35,7 @@ import {perspectivesCards} from "~/composables/perspectivesCards";
                               :maxPrice="card.maxPrice"
           >
             <template #min-price v-if="card.minPrice">{{ card.minPrice }}</template>
+            <template v-if="card.name.toLowerCase() === 'senior'" #more-info>и&nbsp;это не&nbsp;предел</template>
           </UiPerspectivesCard>
         </div>
       </div>
@@ -92,6 +93,7 @@ import {perspectivesCards} from "~/composables/perspectivesCards";
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    width: 100%;
   }
   &__hh {
     position: relative;
