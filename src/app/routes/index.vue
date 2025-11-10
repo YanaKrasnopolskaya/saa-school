@@ -1,0 +1,19 @@
+<script setup lang="ts">
+import HeroSection from "@/widgets/home/HeroSection.vue"
+import ProfessionSection from "@/widgets/home/ProfessionSection.vue";
+import PerspectivesSection from "@/widgets/home/PerspectivesSection.vue";
+import CourseProgramSection from "@/widgets/home/CourseProgramSection.vue";
+import CertificateSection from "@/widgets/home/СertificateSection.vue";
+</script>
+
+<template>
+  <div>
+    <HeroSection />
+    <ProfessionSection />
+    <PerspectivesSection />
+    <CourseProgramSection />
+    <CertificateSection />
+  </div>
+</template>
+
+<style scoped></style>
