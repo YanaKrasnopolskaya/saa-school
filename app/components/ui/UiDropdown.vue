@@ -43,7 +43,7 @@ const toggle = () => {
     font-size: 16px;
     font-weight: 700;
     line-height: 112%;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     text-align: left;
   }
   &__icon {
@@ -56,20 +56,21 @@ const toggle = () => {
     color: rgba(0, 44, 62, 1);
   }
   &__content {
-    padding: 20px 20px 0;
+    padding: 20px 0 0 30px;
   }
 }
 
 .dropdown-transition-enter-active,
 .dropdown-transition-leave-active {
   transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .dropdown-transition-enter-from,
 .dropdown-transition-leave-to {
   opacity: 0;
   max-height: 0;
-
+  padding-top: 0;
 }
 
 .dropdown-transition-enter-to,
