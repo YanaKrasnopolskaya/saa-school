@@ -131,17 +131,22 @@ const props = defineProps({
   &__more-info {
     position: absolute;
     bottom: -18px;
-    right: 26px;
+    left: 50%;
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 25px;
     letter-spacing: 0;
     text-align: center;
-    transform: rotate(-2.47deg);
+    transform: translateX(-50%) rotate(-2.47deg);
     border-radius: 300px;
     background: $background-color;
     box-shadow: 0 4px 16px 0 rgba(0, 44, 62, 0.08);
     padding: 2px 10px;
+    @include desktop {
+      left: auto;
+      right: 26px;
+      transform: rotate(-2.47deg);
+    }
   }
 }
 .perspectives-card--junior {

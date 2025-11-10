@@ -68,7 +68,7 @@ import {perspectivesCards} from "~/composables/constants/perspectivesCards";
     @include tablet {
       justify-content: space-between;
       flex-direction: row;
-      gap: 32px;
+
     }
     @include desktop {
       flex-direction: row;
@@ -81,7 +81,6 @@ import {perspectivesCards} from "~/composables/constants/perspectivesCards";
     line-height: 110%;
     letter-spacing: 0;
     text-align: left;
-    max-width: 294px;
     @include tablet {
       font-size: 2.5rem;
     }
@@ -90,10 +89,13 @@ import {perspectivesCards} from "~/composables/constants/perspectivesCards";
     }
   }
   &__hh-wrapper {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    width: 100%;
+    @include tablet {
+      width: auto;
+    }
   }
   &__hh {
     position: relative;
@@ -182,7 +184,7 @@ import {perspectivesCards} from "~/composables/constants/perspectivesCards";
     }
   }
   &__card {
-    flex: 0 0 55%; // ширина карточки относительно контейнера
+    flex: 0 0 60%; // ширина карточки относительно контейнера
     scroll-snap-align: start; // каждая карточка прилипает к началу
     @include tablet-desktop {
       flex: auto;
