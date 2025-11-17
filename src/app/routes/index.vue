@@ -4,6 +4,7 @@ import ProfessionSection from "@/widgets/home/ProfessionSection.vue";
 import PerspectivesSection from "@/widgets/home/PerspectivesSection.vue";
 import CourseProgramSection from "@/widgets/home/CourseProgramSection.vue";
 import CertificateSection from "@/widgets/home/СertificateSection.vue";
+import LearningProcessSection from "@/widgets/home/LearningProcessSection.vue";
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import CertificateSection from "@/widgets/home/СertificateSection.vue";
     <PerspectivesSection />
     <CourseProgramSection />
     <CertificateSection />
+    <LearningProcessSection />
   </div>
 </template>
 

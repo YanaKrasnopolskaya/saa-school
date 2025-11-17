@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import Dropdown from "app/shared/ui/Dropdown.vue";
-
 const props = defineProps({
   term: String,
   name: String,
