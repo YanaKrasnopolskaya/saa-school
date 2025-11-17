@@ -34,12 +34,12 @@ import {ClassModifier} from "@/shared/const/enams.ts";
           </template>
           <template #bottom v-else-if="card.classModifiers && card.classModifiers === ClassModifier.Course">
             <div class="learning__additional-bottom">
-            <span class="learning__additional-bottom-svg">
-              Доступ ко всем материалам останется у тебя и после курса
-              <svg width="47" height="45" aria-hidden="true">
-                <use href="@/app/assets/sprite.svg#paperclip-icon"></use>
-              </svg>
-            </span>
+              <span class="learning__additional-bottom-svg">
+                Доступ ко всем материалам останется у тебя и после курса
+                <svg width="47" height="45" aria-hidden="true">
+                  <use href="@/app/assets/sprite.svg#paperclip-icon"></use>
+                </svg>
+              </span>
               <span class="learning__additional-bottom-text">на 6 месяцев</span>
             </div>
           </template>
@@ -154,8 +154,9 @@ import {ClassModifier} from "@/shared/const/enams.ts";
       bottom: -50px;
     }
     @include desktop {
-      position: static;
+      position: relative;
       align-self: flex-end;
+      bottom: 0;
     }
   }
   &__additional-bottom-svg {
