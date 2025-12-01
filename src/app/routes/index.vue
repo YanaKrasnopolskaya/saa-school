@@ -5,6 +5,7 @@ import PerspectivesSection from "@/widgets/home/PerspectivesSection.vue";
 import CourseProgramSection from "@/widgets/home/CourseProgramSection.vue";
 import CertificateSection from "@/widgets/home/СertificateSection.vue";
 import LearningProcessSection from "@/widgets/home/LearningProcessSection.vue";
+import CommunitySection from "@/widgets/home/CommunitySection.vue";
 </script>
 
 <template>
@@ -15,6 +16,7 @@ import LearningProcessSection from "@/widgets/home/LearningProcessSection.vue";
     <CourseProgramSection />
     <CertificateSection />
     <LearningProcessSection />
+    <CommunitySection />
   </div>
 </template>
 

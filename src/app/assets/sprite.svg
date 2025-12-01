@@ -94,4 +94,70 @@
         </defs>
         <rect id="Subtract" width="46.299515" height="43.588943" x="0.000000" y="0.000000" fill="url(#pattern_0)" transform="matrix(0.999811,0.0194393,-0.0212624,0.999776,0.927734,0)" />
     </symbol>
+    <symbol id="community-icon1" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" customFrame="#000000">
+        <defs>
+            <g id="pixso_custom_effect_0">
+                <effect x="0.000000" y="8.000000" visibility="visible" fill="rgb(0,44,62)" fill-opacity="0.121568628" effectType="dropShadow" stdDeviation="20" radius="0" />
+            </g>
+            <filter id="filter_0" width="80.000000" height="80.000000" x="0.000000" y="0.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_0)" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feOffset dx="0.000000" dy="8.000000" in="SourceAlpha" />
+                <feGaussianBlur stdDeviation="6.66666651" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.172549 0 0 0 0 0.243137 0 0 0 0.121569 0 " />
+                <feBlend result="effect_dropShadow_1" in2="BackgroundImageFix" mode="normal" />
+                <feBlend result="shape" in="SourceGraphic" in2="effect_dropShadow_1" mode="normal" />
+            </filter>
+        </defs>
+        <g id="Сочетание 213">
+            <g filter="url(#filter_0)">
+                <circle id="Эллипс 125" cx="40" cy="32" r="20" fill="rgb(51,196,233)" />
+            </g>
+            <path id="path" d="M42.3726 29.6987L51.8921 31.4212L42.3726 34.6425L40.8639 44.7565L38.493 34.6425L28.1113 32.9065L38.493 29.6987L40.2532 19.6602L42.3726 29.6987Z" stroke="rgb(255,255,255)" stroke-width="2" />
+        </g>
+    </symbol>
+    <symbol id="community-icon2" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" customFrame="#000000">
+        <defs>
+            <g id="pixso_custom_effect_1">
+                <effect x="0.000000" y="8.000000" visibility="visible" fill="rgb(0,44,62)" fill-opacity="0.121568628" effectType="dropShadow" stdDeviation="20" radius="0" />
+            </g>
+            <filter id="filter_1" width="80.000000" height="80.000000" x="0.000000" y="0.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_1)" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feOffset dx="0.000000" dy="8.000000" in="SourceAlpha" />
+                <feGaussianBlur stdDeviation="6.66666651" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.172549 0 0 0 0 0.243137 0 0 0 0.121569 0 " />
+                <feBlend result="effect_dropShadow_1" in2="BackgroundImageFix" mode="normal" />
+                <feBlend result="shape" in="SourceGraphic" in2="effect_dropShadow_1" mode="normal" />
+            </filter>
+        </defs>
+        <g id="Сочетание 209">
+            <g filter="url(#filter_1)">
+                <circle id="Эллипс 124" cx="40" cy="32" r="20" fill="rgb(51,196,233)" />
+            </g>
+            <path id="path" d="M9.68638 2.81438C18.696 -1.03688 22.6485 3.71859 22.6485 7.92688C22.6485 12.3048 18.7051 15.8538 11.3243 15.8538C10.0485 15.8538 8.87543 15.7477 7.80768 15.5497L2.8677 19.75L4.41668 14.4605C1.51228 13.0312 0 10.638 0 7.92688C0 3.54898 3.74996 0 11.3243 0" stroke="rgb(254.745,254.948,255)" stroke-linejoin="bevel" stroke-width="2" transform="matrix(0.998553,-0.0537854,0.0537854,0.998553,28.4492,23.2656)" />
+        </g>
+    </symbol>
+    <symbol id="community-icon3" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" customFrame="#000000">
+        <defs>
+            <g id="pixso_custom_effect_2">
+                <effect x="0.000000" y="8.000000" visibility="visible" fill="rgb(0,44,62)" fill-opacity="0.121568628" effectType="dropShadow" stdDeviation="20" radius="0" />
+            </g>
+            <filter id="filter_2" width="80.000000" height="80.000000" x="0.000000" y="0.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_2)" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feOffset dx="0.000000" dy="8.000000" in="SourceAlpha" />
+                <feGaussianBlur stdDeviation="6.66666651" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.172549 0 0 0 0 0.243137 0 0 0 0.121569 0 " />
+                <feBlend result="effect_dropShadow_1" in2="BackgroundImageFix" mode="normal" />
+                <feBlend result="shape" in="SourceGraphic" in2="effect_dropShadow_1" mode="normal" />
+            </filter>
+        </defs>
+        <g id="Сочетание 212">
+            <g filter="url(#filter_2)">
+                <circle id="Эллипс 126" cx="40" cy="32" r="20" fill="rgb(51,196,233)" />
+            </g>
+            <g id="Сочетание 211">
+                <ellipse id="Эллипс 127" rx="4.327251" ry="4.490523" cx="40.2725639" cy="25.484663" stroke="rgb(255,254.745,254.745)" stroke-width="2" />
+                <path id="Форма 46" d="M38.7917 41.2L31.6682 41.2C31.4307 38.6627 31.6465 32.668 40.4335 32.668C49.2204 32.668 49.2388 39.1219 48.7653 41.2L44.0163 41.2" stroke="rgb(255,254.745,254.745)" stroke-linejoin="bevel" stroke-width="2" />
+            </g>
+        </g>
+    </symbol>
 </svg>

@@ -9,7 +9,7 @@ import BaseButton from "@/shared/ui/BaseButton.vue";
         <div class="certificate__content">
           <h2 class="certificate__title">Получишь сертификат установленного образца, подтверждающий твои новые навыки</h2>
           <p class="certificate__description">Всё это по&nbsp;государственной лицензии &#8470;Л035&minus;1 298&minus;77/179&nbsp;609.</p>
-          <a href="#" class="certificate__link">
+          <a href="/files/certificate.pdf" target="_blank" rel="noopener" class="certificate__link">
             <BaseButton class="certificate__link-button">посмотреть сертификат</BaseButton>
           </a>
         </div>

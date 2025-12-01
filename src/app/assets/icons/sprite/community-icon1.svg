@@ -1,0 +1,21 @@
+<svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80.000000" height="80.000000" fill="none" customFrame="#000000">
+	<defs>
+		<g id="pixso_custom_effect_0">
+			<effect x="0.000000" y="8.000000" visibility="visible" fill="rgb(0,44,62)" fill-opacity="0.121568628" effectType="dropShadow" stdDeviation="20" radius="0" />
+		</g>
+		<filter id="filter_0" width="80.000000" height="80.000000" x="0.000000" y="0.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_0)" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix" />
+			<feOffset dx="0.000000" dy="8.000000" in="SourceAlpha" />
+			<feGaussianBlur stdDeviation="6.66666651" />
+			<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.172549 0 0 0 0 0.243137 0 0 0 0.121569 0 " />
+			<feBlend result="effect_dropShadow_1" in2="BackgroundImageFix" mode="normal" />
+			<feBlend result="shape" in="SourceGraphic" in2="effect_dropShadow_1" mode="normal" />
+		</filter>
+	</defs>
+	<g id="Сочетание 213">
+		<g filter="url(#filter_0)">
+			<circle id="Эллипс 125" cx="40" cy="32" r="20" fill="rgb(51,196,233)" />
+		</g>
+		<path id="path" d="M42.3726 29.6987L51.8921 31.4212L42.3726 34.6425L40.8639 44.7565L38.493 34.6425L28.1113 32.9065L38.493 29.6987L40.2532 19.6602L42.3726 29.6987Z" stroke="rgb(255,255,255)" stroke-width="2" />
+	</g>
+</svg>
