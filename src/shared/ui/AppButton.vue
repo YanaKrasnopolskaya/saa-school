@@ -1,17 +1,19 @@
 <script setup lang="ts">
 interface ButtonProps {
   variant?: 'primary' | 'secondary',
-  type?: 'button' | 'submit' | 'reset'
+  type?: 'button' | 'submit' | 'reset',
+  disabled?: boolean
 }
 
 withDefaults(defineProps<ButtonProps>(), {
   variant: 'primary',
   type: 'button',
+  disabled: false,
 });
 </script>
 
 <template>
-  <button class="btn" :class="[`btn__${variant}`]" :type="type">
+  <button class="btn" :class="[`btn__${variant}`]" :type="type" :disabled="disabled">
     <slot />
   </button>
 </template>
@@ -30,10 +32,10 @@ withDefaults(defineProps<ButtonProps>(), {
   border: none;
   &__primary {
     background: $primary-button-color;
-    &:hover {
+    &:hover:not(:disabled) {
       background: $primary-button-color-hover;
     }
-    &:focus-visible {
+    &:focus-visible:not(:disabled) {
       background: $primary-button-color-focus;
     }
     &:disabled {
@@ -45,11 +47,11 @@ withDefaults(defineProps<ButtonProps>(), {
   &__secondary {
     background: transparent;
     border: 1px solid rgba(0, 44, 62, 1);
-    &:hover {
+    &:hover:not(:disabled) {
       border: 1px solid $secondary-color;
       color: $secondary-color;
     }
-    &:focus-visible {
+    &:focus-visible:not(:disabled) {
       border: 1px solid $secondary-color-focus;
       color: $secondary-color-focus;
     }

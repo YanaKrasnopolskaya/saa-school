@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import CourseCard from "@/entities/CourseCard.vue";
-import Dropdown from "@/shared/ui/Dropdown.vue";
+import AppDropdown from "@/shared/ui/AppDropdown.vue";
 import {courseProgram} from "@/shared/const/courseProgram";
 </script>
 
@@ -22,13 +22,13 @@ import {courseProgram} from "@/shared/const/courseProgram";
             :description="program.description"
         >
           <template #dropdown>
-            <Dropdown v-for="item in program.items" :label="item.name">
+            <AppDropdown v-for="item in program.items" :label="item.name">
               <template #dropdown-text>
                 <ul class="course__dropdown-items">
                   <li class="course__dropdown-item" v-for="text in item.texts">{{text}}</li>
                 </ul>
               </template>
-            </Dropdown>
+            </AppDropdown>
           </template>
         </CourseCard>
       </div>

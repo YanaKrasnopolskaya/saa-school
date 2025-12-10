@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import BaseButton from "@/shared/ui/BaseButton.vue";
+import AppButton from "@/shared/ui/AppButton.vue";
 import AppMenu from "@/widgets/menu/AppMenu.vue";
 import AppNavigation from "@/widgets/navigation/AppNavigation.vue";
 
@@ -20,12 +20,12 @@ const toggleMenu = () => {
     </NuxtLink>
     <AppNavigation class="header__nav"/>
     <div class="header__cta">
-      <BaseButton class="header__cta-button">Записаться</BaseButton>
-      <button class="header__menu-button" type="button" aria-label="Меню" @click="toggleMenu">
+      <AppButton class="header__cta-button">Записаться</AppButton>
+      <app-button class="header__menu-button" type="button" aria-label="Меню" @click="toggleMenu">
         <svg class="header__menu-icon" width="36" height="36" aria-hidden="true">
           <use href="@/app/assets/sprite.svg#menu-icon"></use>
         </svg>
-      </button>
+      </app-button>
     </div>
   </header>
   <AppMenu class="header__menu" :isOpen="isOpen" @close-menu="isOpen = false"/>

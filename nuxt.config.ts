@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     },
     devtools: { enabled: true },
     css: [
-        '@/app/assets/styles/main.scss' // глобальный SCSS
+        '@/app/assets/styles/main.scss' , // глобальный SCSS
     ],
     vite: {
         plugins: [viteTsconfigPaths()],

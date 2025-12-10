@@ -1,5 +1,5 @@
 <script setup>
-import BaseButton from "@/shared/ui/BaseButton.vue";
+import AppButton from "@/shared/ui/AppButton.vue";
 </script>
 
 <template>
@@ -10,7 +10,7 @@ import BaseButton from "@/shared/ui/BaseButton.vue";
           <h2 class="certificate__title">Получишь сертификат установленного образца, подтверждающий твои новые навыки</h2>
           <p class="certificate__description">Всё это по&nbsp;государственной лицензии &#8470;Л035&minus;1 298&minus;77/179&nbsp;609.</p>
           <a href="/files/certificate.pdf" target="_blank" rel="noopener" class="certificate__link">
-            <BaseButton class="certificate__link-button">посмотреть сертификат</BaseButton>
+            <AppButton class="certificate__link-button">посмотреть сертификат</AppButton>
           </a>
         </div>
         <div class="certificate__image-wrapper">
