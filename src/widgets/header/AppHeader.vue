@@ -15,7 +15,7 @@ const toggleMenu = () => {
   <header class="header">
     <NuxtLink to="/public" class="header__logo-link">
       <svg class="header__logo" width="165" height="29" aria-hidden="true">
-        <use href="@/app/assets/sprite.svg#logo-icon"></use>
+        <use href="@/app/assets/icons/sprite.svg#logo-icon"></use>
       </svg>
     </NuxtLink>
     <AppNavigation class="header__nav"/>
@@ -23,7 +23,7 @@ const toggleMenu = () => {
       <AppButton class="header__cta-button">Записаться</AppButton>
       <app-button class="header__menu-button" type="button" aria-label="Меню" @click="toggleMenu">
         <svg class="header__menu-icon" width="36" height="36" aria-hidden="true">
-          <use href="@/app/assets/sprite.svg#menu-icon"></use>
+          <use href="@/app/assets/icons/sprite.svg#menu-icon"></use>
         </svg>
       </app-button>
     </div>

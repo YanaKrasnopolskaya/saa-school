@@ -14,7 +14,7 @@ const toggle = () => {
     <button class="dropdown__button" @click="toggle" type="button">
       {{label}}
       <svg class="dropdown__icon" :class="{'dropdown__icon-rotated': isOpen}" width="24" height="24" aria-hidden="true">
-        <use href="@/app/assets/sprite.svg#dropdown-open-icon"></use>
+        <use href="@/app/assets/icons/sprite.svg#dropdown-open-icon"></use>
       </svg>
     </button>
     <Transition name="dropdown-transition">

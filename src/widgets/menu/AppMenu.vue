@@ -15,11 +15,11 @@ const closeMenu = () => {
   <aside class="menu" :class="{ 'menu__open': isOpen }" aria-label="Меню">
     <div class="menu__header">
       <svg class="menu__logo" width="208" height="37" aria-hidden="true">
-        <use href="@/app/assets/sprite.svg#menu-logo-icon"></use>
+        <use href="@/app/assets/icons/sprite.svg#menu-logo-icon"></use>
       </svg>
       <button class="menu__close-btn" @click="closeMenu">
         <svg width="40" height="40" aria-hidden="true">
-          <use href="@/app/assets/sprite.svg#close-menu-icon"></use>
+          <use href="@/app/assets/icons/sprite.svg#close-menu-icon"></use>
         </svg>
       </button>
     </div>
@@ -31,12 +31,12 @@ const closeMenu = () => {
         <div class="menu__socials">
           <a href="#" class="menu__socials-link">
             <svg class="menu__socials-icon" width="52" height="52" aria-hidden="true">
-              <use href="@/app/assets/sprite.svg#tg-icon"></use>
+              <use href="@/app/assets/icons/sprite.svg#tg-icon"></use>
             </svg>
           </a>
           <a href="#" class="menu__socials-link">
             <svg class="menu__socials-icon" width="52" height="52" aria-hidden="true">
-              <use href="@/app/assets/sprite.svg#vk-icon"></use>
+              <use href="@/app/assets/icons/sprite.svg#vk-icon"></use>
             </svg>
           </a>
         </div>

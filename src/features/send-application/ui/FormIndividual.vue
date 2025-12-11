@@ -19,13 +19,13 @@ const form = ref({
       <AppInput label="Номер телефона" placeholder="(999) 999-99-99" v-model="form.phone"/>
       <AppInput label="Ник в Telegram" placeholder="@primer" v-model="form.telegram" :required="false"></AppInput>
     </template>
-    <template v-if="form.telegram.trim()" #extra-fields>
-      <Transition animate-fade-down animate-duration-[600ms] animate-ease-in-out>
-        <div class="radio-wrapper">
+    <template #extra-fields>
+      <transition name="fade-down">
+        <div v-if="form.telegram.trim()" class="radio-wrapper animate-in fade-down duration-500 ease-in-out">
           <AppRadio v-model="form.checkValue" name="contact" value="call" label="Позвонить мне" />
           <AppRadio v-model="form.checkValue" name="contact" value="telegram" label="Написать в Telegram" />
         </div>
-      </Transition>
+      </transition>
     </template>
   </ApplicationForm>
 </template>
@@ -35,6 +35,26 @@ const form = ref({
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 40px;
+  gap: 20px;
+}
+.fade-down-enter-active,
+.fade-down-leave-active {
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+.fade-down-enter-from {
+  opacity: 0;
+  transform: translateY(-12px);
+}
+.fade-down-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-down-leave-from {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-down-leave-to {
+  opacity: 0;
+  transform: translateY(-12px);
 }
 </style>

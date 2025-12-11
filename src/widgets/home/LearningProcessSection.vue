@@ -11,7 +11,7 @@ import {ClassModifier} from "@/shared/const/enams.ts";
         <div class="learning__title-wrapper">
           <h2 class="learning__title">Как проходит обучение</h2>
           <svg class="learning__title-icon" width="40" height="40" aria-hidden="true">
-            <use href="@/app/assets/sprite.svg#course-program-star-icon"></use>
+            <use href="@/app/assets/icons/sprite.svg#course-program-star-icon"></use>
           </svg>
         </div>
         <LearningCard v-for="(card, index) in LearningCards"
@@ -27,7 +27,7 @@ import {ClassModifier} from "@/shared/const/enams.ts";
               <span class="learning__additional-top-svg">
                 это реально не много
                 <svg class="learning__additional-top-icon" width="15" height="16" aria-hidden="true">
-                  <use href="@/app/assets/sprite.svg#blot-icon"></use>
+                  <use href="@/app/assets/icons/sprite.svg#blot-icon"></use>
                 </svg>
               </span>
             </div>
@@ -37,7 +37,7 @@ import {ClassModifier} from "@/shared/const/enams.ts";
               <span class="learning__additional-bottom-svg">
                 Доступ ко всем материалам останется у тебя и после курса
                 <svg width="47" height="45" aria-hidden="true">
-                  <use href="@/app/assets/sprite.svg#paperclip-icon"></use>
+                  <use href="@/app/assets/icons/sprite.svg#paperclip-icon"></use>
                 </svg>
               </span>
               <span class="learning__additional-bottom-text">на 6 месяцев</span>

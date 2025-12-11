@@ -11,7 +11,7 @@ import {courseProgram} from "@/shared/const/courseProgram";
         <div class="course__title-wrapper">
           <h2 class="course__title">Программа курса</h2>
           <svg class="course__title-icon" width="40" height="40" aria-hidden="true">
-            <use href="@/app/assets/sprite.svg#course-program-star-icon"></use>
+            <use href="@/app/assets/icons/sprite.svg#course-program-star-icon"></use>
           </svg>
         </div>
         <CourseCard

@@ -14,16 +14,16 @@ import {perspectivesCards} from "@/shared/const/perspectivesCards";
               <span class="perspectives__hh-num">+ 7000</span>
               <div class="perspectives__hh-desc">
                 <svg class="perspectives__hh-icon" width="34" height="34" aria-hidden="true">
-                  <use href="@/app/assets/sprite.svg#hh-icon"></use>
+                  <use href="@/app/assets/icons/sprite.svg#hh-icon"></use>
                 </svg>
                 <span class="perspectives__hh-text">активных<br>вакансий на&nbsp;hh.ru</span>
               </div>
               <svg class="perspectives__mark-icon" width="69" height="71" aria-hidden="true">
-                <use href="@/app/assets/sprite.svg#excl-mark-icon"></use>
+                <use href="@/app/assets/icons/sprite.svg#excl-mark-icon"></use>
               </svg>
             </div>
             <svg class="perspectives__hh-desc-icon" width="34" height="34" aria-hidden="true">
-              <use href="@/app/assets/sprite.svg#swiper-icon"></use>
+              <use href="@/app/assets/icons/sprite.svg#swiper-icon"></use>
             </svg>
           </div>
         </div>

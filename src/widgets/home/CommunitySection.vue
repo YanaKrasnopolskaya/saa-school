@@ -9,7 +9,7 @@
           <h2 class="community__info-title">Твой круг общения&nbsp;&mdash; уже здесь
             <span>
               <svg class="community__info-icon" width="40" height="40" aria-hidden="true">
-              <use href="@/app/assets/sprite.svg#course-program-star-icon"></use>
+              <use href="@/app/assets/icons/sprite.svg#course-program-star-icon"></use>
               </svg>
             </span>
           </h2>
@@ -20,19 +20,19 @@
             <p class="community__advantages-item">
               Доверительная атмосфера&nbsp;&mdash; здесь никто не&nbsp;осуждает и&nbsp;не&nbsp;критикует за&nbsp;&laquo;неправильные&raquo; вопросы
               <svg class="community__advantages-icon" width="80" height="80" aria-hidden="true">
-                <use href="@/app/assets/sprite.svg#community-icon1"></use>
+                <use href="@/app/assets/icons/sprite.svg#community-icon1"></use>
               </svg>
             </p>
             <p class="community__advantages-item community__advantages-item--center">
               Живой диалог с&nbsp;опытными специалистами&nbsp;&mdash; получай помощь от&nbsp;тех, кто уже в&nbsp;профессии
               <svg class="community__advantages-icon" width="80" height="80" aria-hidden="true">
-                <use href="@/app/assets/sprite.svg#community-icon2"></use>
+                <use href="@/app/assets/icons/sprite.svg#community-icon2"></use>
               </svg>
             </p>
             <p class="community__advantages-item community__advantages-item--bottom">
               Настоящее комьюнити - общайся, делись и&nbsp;расти вместе с&nbsp;другими
               <svg class="community__advantages-icon" width="80" height="80" aria-hidden="true">
-                <use href="@/app/assets/sprite.svg#community-icon3"></use>
+                <use href="@/app/assets/icons/sprite.svg#community-icon3"></use>
               </svg>
             </p>
           </div>

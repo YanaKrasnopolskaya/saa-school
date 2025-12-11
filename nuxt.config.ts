@@ -19,7 +19,7 @@ export default defineNuxtConfig({
         '@/app/assets/styles/main.scss' , // глобальный SCSS
     ],
     vite: {
-        plugins: [viteTsconfigPaths()],
+        plugins: [viteTsconfigPaths(),],
         css: {
             preprocessorOptions: {
                 scss: {

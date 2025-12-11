@@ -14,12 +14,12 @@
           <div class="profession__image-content-text">
             <span class="profession__text profession__text--diff">Сможешь указывать людям на&nbsp;их&nbsp;ошибки
               <svg class="profession__star-icon" width="60" height="60" aria-hidden="true">
-                <use href="@/app/assets/sprite.svg#star-icon"></use>
+                <use href="@/app/assets/icons/sprite.svg#star-icon"></use>
               </svg>
             </span>
             <span class="profession__text">И&nbsp;за&nbsp;это заплатят
               <svg class="profession__spiral-icon" width="100" height="80" aria-hidden="true">
-              <use href="@/app/assets/sprite.svg#spiral-icon"></use>
+              <use href="@/app/assets/icons/sprite.svg#spiral-icon"></use>
               </svg>
             </span>
           </div>

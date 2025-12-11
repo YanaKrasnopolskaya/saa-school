@@ -11,7 +11,7 @@ const props = defineProps({
     <div class="course-card__content">
       <div class="course-card__term-wrapper">
         <svg class="term-icon" width="24" height="24" aria-hidden="true">
-          <use href="@/app/assets/sprite.svg#term-icon"></use>
+          <use href="@/app/assets/icons/sprite.svg#term-icon"></use>
         </svg>
         <span class="course-card__term">{{term}}</span>
       </div>

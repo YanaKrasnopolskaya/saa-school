@@ -8,21 +8,32 @@ const consent = ref(true);
   <form class="application-form">
     <slot name="input-field"></slot>
     <slot name="extra-fields"></slot>
+<!--    <div class="application-form__notification">-->
+<!--      <span class="application-form__notification-successfully">-->
+<!--        <svg class="application-form__notification-icon" width="18" height="18" aria-hidden="true">-->
+<!--          <use href="@/app/assets/icons/sprite.svg#check-icon"></use>-->
+<!--        </svg>-->
+<!--        Данные успешно отправлены-->
+<!--      </span>-->
+<!--      <span class="application-form__notification-error">-->
+<!--        <svg class="application-form__notification-icon" width="18" height="18" aria-hidden="true">-->
+<!--          <use href="@/app/assets/icons/sprite.svg#error-icon"></use>-->
+<!--        </svg>-->
+<!--        Не удалось отправить данные. Попробуйте еще раз-->
+<!--      </span>-->
+<!--    </div>-->
     <AppButton :disabled="!consent" class="application-form__button">отправить заявку</AppButton>
     <label class="application-form__consent">
       <input type="checkbox" v-model="consent"/>
       <span class="application-form__checkbox">
         <svg class="application-form__checkbox-icon" width="18" height="18" aria-hidden="true">
-          <use href="@/app/assets/sprite.svg#check-mark-icon"></use>
+          <use href="@/app/assets/icons/sprite.svg#check-mark-icon"></use>
         </svg>
       </span>
       <span>Я&nbsp;согласен (-а) на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;
         <a href="#">Политикой конфиденциальности</a>.
       </span>
     </label>
-    <div class="p-10 text-3xl text-white bg-blue-500">
-      Hello Tailwind 🚀
-    </div>
   </form>
 </template>
 
@@ -36,6 +47,29 @@ const consent = ref(true);
   align-items: flex-start;
   gap: 40px;
   padding: 20px;
+  &__notification {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px 10px 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px 0 rgba(0, 44, 62, 0.08);
+    background: $background-color;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: left;
+  }
+  &__notification-successfully {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  }
   &__button {
     width: 100%;
   }

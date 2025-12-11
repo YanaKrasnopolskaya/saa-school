@@ -20,7 +20,9 @@ const handleInput = computed({
     <label v-if="label" class="app-input__label">{{ label }}<span v-if="!required" class="app-input__label-prefix">-&nbsp;не&nbsp;обязательно</span></label>
     <div class="app-input__wrapper">
       <slot name="prefix" />
-      <input :type="type" :placeholder="placeholder" :required="required" v-model="handleInput" class="app-input__field"/>
+      <slot name="input">
+        <input :type="type" :placeholder="placeholder" :required="required" v-model="handleInput" class="app-input__field"/>
+      </slot>
     </div>
   </div>
 </template>

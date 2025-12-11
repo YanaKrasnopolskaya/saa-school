@@ -27,13 +27,13 @@ const handleRadio = computed({
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 12px;
+  gap: 8px;
   cursor: pointer;
   &:hover .app-radio__custom-radio {
     border-color: $secondary-color;
   }
   &__label {
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0;
