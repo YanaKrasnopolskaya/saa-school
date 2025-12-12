@@ -1,0 +1,1 @@
+export {default as LearningProcessSection} from "./ui/LearningProcessSection.vue"

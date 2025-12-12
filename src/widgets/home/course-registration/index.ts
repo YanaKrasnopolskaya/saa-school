@@ -1,0 +1,1 @@
+export { default as CourseRegistrationSection } from "./ui/CourseRegistrationSection.vue"

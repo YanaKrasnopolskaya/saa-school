@@ -1,0 +1,1 @@
+export { default as PerspectivesCard } from "./ui/PerspectivesCard.vue"

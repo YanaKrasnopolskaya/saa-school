@@ -1,0 +1,1 @@
+export { default as CourseProgramSection } from "./ui/CourseProgramSection.vue"

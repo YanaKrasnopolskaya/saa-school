@@ -1,0 +1,1 @@
+export { default as CertificateSection } from "./ui/СertificateSection.vue"

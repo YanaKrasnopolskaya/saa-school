@@ -1,0 +1,1 @@
+export { COURSE_PROGRAM } from "./const/COURSE_PROGRAM"

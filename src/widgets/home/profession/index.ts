@@ -1,0 +1,1 @@
+export {default as ProfessionSection} from "./ui/ProfessionSection.vue"
