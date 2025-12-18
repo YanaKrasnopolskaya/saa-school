@@ -4,25 +4,23 @@ const props = defineProps({
   type: { type: String, default: 'text' },
   label: String,
   placeholder: String,
-  required: { type: Boolean, default: true }
+  required: { type: Boolean, default: true },
+  error: { type: Boolean, default: false },
 })
 
 const emit = defineEmits(["update:modelValue"]);
 
-const handleInput = computed({
-  get: () => props.modelValue,
-  set: (value) => emit('update:modelValue', value)
-})
+const handleInput = (e) => {
+  emit("update:modelValue", e.target.value);
+}
 </script>
 
 <template>
   <div class="app-input">
     <label v-if="label" class="app-input__label">{{ label }}<span v-if="!required" class="app-input__label-prefix">-&nbsp;не&nbsp;обязательно</span></label>
-    <div class="app-input__wrapper">
-      <slot name="prefix" />
-      <slot name="input">
-        <input :type="type" :placeholder="placeholder" :required="required" v-model="handleInput" class="app-input__field"/>
-      </slot>
+    <div class="app-input__wrapper" :class="{'app-input__wrapper--error': error }">
+      <slot name="prefix"></slot>
+      <input class="app-input__field"  :type="type" :placeholder="placeholder" :required="required" @input="handleInput" :value="modelValue" />
     </div>
   </div>
 </template>
@@ -55,10 +53,14 @@ const handleInput = computed({
     width: 100%;
     display: flex;
     align-items: center;
+    gap: 11px;
     border-bottom: 1px solid rgba(0, 44, 62, 0.3);
     &:hover {
       border-color: $secondary-color;
     }
+  }
+  &__wrapper--error {
+    border-color: $error-color;
   }
   &__field {
     width: 100%;

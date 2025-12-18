@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AppButton from "@/shared/ui/AppButton.vue";
+import AppButton from "@/shared/ui/button/ui/AppButton.vue";
 import AppMenu from "@/widgets/menu/ui/AppMenu.vue";
 import AppNavigation from "@/widgets/navigation/ui/AppNavigation.vue";
 
@@ -77,7 +77,6 @@ const toggleMenu = () => {
     background: inherit;
     width: 36px;
     height: 36px;
-    display: block;
     @include desktop {
       width: 40px;
       height: 40px;

@@ -1,0 +1,1 @@
+export {nameRule, phoneRule, telegramRule} from './rules/rules'

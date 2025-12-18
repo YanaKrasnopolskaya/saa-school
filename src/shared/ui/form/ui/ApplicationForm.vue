@@ -1,28 +1,33 @@
 <script setup>
-import AppButton from "@/shared/ui/AppButton.vue";
+import AppButton from "../../button/ui/AppButton.vue"
 
 const consent = ref(true);
+const props = defineProps({
+  success: { type: Boolean, default: false },
+  error:   { type: Boolean, default: false }
+});
+const emit = defineEmits(['submit']);
 </script>
 
 <template>
-  <form class="application-form">
+  <form class="application-form" @submit.prevent="emit('submit')" novalidate>
     <slot name="input-field"></slot>
     <slot name="extra-fields"></slot>
-<!--    <div class="application-form__notification">-->
-<!--      <span class="application-form__notification-successfully">-->
-<!--        <svg class="application-form__notification-icon" width="18" height="18" aria-hidden="true">-->
-<!--          <use href="@/app/assets/icons/sprite.svg#check-icon"></use>-->
-<!--        </svg>-->
-<!--        Данные успешно отправлены-->
-<!--      </span>-->
-<!--      <span class="application-form__notification-error">-->
-<!--        <svg class="application-form__notification-icon" width="18" height="18" aria-hidden="true">-->
-<!--          <use href="@/app/assets/icons/sprite.svg#error-icon"></use>-->
-<!--        </svg>-->
-<!--        Не удалось отправить данные. Попробуйте еще раз-->
-<!--      </span>-->
-<!--    </div>-->
-    <AppButton :disabled="!consent" class="application-form__button">отправить заявку</AppButton>
+    <div class="application-form__notification" v-if="success || error">
+      <span v-if="success" class="application-form__notification-successfully">
+        <svg class="application-form__notification-icon" width="18" height="18" aria-hidden="true">
+          <use href="@/app/assets/icons/sprite.svg#check-icon"></use>
+        </svg>
+        Данные успешно отправлены
+      </span>
+      <span v-if="error" class="application-form__notification-error">
+        <svg class="application-form__notification-icon" width="18" height="18" aria-hidden="true">
+          <use href="@/app/assets/icons/sprite.svg#error-icon"></use>
+        </svg>
+        Не удалось отправить данные. Попробуйте еще раз
+      </span>
+    </div>
+    <AppButton :disabled="!consent" class="application-form__button" type="submit">отправить заявку</AppButton>
     <label class="application-form__consent">
       <input type="checkbox" v-model="consent"/>
       <span class="application-form__checkbox">

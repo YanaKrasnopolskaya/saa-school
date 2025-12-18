@@ -1,7 +1,7 @@
 <script setup>
-import Learning from "../../../../entities/learning/ui/LearningCard.vue";
 import {LEARNING_PROGRAM} from "@/entities/learning/model/const/LEARNING_PROGRAM.ts";
 import {ClassModifier} from "@/shared/const/enums.ts";
+import {LearningCard} from "@/entities/learning/index.ts";
 </script>
 
 <template>

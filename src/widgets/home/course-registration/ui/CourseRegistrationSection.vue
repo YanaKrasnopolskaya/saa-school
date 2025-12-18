@@ -1,5 +1,5 @@
 <script setup>
-import FormIndividual from "../../../../features/send-application/ui/FormIndividual.vue";
+import FormIndividual from "@/features/send-application/individual/ui/FormIndividual.vue";
 </script>
 
 <template>
@@ -18,15 +18,30 @@ import FormIndividual from "../../../../features/send-application/ui/FormIndivid
 <style scoped lang="scss">
 .section-course-registration {
   padding: 36px 0;
+  @include tablet {
+    margin: 0 52px 0;
+  }
 }
 .course-registration {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  @include desktop {
+    flex-direction: row;
+    margin-left: -38px;
+    margin-right: -38px;
+  }
   &__info {
     background: rgba(230, 248, 252, 1) url("/images/certificate-mobile-bg.png") top right / cover no-repeat;
     border-radius: 12px;
     padding: 20px 78px 20px 20px;
+    @include tablet {
+      padding: 40px 120px 40px 40px;
+    }
+    @include desktop {
+      padding: 40px 90px 40px 40px;
+      width: 75%;
+    }
   }
   &__info-title {
     font-size: 2rem;

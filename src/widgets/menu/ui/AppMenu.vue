@@ -11,38 +11,41 @@ const closeMenu = () => {
 </script>
 
 <template>
-  <div class="menu-overlay" :class="{ show: isOpen }" @click="closeMenu"></div>
-  <aside class="menu" :class="{ 'menu__open': isOpen }" aria-label="Меню">
-    <div class="menu__header">
-      <svg class="menu__logo" width="208" height="37" aria-hidden="true">
-        <use href="@/app/assets/icons/sprite.svg#menu-logo-icon"></use>
-      </svg>
-      <button class="menu__close-btn" @click="closeMenu">
-        <svg width="40" height="40" aria-hidden="true">
-          <use href="@/app/assets/icons/sprite.svg#close-menu-icon"></use>
+  <div class="app-menu">
+    <div class="menu-overlay" :class="{ show: isOpen }" @click="closeMenu"></div>
+    <aside class="menu" :class="{ 'menu__open': isOpen }" aria-label="Меню">
+      <div class="menu__header">
+        <svg class="menu__logo" width="208" height="37" aria-hidden="true">
+          <use href="@/app/assets/icons/sprite.svg#menu-logo-icon"></use>
         </svg>
-      </button>
-    </div>
-    <div class="menu__content">
-      <AppNavigation class="menu__navigation"/>
-      <div class="menu__contact">
-        <a href="tel:88003008352" class="menu__contact-link">8 800 300 83 52</a>
-        <a href="mailto:info@saaschool.ru" class="menu__contact-link">info@saaschool.ru</a>
-        <div class="menu__socials">
-          <a href="#" class="menu__socials-link">
-            <svg class="menu__socials-icon" width="52" height="52" aria-hidden="true">
-              <use href="@/app/assets/icons/sprite.svg#tg-icon"></use>
-            </svg>
-          </a>
-          <a href="#" class="menu__socials-link">
-            <svg class="menu__socials-icon" width="52" height="52" aria-hidden="true">
-              <use href="@/app/assets/icons/sprite.svg#vk-icon"></use>
-            </svg>
-          </a>
+        <button class="menu__close-btn" @click="closeMenu">
+          <svg width="40" height="40" aria-hidden="true">
+            <use href="@/app/assets/icons/sprite.svg#close-menu-icon"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="menu__content">
+        <AppNavigation class="menu__navigation"/>
+        <div class="menu__contact">
+          <a href="tel:88003008352" class="menu__contact-link">8 800 300 83 52</a>
+          <a href="mailto:info@saaschool.ru" class="menu__contact-link">info@saaschool.ru</a>
+          <div class="menu__socials">
+            <a href="#" class="menu__socials-link">
+              <svg class="menu__socials-icon" width="52" height="52" aria-hidden="true">
+                <use href="@/app/assets/icons/sprite.svg#tg-icon"></use>
+              </svg>
+            </a>
+            <a href="#" class="menu__socials-link">
+              <svg class="menu__socials-icon" width="52" height="52" aria-hidden="true">
+                <use href="@/app/assets/icons/sprite.svg#vk-icon"></use>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </aside>
+    </aside>
+  </div>
+
 </template>
 
 <style scoped lang="scss">

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import CourseCard from "../../../../entities/courses/ui/CourseCard.vue";
-import AppDropdown from "@/shared/ui/AppDropdown.vue";
+import AppDropdown from "@/shared/ui/dropdown/ui/AppDropdown.vue";
 import {COURSE_PROGRAM} from "@/entities/course-program/const/COURSE_PROGRAM";
 </script>
 

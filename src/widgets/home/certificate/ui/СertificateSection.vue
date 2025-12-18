@@ -1,5 +1,5 @@
 <script setup>
-import AppButton from "@/shared/ui/AppButton.vue";
+import AppButton from "@/shared/ui/button/ui/AppButton.vue";
 </script>
 
 <template>

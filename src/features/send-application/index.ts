@@ -1,1 +1,0 @@
-export { default as FormIndividual } from "./ui/FormIndividual.vue"

@@ -7,6 +7,7 @@ import CertificateSection from "@/widgets/home/certificate/ui/СertificateSectio
 import LearningProcessSection from "@/widgets/home/learning/ui/LearningProcessSection.vue";
 import CommunitySection from "@/widgets/home/community/ui/CommunitySection.vue";
 import CourseRegistrationSection from "@/widgets/home/course-registration/ui/CourseRegistrationSection.vue";
+import { ResumeSection } from "@/widgets/home/resume";
 </script>
 
 <template>
@@ -19,6 +20,7 @@ import CourseRegistrationSection from "@/widgets/home/course-registration/ui/Cou
     <LearningProcessSection />
     <CommunitySection />
     <CourseRegistrationSection />
+    <ResumeSection />
   </div>
 </template>
 

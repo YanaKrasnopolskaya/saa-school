@@ -1,0 +1,1 @@
+export {RESUMES} from './const/RESUMES'

@@ -174,6 +174,35 @@
         <circle id="Эллипс 172" cx="12" cy="12" r="12" fill="rgb(217,45,32)" fill-opacity="0.219999999" />
         <path id="Icon" d="M17 7L7 17M7 7L17 17" stroke="rgb(217,45,32)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
     </symbol>
-
-
+    <symbol id="flag1-icon" viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" customFrame="#000000">
+        <g id="g">
+            <rect id="rect" width="24.000000" height="5.333531" x="0.000000" y="0.000000" fill="rgb(255,255,255)" />
+            <rect id="rect" width="24.000000" height="5.333531" x="0.000000" y="10.666016" fill="rgb(225,0,14)" />
+            <rect id="rect" width="24.000000" height="5.333531" x="0.000000" y="5.332031" fill="rgb(59,9,255)" />
+        </g>
+    </symbol>
+    <symbol id="flag2-icon" viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" customFrame="#000000">
+        <g id="g">
+            <rect id="rect" width="24.000000" height="5.333531" x="0.000000" y="0.000000" fill="rgb(0,0,0)" />
+            <rect id="rect" width="24.000000" height="5.333531" x="0.000000" y="10.666016" fill="rgb(227, 189, 0)" />
+            <rect id="rect" width="24.000000" height="5.333531" x="0.000000" y="5.332031" fill="rgb(168, 0, 0)" />
+        </g>
+    </symbol>
+    <symbol id="flag3-icon" viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" customFrame="#000000">
+        <g id="g">
+            <rect id="rect" width="24.000000" height="5.333531" x="0.000000" y="0.000000" fill="rgb(225,0,14)" />
+            <rect id="rect" width="24.000000" height="5.333531" x="0.000000" y="10.666016" fill="rgb(0, 145, 41)" />
+            <rect id="rect" width="24.000000" height="5.333531" x="0.000000" y="5.332031" fill="rgb(225,0,14)" />
+        </g>
+    </symbol>
+    <symbol id="select-icon" viewBox="0 0 7 4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7.000000" height="4.000000" fill="none" customFrame="#000000">
+        <path id="Многоугольник 2" d="M6.53109 3L0.468911 3L3.5 0L6.53109 3Z" fill="rgb(0,44,62)" fill-opacity="0.400000006" fill-rule="evenodd" transform="matrix(1,0,0,-1,0,4)" />
+    </symbol>
+    <symbol id="points-icon" viewBox="0 0 47 11.9863" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" customFrame="#000000">
+        <g id="Сочетание 171">
+            <ellipse id="Эллипс 109" rx="5.875000" ry="5.992682" cx="5.875" cy="5.9926815" fill="rgb(208,215,217)" />
+            <ellipse id="Эллипс 110" rx="5.875000" ry="5.992682" cx="23.5" cy="5.9926815" fill="rgb(208,215,217)" />
+            <ellipse id="Эллипс 111" rx="5.875000" ry="5.992682" cx="41.125" cy="5.9926815" fill="rgb(208,215,217)" />
+        </g>
+    </symbol>
 </svg>
