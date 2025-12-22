@@ -63,9 +63,11 @@ import {INTERNSHIP_CARDS} from "@/entities/internship/index.ts";
     max-width: 280px;
     @include tablet {
       font-size: 2.5rem;
+      max-width: 640px;
     }
     @include desktop {
       font-size: 3rem;
+      max-width: 880px;
     }
   }
   &__info-description {
