@@ -1,0 +1,1 @@
+export {default as InternshipSection} from './ui/InternshipSection.vue'

@@ -1,0 +1,1 @@
+export {default as CompaniesSection} from './ui/CompaniesSection.vue'

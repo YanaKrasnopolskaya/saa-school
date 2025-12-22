@@ -1,0 +1,1 @@
+export {COMPANY_LOGOS} from './const/COMPANY_LOGOS'

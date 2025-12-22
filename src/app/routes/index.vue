@@ -1,13 +1,15 @@
 <script setup lang="ts">
-import HeroSection from "@/widgets/home/hero/ui/HeroSection.vue"
-import ProfessionSection from "@/widgets/home/profession/ui/ProfessionSection.vue";
-import PerspectivesSection from "@/widgets/home/perspectives/ui/PerspectivesSection.vue";
-import CourseProgramSection from "@/widgets/home/courses/ui/CourseProgramSection.vue";
-import CertificateSection from "@/widgets/home/certificate/ui/СertificateSection.vue";
-import LearningProcessSection from "@/widgets/home/learning/ui/LearningProcessSection.vue";
-import CommunitySection from "@/widgets/home/community/ui/CommunitySection.vue";
-import CourseRegistrationSection from "@/widgets/home/course-registration/ui/CourseRegistrationSection.vue";
+import {HeroSection} from "@/widgets/home/hero";
+import {ProfessionSection} from "@/widgets/home/profession";
+import {PerspectivesSection} from "@/widgets/home/perspectives";
+import {CourseProgramSection} from "@/widgets/home/courses";
+import {CertificateSection} from "@/widgets/home/certificate";
+import {LearningProcessSection} from "@/widgets/home/learning";
+import {CommunitySection} from "@/widgets/home/community";
+import {CourseRegistrationSection} from "@/widgets/home/course-registration";
 import { ResumeSection } from "@/widgets/home/resume";
+import {CompaniesSection} from "@/widgets/home/companies";
+import {InternshipSection} from "@/widgets/home/internship";
 </script>
 
 <template>
@@ -21,6 +23,8 @@ import { ResumeSection } from "@/widgets/home/resume";
     <CommunitySection />
     <CourseRegistrationSection />
     <ResumeSection />
+    <CompaniesSection />
+    <InternshipSection />
   </div>
 </template>
 
