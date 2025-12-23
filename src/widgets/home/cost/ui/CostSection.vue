@@ -1,5 +1,6 @@
 <script setup>
-
+import {COST_CARDS, CostCard} from "@/entities/cost/index.ts";
+import {AppButton} from "@/shared/ui/button/index.ts";
 </script>
 
 <template>
@@ -14,8 +15,21 @@
         </div>
         <div class="cost__card-wrapper">
           <svg class="cost__card-icon" width="117" height="156" aria-hidden="true">
-            <use href="@/app/assets/icons/sprite.svg#course-program-star-icon"></use>
+            <use href="@/app/assets/icons/sprite.svg#spiral-left-icon"></use>
           </svg>
+          <CostCard v-for="card in COST_CARDS"
+                    :about="card.about"
+                    :name="card.name"
+                    :description="card.description"
+                    :price="card.price"
+                    :price-desc="card.priceDesc"
+                    :discount="card.discount"
+                    :discounted-price="card.discountedPrice"
+                    :unique="card.unique">
+            <template #cost-button>
+              <AppButton type="button">Записаться</AppButton>
+            </template>
+          </CostCard>
         </div>
       </div>
     </div>
@@ -24,12 +38,18 @@
 
 <style scoped lang="scss">
 .cost-section {
-  margin: 40px 8px;
+  margin: 40px 4px;
 }
 .cost {
   display: flex;
   flex-direction: column;
   gap: 36px;
+  @include tablet {
+    gap: 40px;
+  }
+  @include desktop {
+    gap: 66px;
+  }
   &__info {
     padding: 0 12px;
     display: flex;
@@ -82,18 +102,36 @@
     @include tablet {
       flex-direction: row;
       gap: 40px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      margin-left: -20px;
+      margin-right: -20px;
+      padding-left: 20px;
+      padding-right: 20px;
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
     @include desktop {
       justify-content: center;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
+      overflow-x: visible;
     }
   }
   &__card-icon {
     display: none;
-    @include tablet-desktop {
+    @include tablet {
       display: block;
       position: absolute;
-      bottom: 0;
-      left: 0;
+      bottom: -20px;
+      left: 20px;
+    }
+    @include desktop {
+      bottom: -20px;
+      left: 50px;
     }
   }
 }
