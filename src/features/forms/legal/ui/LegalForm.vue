@@ -4,7 +4,7 @@ import { vMaska } from "maska/vue"
 import {ApplicationForm} from "@/shared/ui/form"
 import {AppInput} from "@/shared/ui/input"
 import {AppSelect} from "@/shared/ui/select"
-import {useField} from "vee-validate"
+import {useField, useForm} from "vee-validate"
 import {sendApplication} from "@/features/send-application";
 import {schemes} from "@/features/validation";
 import type {LegalFormInterface} from "@/features/forms";
@@ -12,6 +12,7 @@ import type {LegalFormInterface} from "@/features/forms";
 const phoneCode = ref('+7');
 const comment = ref('');
 const {individualSchema} = schemes();
+const { onSubmit, isSuccess, isError } = sendApplication();
 
 const initialValues: LegalFormInterface = {
   name: '',
@@ -19,21 +20,32 @@ const initialValues: LegalFormInterface = {
   phone: '',
   email: ''
 }
+
+const { handleSubmit, resetForm } = useForm<LegalFormInterface>({
+  validationSchema: individualSchema,
+  initialValues,
+});
+
 const { value: name, errorMessage: nameError, meta: nameMeta } = useField<string>('name');
 const { value: nameOrg, errorMessage: nameOrgError, meta: nameOrgMeta } = useField<string>('nameOrg');
 const { value: phone, errorMessage: phoneError, meta: phoneMeta } = useField<string>('phone');
 const { value: email, errorMessage: emailError, meta: emailMeta } = useField<string>('email');
 
 
-const { isSuccess, isError, onSubmit } = sendApplication<LegalFormInterface>(
-    individualSchema,
-    initialValues,
-    {comment: comment.value}
-)
+const submit = handleSubmit(async (values) => {
+  await onSubmit({
+    name: name.value,
+    nameOrg: nameOrg.value,
+    phone: phone.value,
+    email: email.value,
+    comment: comment.value,
+  });
+  resetForm();
+});
 </script>
 
 <template>
-  <ApplicationForm @submit="onSubmit" :success="isSuccess" :error="isError">
+  <ApplicationForm @submit="submit" :success="isSuccess" :error="isError">
     <template #input-field>
       <AppInput label="Имя" placeholder="Как вас зовут?" v-model="name" :error="!!nameError && nameMeta.touched"/>
       <AppInput label="Наименование организации" placeholder="Как называется ваша организация" v-model="nameOrg" :error="!!nameOrgError && nameOrgMeta.touched"/>
@@ -46,7 +58,6 @@ const { isSuccess, isError, onSubmit } = sendApplication<LegalFormInterface>(
       <AppInput label="E-mail" placeholder="address@mail.ru" v-model="email" :error="!!emailError && emailMeta.touched"/>
       <AppInput label="Комментарий" placeholder="Что уточнить перед обучением?" v-model="comment" />
     </template>
-
   </ApplicationForm>
 </template>
 

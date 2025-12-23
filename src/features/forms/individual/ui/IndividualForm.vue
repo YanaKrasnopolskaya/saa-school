@@ -5,35 +5,51 @@ import {ApplicationForm} from "@/shared/ui/form"
 import {AppInput} from "@/shared/ui/input"
 import {AppSelect} from "@/shared/ui/select"
 import {AppRadio} from "@/shared/ui/radio"
-import {useField} from "vee-validate"
-import {sendApplication} from "@/features/send-application";
-import type {IndividualFormInterface} from "@/features/forms";
-import {schemes} from "@/features/validation";
+import {useField, useForm} from "vee-validate"
+import {sendApplication} from "@/features/send-application"
+import type {IndividualFormInterface} from "@/features/forms"
+import {schemes} from "@/features/validation"
 
 const phoneCode = ref('+7');
 const checkValue = ref<'call' | 'write'>('write');
 const {individualSchema} = schemes();
+const { onSubmit, isSuccess, isError } = sendApplication();
 
 const initialValues: IndividualFormInterface = {
   name: '',
   phone: '',
   telegram: '',
-}
+};
+
+const { handleSubmit, resetForm } = useForm<IndividualFormInterface>({
+  validationSchema: individualSchema,
+  initialValues,
+});
+
 const { value: name, errorMessage: nameError, meta: nameMeta } = useField<string>('name');
 const { value: phone, errorMessage: phoneError, meta: phoneMeta } = useField<string>('phone');
-const { value: telegram, errorMessage: telegramError, meta: telegramMeta } = useField<string>('telegram', {
+const { value: telegram, errorMessage: telegramError, meta: telegramMeta } = useField<string>('telegram', undefined, {
   validateOnValueUpdate: true
 });
 
-const { isSuccess, isError, onSubmit } = sendApplication<IndividualFormInterface>(
-    individualSchema,
-    initialValues,
-    { checkValue: checkValue.value}
-)
+const submit = handleSubmit(async (values) => {
+  const payload: Record<string, any> = {
+    name: values.name,
+    phone: values.phone,
+  };
+
+  if (values.telegram?.trim()) {
+    payload.telegram = values.telegram;
+    payload.checkValue = checkValue.value;
+  }
+
+  await onSubmit(payload);
+  resetForm();
+});
 </script>
 
 <template>
-  <ApplicationForm @submit="onSubmit" :success="isSuccess" :error="isError">
+  <ApplicationForm @submit="submit" :success="isSuccess" :error="isError">
     <template #input-field>
       <AppInput label="Имя" placeholder="Как вас зовут?" v-model="name" :error="!!nameError && nameMeta.touched"/>
       <AppInput label="Номер телефона" placeholder="(999) 999-99-99" v-model="phone" v-maska="`${phoneCode} (###) ###-##-##`" :error="!!phoneError && phoneMeta.touched">

@@ -1,5 +1,5 @@
 <script setup>
-import IndividualFormInterface from "@/features/forms/individual/ui/IndividualForm.vue";
+import {IndividualForm} from "@/features/forms/index.ts";
 </script>
 
 <template>
