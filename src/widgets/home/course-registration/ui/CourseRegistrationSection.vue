@@ -1,5 +1,5 @@
 <script setup>
-import FormIndividual from "@/features/send-application/individual/ui/FormIndividual.vue";
+import IndividualFormInterface from "@/features/forms/individual/ui/IndividualForm.vue";
 </script>
 
 <template>
@@ -9,7 +9,7 @@ import FormIndividual from "@/features/send-application/individual/ui/FormIndivi
         <div class="course-registration__info">
           <h2 class="course-registration__info-title">Записаться на&nbsp;курс или получить консультацию</h2>
         </div>
-        <FormIndividual />
+        <IndividualForm />
       </div>
     </div>
   </section>

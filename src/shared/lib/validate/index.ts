@@ -1,1 +1,1 @@
-export {nameRule, phoneRule, telegramRule} from './rules/rules'
+export {nameRule, phoneRule, telegramRule, emailRule, nameOrganizationRule} from './rules/rules'
