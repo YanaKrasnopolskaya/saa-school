@@ -54,9 +54,9 @@ const closeMenu = () => {
   top: 0;
   right: calc(-1 * 100%);
   width: 100vw;
-  height: 100vh;
+  min-height: 100svh;
   transition: right 0.4s ease;
-  z-index: 100000;
+  z-index: 1000000000000000;
   background-color: $background-color;
   background-image: url("~~/public/images/cta-bg-2.png"), url("~~/public/images/cta-bg-1.png");
   background-position: left -400px, center bottom -500px;

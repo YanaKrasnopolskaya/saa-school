@@ -2,45 +2,58 @@
 const props = defineProps<{
   modalValue: Boolean,
 }>();
-const emit = defineEmits(['update:modalValue']);
-const isOpen = ref(props.modalValue);
-
-watch(() => props.modalValue, (val) => {
-  isOpen.value = val;
-});
+const emit = defineEmits(['close']);
 
 // закрытие модалки
 const closeModal = () => {
-  isOpen.value = false;
-  emit('update:modalValue', false);
+  emit('close');
 }
 </script>
 
 <template>
   <Transition name="fade-up">
-    <div class="modal-window" v-if="isOpen">
-      <slot name="form"></slot>
-      <button class="modal-window__close-btn" @click="closeModal">
-        <svg class="menu__logo" width="208" height="37" aria-hidden="true">
-          <use href="@/app/assets/icons/sprite.svg#close-menu-icon"></use>
-        </svg>
-      </button>
+    <div class="modal-window" v-if="modalValue">
+      <div class="modal-window__form">
+        <slot name="form"></slot>
+        <button class="modal-window__close-btn" @click="closeModal">
+          <svg class="modal-window__icon" width="40" height="40" aria-hidden="true">
+            <use href="@/app/assets/icons/sprite.svg#close-menu-icon"></use>
+          </svg>
+        </button>
+      </div>
     </div>
   </Transition>
 </template>
 
 <style scoped lang="scss">
-.menu-overlay {
-  position: relative;
+.modal-window {
+  position: fixed;
   width: 100vw;
   z-index: 10000;
-  height: 100vh;
+  min-height: 100svh;
   inset: 0;
   backdrop-filter: blur(2px);
   background: rgba(0, 44, 62, 0.7);
-  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__form {
+    position: relative;
+    width: 615px;
+    margin: 0 32px;
+  }
   &__close-btn {
     position: absolute;
+    top: 0;
+    right: -35px;
+    border: none;
+    background: inherit;
+    @include tablet-desktop {
+      right: -50px;
+    }
+  }
+  &__icon {
+    color: rgba(255, 255, 255, 1);
   }
 }
 .fade-up-enter-active,

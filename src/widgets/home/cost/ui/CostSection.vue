@@ -1,6 +1,10 @@
 <script setup>
 import {COST_CARDS, CostCard} from "@/entities/cost/index.ts";
 import {AppButton} from "@/shared/ui/button/index.ts";
+import {ModalWindow, useModal} from "@/features/modal/index.ts";
+import {IndividualForm} from "@/features/forms/index.ts";
+
+const {isOpenModal, openModal, closeModal} = useModal();
 </script>
 
 <template>
@@ -27,11 +31,16 @@ import {AppButton} from "@/shared/ui/button/index.ts";
                     :discounted-price="card.discountedPrice"
                     :unique="card.unique">
             <template #cost-button>
-              <AppButton type="button">Записаться</AppButton>
+              <AppButton type="button" @click="openModal">Записаться</AppButton>
             </template>
           </CostCard>
         </div>
       </div>
+      <ModalWindow :modal-value="isOpenModal" @close="closeModal">
+        <template #form>
+          <IndividualForm />
+        </template>
+      </ModalWindow>
     </div>
   </section>
 </template>

@@ -2,13 +2,15 @@
 import AppButton from "@/shared/ui/button/ui/AppButton.vue";
 import AppMenu from "@/widgets/menu/ui/AppMenu.vue";
 import AppNavigation from "@/widgets/navigation/ui/AppNavigation.vue";
+import {IndividualForm} from "@/features/forms";
+import {ModalWindow, useModal} from "@/features/modal";
 
-const isOpen = ref<boolean>(false);
+const isOpen = ref(false);
 
 const toggleMenu = () => {
   isOpen.value = !isOpen.value;
 }
-
+const {isOpenModal, openModal, closeModal} = useModal();
 </script>
 
 <template>
@@ -20,21 +22,26 @@ const toggleMenu = () => {
     </NuxtLink>
     <AppNavigation class="header__nav"/>
     <div class="header__cta">
-      <AppButton class="header__cta-button">Записаться</AppButton>
-      <app-button class="header__menu-button" type="button" aria-label="Меню" @click="toggleMenu">
+      <AppButton class="header__cta-button" @click="openModal">Записаться</AppButton>
+      <App-button class="header__menu-button" type="button" aria-label="Меню" @click="toggleMenu">
         <svg class="header__menu-icon" width="36" height="36" aria-hidden="true">
           <use href="@/app/assets/icons/sprite.svg#menu-icon"></use>
         </svg>
-      </app-button>
+      </App-button>
     </div>
   </header>
   <AppMenu class="header__menu" :isOpen="isOpen" @close-menu="isOpen = false"/>
+  <ModalWindow :modal-value="isOpenModal" @close="closeModal">
+    <template #form>
+      <IndividualForm />
+    </template>
+  </ModalWindow>
 </template>
 
 <style scoped lang="scss">
 .header {
   position: fixed;
-  z-index: 1000;
+  z-index: 10000000;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -68,8 +75,10 @@ const toggleMenu = () => {
   }
   &__cta-button {
     display: none;
+    pointer-events: none;
     @include desktop {
       display: block;
+      pointer-events: auto;
     }
   }
   &__menu-button {

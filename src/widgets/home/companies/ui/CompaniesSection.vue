@@ -65,7 +65,7 @@ import {COMPANY_LOGOS} from "@/entities/companies/index.ts";
       gap: 20px 0;
     }
     @include desktop {
-      grid-template-columns: repeat(4, 231px);
+      grid-template-columns: repeat(4, minmax(180px, 1fr));
       gap: 32px;
     }
   }
