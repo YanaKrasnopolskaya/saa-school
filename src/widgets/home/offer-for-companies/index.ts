@@ -1,0 +1,1 @@
+export {default as OfferForCompaniesSection} from './ui/OfferForCompaniesSection.vue'

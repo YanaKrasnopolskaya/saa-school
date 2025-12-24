@@ -12,6 +12,7 @@ import {CompaniesSection} from "@/widgets/home/companies";
 import {InternshipSection} from "@/widgets/home/internship";
 import {CostSection} from "@/widgets/home/cost";
 import {FinanceSupportSection} from "@/widgets/home/finance-support";
+import {OfferForCompaniesSection} from "@/widgets/home/offer-for-companies";
 </script>
 
 <template>
@@ -29,6 +30,7 @@ import {FinanceSupportSection} from "@/widgets/home/finance-support";
     <InternshipSection />
     <CostSection />
     <FinanceSupportSection />
+    <OfferForCompaniesSection />
   </div>
 </template>
 
