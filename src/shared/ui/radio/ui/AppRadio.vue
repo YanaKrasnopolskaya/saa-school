@@ -4,6 +4,7 @@ const props = defineProps({
   label: String,
   name: String,
   value: String,
+  darkTheme: { type: Boolean, default: false }
 })
 
 const emit = defineEmits(["update:modelValue"]);
@@ -15,7 +16,7 @@ const handleRadio = computed({
 </script>
 
 <template>
-  <label class="app-radio">
+  <label class="app-radio" :class="{'app-radio--dark': darkTheme}">
     <span v-if="label" class="app-radio__label">{{ label }}</span>
     <input type="radio" v-model="handleRadio" :name="name" :value="value" class="app-radio__field"/>
     <span class="app-radio__custom-radio"></span>
@@ -50,6 +51,7 @@ const handleRadio = computed({
     border: 2px solid rgba(0, 44, 62, 0.3);
     border-radius: 50%;
     position: relative;
+    background: rgba(230, 248, 252, 1);
     &::after {
       content: "";
       position: absolute;
@@ -69,5 +71,8 @@ const handleRadio = computed({
   &__field:checked + .app-radio__custom-radio {
     border-color: $secondary-color;
   }
+}
+.app-radio--dark .app-radio__label {
+  color: rgba(255, 255, 255, 1);
 }
 </style>

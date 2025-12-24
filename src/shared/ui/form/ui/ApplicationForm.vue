@@ -4,13 +4,14 @@ import AppButton from "../../button/ui/AppButton.vue"
 const consent = ref(true);
 const props = defineProps({
   success: { type: Boolean, default: false },
-  error:   { type: Boolean, default: false }
+  error:   { type: Boolean, default: false },
+  darkTheme:   { type: Boolean, default: false },
 });
 const emit = defineEmits(['submit']);
 </script>
 
 <template>
-  <form class="application-form" @submit.prevent="emit('submit')" novalidate>
+  <form class="application-form" :class="{'application-form--dark' : props.darkTheme}" @submit.prevent="emit('submit')" novalidate>
     <slot name="input-field"></slot>
     <slot name="extra-fields"></slot>
     <div class="application-form__notification" v-if="success || error">
@@ -86,7 +87,6 @@ const emit = defineEmits(['submit']);
     letter-spacing: 0;
     text-align: left;
     padding-left: 36px;
-
   }
   &__consent input {
     position: absolute;
@@ -116,5 +116,11 @@ const emit = defineEmits(['submit']);
   &__checkbox svg {
     opacity: 0;
   }
+}
+.application-form--dark {
+  background: rgba(0, 44, 62, 1);
+}
+.application-form--dark .application-form__consent {
+  color: rgba(255, 255, 255, 1);
 }
 </style>

@@ -32,7 +32,7 @@ const handleSelect = (code) => {
       <svg width="24" height="16">
         <use v-if="selected" :href="`${spriteUrl}#${selected.iconId}`"></use>
       </svg>
-      <svg aria-hidden="true" width="7" height="4">
+      <svg class="select__sel-icon" aria-hidden="true" width="7" height="4">
         <use href="@/app/assets/icons/sprite.svg#select-icon"></use>
       </svg>
     </button>

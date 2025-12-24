@@ -6,6 +6,7 @@ const props = defineProps({
   placeholder: String,
   required: { type: Boolean, default: true },
   error: { type: Boolean, default: false },
+  darkTheme: { type: Boolean, default: false },
 })
 
 const emit = defineEmits(["update:modelValue"]);
@@ -16,7 +17,7 @@ const handleInput = (e) => {
 </script>
 
 <template>
-  <div class="app-input">
+  <div class="app-input" :class="{'app-input--dark': darkTheme}">
     <label v-if="label" class="app-input__label">{{ label }}<span v-if="!required" class="app-input__label-prefix">-&nbsp;не&nbsp;обязательно</span></label>
     <div class="app-input__wrapper" :class="{'app-input__wrapper--error': error }">
       <slot name="prefix"></slot>
@@ -79,5 +80,12 @@ const handleInput = (e) => {
       outline: none;
     }
   }
+}
+.app-input--dark .app-input__label,
+.app-input--dark .app-input__field {
+  color: rgba(255, 255, 255, 1);
+}
+.app-input--dark .app-input__wrapper {
+  border-color: rgba(255, 255, 255, 0.3);
 }
 </style>

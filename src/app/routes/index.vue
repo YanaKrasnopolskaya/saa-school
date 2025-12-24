@@ -33,6 +33,7 @@ import {AboutSection} from "@/widgets/home/about";
     <FinanceSupportSection />
     <OfferForCompaniesSection />
     <AboutSection />
+    <CourseRegistrationSection :dark-theme="true"/>
   </div>
 </template>
 

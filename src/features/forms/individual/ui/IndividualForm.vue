@@ -10,6 +10,10 @@ import {sendApplication} from "@/features/send-application"
 import type {IndividualFormInterface} from "@/features/forms"
 import {schemes} from "@/features/validation"
 
+const props = defineProps<{
+  darkTheme?: boolean
+}>();
+
 const phoneCode = ref('+7');
 const checkValue = ref<'call' | 'write'>('write');
 const {individualSchema} = schemes();
@@ -49,22 +53,22 @@ const submit = handleSubmit(async (values) => {
 </script>
 
 <template>
-  <ApplicationForm @submit="submit" :success="isSuccess" :error="isError">
+  <ApplicationForm @submit="submit" :success="isSuccess" :error="isError" :dark-theme="darkTheme">
     <template #input-field>
-      <AppInput label="Имя" placeholder="Как вас зовут?" v-model="name" :error="!!nameError && nameMeta.touched"/>
-      <AppInput label="Номер телефона" placeholder="(999) 999-99-99" v-model="phone" v-maska="`${phoneCode} (###) ###-##-##`" :error="!!phoneError && phoneMeta.touched">
+      <AppInput label="Имя" placeholder="Как вас зовут?" v-model="name" :error="!!nameError && nameMeta.touched" :dark-theme="darkTheme"/>
+      <AppInput label="Номер телефона" placeholder="(999) 999-99-99" v-model="phone" v-maska="`${phoneCode} (###) ###-##-##`" :error="!!phoneError && phoneMeta.touched" :dark-theme="darkTheme">
         <template #prefix>
           <AppSelect :options="COUNTRIES" v-model="phoneCode"/>
-          <span v-if="!phone?.trim()" class="prefix__code">{{phoneCode}}</span>
+          <span v-if="!phone?.trim()" class="prefix-code" :class="{'prefix-code--dark' : darkTheme}">{{phoneCode}}</span>
         </template>
       </AppInput>
-      <AppInput  label="Ник в Telegram" placeholder="@primer" v-model="telegram" :error="!!telegramError && telegramMeta.touched"/>
+      <AppInput  label="Ник в Telegram" placeholder="@primer" v-model="telegram" :error="!!telegramError && telegramMeta.touched" :dark-theme="darkTheme"/>
     </template>
     <template #extra-fields>
       <Transition name="fade-down">
         <div v-if="telegram?.trim()" class="radio-wrapper animate-in fade-down duration-500 ease-in-out">
-          <AppRadio v-model="checkValue" name="contact" value="call" label="Позвонить мне"/>
-          <AppRadio v-model="checkValue" name="contact" value="write" label="Написать в Telegram"/>
+          <AppRadio v-model="checkValue" name="contact" value="call" label="Позвонить мне" :dark-theme="darkTheme"/>
+          <AppRadio v-model="checkValue" name="contact" value="write" label="Написать в Telegram" :dark-theme="darkTheme"/>
         </div>
       </Transition>
     </template>
@@ -97,5 +101,9 @@ const submit = handleSubmit(async (values) => {
 .fade-down-leave-to {
   opacity: 0;
   transform: translateY(-12px);
+}
+
+.prefix-code--dark {
+  color:  rgba(255, 255, 255, 1);
 }
 </style>

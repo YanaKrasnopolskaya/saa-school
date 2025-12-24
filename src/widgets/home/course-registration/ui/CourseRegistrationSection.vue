@@ -1,15 +1,19 @@
-<script setup>
+<script setup lang="ts">
 import {IndividualForm} from "@/features/forms/index.ts";
+
+const props = defineProps<{
+  darkTheme?: boolean
+}>();
 </script>
 
 <template>
   <section class="section-course-registration">
     <div class="container">
       <div class="course-registration">
-        <div class="course-registration__info">
+        <div class="course-registration__info" :class="{'course-registration__info--dark' : darkTheme}">
           <h2 class="course-registration__info-title">Записаться на&nbsp;курс или получить консультацию</h2>
         </div>
-        <IndividualForm />
+        <IndividualForm :dark-theme="darkTheme"/>
       </div>
     </div>
   </section>
@@ -58,5 +62,11 @@ import {IndividualForm} from "@/features/forms/index.ts";
       line-height: 60px;
     }
   }
+}
+.course-registration__info--dark {
+  background: rgba(0, 44, 62, 1) url("/images/certificate-mobile-bg.png") top right / cover no-repeat;
+}
+.course-registration__info--dark .course-registration__info-title {
+  color: rgba(255, 255, 255, 1);
 }
 </style>
