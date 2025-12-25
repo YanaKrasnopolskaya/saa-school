@@ -31,27 +31,21 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
 </template>
 
 <style scoped lang="scss">
-.about-section {
-  padding: 40px 16px 32px;
-  @include tablet {
-    padding: 40px 8px 36px;
-  }
-  @include desktop {
-    padding: 34px 44px 48px;
-  }
-}
 .about {
+  padding: 40px 20px 32px;
   display: flex;
   flex-direction: column;
   gap: 36px;
   justify-content: center;
   @include tablet {
     gap: 40px;
+    padding: 40px 16px 36px;
   }
   @include desktop {
     gap: 50px;
     flex-direction: row-reverse;
     align-items: center;
+    padding: 34px 44px 48px;
   }
   &__info-wrapper {
     display: flex;
@@ -101,14 +95,14 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
     background: rgb(230, 248, 252) url(/images/certificate-mobile-bg.png) top right / cover no-repeat;
     display: grid;
     grid-template-columns: repeat(2, auto);
-    margin-left: -28px;
-    margin-right: -28px;
     padding: 20px;
     gap: 12px 0;
     justify-content: center;
-    @include desktop {
-      margin-left: -40px;
-      margin-right: -40px;
+    margin-left: -20px;
+    margin-right: -20px;
+    @include tablet {
+      margin-left: -16px;
+      margin-right: -16px;
     }
   }
   &__leaders-icon {

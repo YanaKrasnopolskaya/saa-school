@@ -14,6 +14,8 @@ import {CostSection} from "@/widgets/home/cost";
 import {FinanceSupportSection} from "@/widgets/home/finance-support";
 import {OfferForCompaniesSection} from "@/widgets/home/offer-for-companies";
 import {AboutSection} from "@/widgets/home/about";
+import {QuestionsSection} from "@/widgets/home/questions";
+import {FeedbackSection} from "@/widgets/home/feedback";
 </script>
 
 <template>
@@ -34,6 +36,8 @@ import {AboutSection} from "@/widgets/home/about";
     <OfferForCompaniesSection />
     <AboutSection />
     <CourseRegistrationSection :dark-theme="true"/>
+    <QuestionsSection />
+    <FeedbackSection />
   </div>
 </template>
 
