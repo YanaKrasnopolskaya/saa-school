@@ -87,15 +87,15 @@ const {isOpenModal, openModal, closeModal} = useModal();
     margin: 0 auto;
     @include tablet {
       position: absolute;
-      right: 0;
-      top: 60px;
-      width: 252px;
-      height: 240px;
+      right: 40px;
+      top: 70%;
+      transform: translateY(-70%);
+      width: 281px;
+      height: 282px;
     }
     @include desktop {
       width: 281px;
       height: 282px;
-      top: 20px;
     }
   }
   &__btn {

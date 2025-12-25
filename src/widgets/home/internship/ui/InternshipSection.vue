@@ -20,23 +20,17 @@ import {INTERNSHIP_CARDS} from "@/entities/internship/index.ts";
 </template>
 
 <style scoped lang="scss">
-.internship-section {
-  margin: 40px 4px;
-  @include tablet {
-    margin: 40px 9px 60px;
-  }
-  @include desktop {
-    margin: 70px 60px 66px;
-  }
-}
 .internship {
   display: flex;
   flex-direction: column;
   gap: 36px;
+  padding: 40px 4px;
   @include tablet {
+    padding: 40px 8px;
     gap: 40px;
   }
   @include desktop {
+    padding: 70px 64px;
     gap: 60px;
   }
   &__info {
@@ -44,9 +38,9 @@ import {INTERNSHIP_CARDS} from "@/entities/internship/index.ts";
     flex-direction: column;
     justify-content: flex-start;
     gap: 20px;
-    padding: 0 19px 0 12px;
+    padding-left: 12px;
     @include tablet{
-      padding: 0;
+      padding-left: 0;
       max-width: 600px;
     }
     @include desktop {

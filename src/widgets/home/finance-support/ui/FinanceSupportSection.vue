@@ -16,23 +16,17 @@ import {FINANCE_SUPPORT_CARDS, FinanceSupportCard} from "@/entities/finance-supp
 </template>
 
 <style scoped lang="scss">
-.finance-support-section {
-  padding: 36px 4px;
-  @include tablet {
-    padding: 40px 8px;
-  }
-  @include desktop {
-    padding: 64px;
-  }
-}
 .finance-support {
   display: flex;
   flex-direction: column;
   gap: 36px;
+  padding: 40px 4px;
   @include tablet {
     gap: 68px;
+    padding: 40px 8px;
   }
   @include desktop {
+    padding: 70px 64px;
     gap: 66px;
   }
   &__title {
@@ -44,6 +38,7 @@ import {FINANCE_SUPPORT_CARDS, FinanceSupportCard} from "@/entities/finance-supp
     padding-left: 12px;
     @include tablet {
       font-size: 2.5rem;
+      padding-left: 0;
     }
     @include desktop {
       font-size: 3rem;
@@ -56,10 +51,12 @@ import {FINANCE_SUPPORT_CARDS, FinanceSupportCard} from "@/entities/finance-supp
     justify-content: center;
     align-items: center;
     @include tablet {
+      justify-content: space-between;
       flex-direction: row;
       gap: 12px;
     }
     @include desktop {
+
       gap: 14px;
     }
   }

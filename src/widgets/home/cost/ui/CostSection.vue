@@ -46,26 +46,28 @@ const {isOpenModal, openModal, closeModal} = useModal();
 </template>
 
 <style scoped lang="scss">
-.cost-section {
-  margin: 40px 4px;
-}
 .cost {
   display: flex;
   flex-direction: column;
   gap: 36px;
+  padding: 40px 4px;
+  box-sizing: border-box;
   @include tablet {
     gap: 40px;
+    padding: 40px 8px;
   }
   @include desktop {
+    padding: 90px 64px;
     gap: 66px;
   }
   &__info {
-    padding: 0 12px;
+    padding-left: 12px;
     display: flex;
     flex-direction: column;
     gap: 20px;
     width: fit-content;
     @include desktop {
+      padding-left: 0;
       gap: 26px;
     }
   }
@@ -108,6 +110,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
     gap: 12px;
     justify-content: flex-start;
     position: relative;
+    box-sizing: border-box;
     @include tablet {
       flex-direction: row;
       gap: 40px;
@@ -140,7 +143,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
     }
     @include desktop {
       bottom: -20px;
-      left: 50px;
+      left: 0;
     }
   }
 }

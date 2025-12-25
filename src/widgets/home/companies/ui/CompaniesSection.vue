@@ -27,19 +27,27 @@ import {COMPANY_LOGOS} from "@/entities/companies/index.ts";
   display: flex;
   flex-direction: column;
   gap: 36px;
-  margin-top: 40px;
+  padding: 40px 4px;
+  @include tablet {
+    padding: 40px 0 0;
+  }
+  @include desktop {
+    padding: 70px 64px;
+  }
   &__title {
     font-size: 2rem;
     font-weight: 700;
     line-height: 40px;
     letter-spacing: 0;
     text-align: left;
-    padding: 0 35px 0 20px;
+    padding: 0 35px 0 12px;
     @include tablet {
+      padding: 0 0 0 20px;
       font-size: 2.5rem;
       line-height: 50px;
     }
     @include desktop {
+      padding: 0;
       font-size: 3rem;
       line-height: 60px;
     }
@@ -48,11 +56,17 @@ import {COMPANY_LOGOS} from "@/entities/companies/index.ts";
 .companies {
   background: rgb(230, 248, 252) url(/images/certificate-mobile-bg.png) top right / cover no-repeat;
   padding: 11px 13px 9px;
+  margin-left: -16px;
+  margin-right: -16px;
   @include tablet {
+    margin-left: 0;
+    margin-right: 0;
     padding: 22px 20px;
   }
   @include desktop {
     padding: 29px 65px;
+    margin-left: -64px;
+    margin-right: -64px;
   }
   &__list {
     display: grid;

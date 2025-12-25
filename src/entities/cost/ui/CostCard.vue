@@ -40,7 +40,7 @@ const props = defineProps<CostCardInterface>();
     gap: 40px;
   }
   @include desktop {
-    flex: 0 0 496px;
+    flex: 1;
   }
   &__info {
     display: flex;

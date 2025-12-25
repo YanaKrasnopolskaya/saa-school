@@ -28,6 +28,7 @@ const props = defineProps<FinanceSupportCardInterface>();
   justify-content: flex-start;
   position: relative;
   align-self: stretch;
+  flex: 1;
   @include tablet {
     padding: 83px 30px 30px 30px;
   }
