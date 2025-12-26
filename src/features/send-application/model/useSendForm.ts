@@ -1,5 +1,5 @@
 // отправка заявки
-export async function sendForm<T extends Record<string, any>>(data: T) {
+export async function useSendForm<T extends Record<string, any>>(data: T) {
     try {
         console.log('Отправка формы', data);
         await new Promise(resolve => setTimeout(resolve, 800)); // типа ждём отправку

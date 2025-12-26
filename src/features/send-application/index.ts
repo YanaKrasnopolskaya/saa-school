@@ -1,2 +1,2 @@
-export {sendForm} from './model/sendForm'
-export {sendApplication} from './model/sendApplication'
+export {useSendForm} from './model/useSendForm'
+export {useSendApplication} from './model/useSendApplication'

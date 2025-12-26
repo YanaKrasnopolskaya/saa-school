@@ -87,5 +87,8 @@ const handleInput = (e) => {
 }
 .app-input--dark .app-input__wrapper {
   border-color: rgba(255, 255, 255, 0.3);
+  &.app-input__wrapper--error {
+    border-color: $error-color;
+  }
 }
 </style>

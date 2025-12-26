@@ -41,6 +41,8 @@ import {ADVANTAGES} from "@/entities/advantage/model/const/ADVANTAGES";
   padding-top: 89px;
   display: flex;
   flex-direction: column;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
   @include tablet {
     background-image: url("/images/hero-tablet-bg.png");
   }

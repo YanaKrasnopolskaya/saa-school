@@ -5,14 +5,14 @@ import {ApplicationForm} from "@/shared/ui/form"
 import {AppInput} from "@/shared/ui/input"
 import {AppSelect} from "@/shared/ui/select"
 import {useField, useForm} from "vee-validate"
-import {sendApplication} from "@/features/send-application";
+import {useSendApplication} from "@/features/send-application";
 import {schemes} from "@/features/validation";
 import type {LegalFormInterface} from "@/features/forms";
 
 const phoneCode = ref('+7');
 const comment = ref('');
 const {LegalSchema} = schemes();
-const { onSubmit, isSuccess, isError } = sendApplication();
+const { onSubmit, isSuccess, isError } = useSendApplication();
 
 const initialValues: LegalFormInterface = {
   name: '',

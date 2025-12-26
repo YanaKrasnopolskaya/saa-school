@@ -1,6 +1,6 @@
-import {sendForm} from "@/features/send-application";
+import {useSendForm} from "@/features/send-application";
 
-export function sendApplication() {
+export function useSendApplication() {
     const isSuccess = ref(false);
     const isError = ref(false);
 
@@ -10,7 +10,7 @@ export function sendApplication() {
         isError.value = false
 
         try {
-            await sendForm(values);
+            await useSendForm(values);
             isSuccess.value = true;
         } catch (error: any) {
             console.error(error);

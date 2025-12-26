@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {IndividualForm} from "@/features/forms/index.ts";
+import {IndividualForm} from "@/features/forms";
 
 const props = defineProps<{
   darkTheme?: boolean

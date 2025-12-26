@@ -6,7 +6,7 @@ import {AppInput} from "@/shared/ui/input"
 import {AppSelect} from "@/shared/ui/select"
 import {AppRadio} from "@/shared/ui/radio"
 import {useField, useForm} from "vee-validate"
-import {sendApplication} from "@/features/send-application"
+import {useSendApplication} from "@/features/send-application"
 import type {IndividualFormInterface} from "@/features/forms"
 import {schemes} from "@/features/validation"
 
@@ -17,7 +17,7 @@ const props = defineProps<{
 const phoneCode = ref('+7');
 const checkValue = ref<'call' | 'write'>('write');
 const {individualSchema} = schemes();
-const { onSubmit, isSuccess, isError } = sendApplication();
+const { onSubmit, isSuccess, isError } = useSendApplication();
 
 const initialValues: IndividualFormInterface = {
   name: '',
