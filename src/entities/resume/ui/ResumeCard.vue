@@ -59,8 +59,9 @@ const props = defineProps<Resume>();
   flex-direction: column;
   justify-content: flex-start;
   position: relative;
+  padding: 0 6px;
   &__points {
-    padding: 16px 12px;
+    padding: 12px 14px;
     border-bottom: 1px solid rgba(210, 218, 221, 1);
   }
   &__points svg {
@@ -75,7 +76,7 @@ const props = defineProps<Resume>();
 .resume {
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 20px;
   @include tablet-desktop {
     flex-direction: row;
   }
@@ -198,6 +199,9 @@ const props = defineProps<Resume>();
     flex-direction: column;
     gap: 16px;
     justify-content: flex-start;
+    @include tablet {
+      padding: 0 20px 0 0;
+    }
     @include desktop {
       gap: 26px;
       width: 90%;
@@ -207,6 +211,9 @@ const props = defineProps<Resume>();
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
+    @include tablet {
+      gap: 12px;
+    }
   }
   &__stack-item {
     padding: 8px 18px;
@@ -224,11 +231,11 @@ const props = defineProps<Resume>();
   }
   &__icon {
     position: absolute;
-    bottom: -30px;
-    right: -30px;
+    bottom: -40px;
+    right: -6px;
     @include tablet {
-      bottom: -80px;
-      right: -30px;
+      bottom: -90px;
+      right: -10px;
       width: 144px;
       height: 144px;
     }

@@ -5,7 +5,7 @@ import {LearningCard} from "@/entities/learning/index.ts";
 </script>
 
 <template>
-  <section class="section-learning">
+  <section class="learning-section">
     <div class="container">
       <div class="learning">
         <div class="learning__title-wrapper">
@@ -50,13 +50,16 @@ import {LearningCard} from "@/entities/learning/index.ts";
 </template>
 
 <style scoped lang="scss">
-.section-learning {
-  padding: 40px 17px;
+.learning-section {
+  padding: 54px 20px 32px;
+  @include tablet {
+    padding: 24px 20px 80px;
+  }
 }
 .learning {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   @include tablet {
     gap: 28px;
   }

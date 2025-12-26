@@ -3,7 +3,7 @@
 
 <template>
   <nav class="nav">
-      <a href="#program" class="nav__link" aria-disabled="true">Программа курса</a>
+      <a href="#courses" class="nav__link" aria-disabled="true">Программа курса</a>
     <a href="#cost" class="nav__link">Стоимость</a>
     <a href="#contacts" class="nav__link nav__link--hide-mobile">Контакты</a>
   </nav>

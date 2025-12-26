@@ -33,7 +33,7 @@ const props = defineProps<CostCardInterface>();
   background: $background-color;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
   @include tablet {
     flex: 0 0 70%;
     padding: 40px;
@@ -45,7 +45,7 @@ const props = defineProps<CostCardInterface>();
   &__info {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 4px;
   }
   &__info-title {
     font-size: 1.5rem;

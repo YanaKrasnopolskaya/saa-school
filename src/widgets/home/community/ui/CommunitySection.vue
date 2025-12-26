@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <section class="section-community">
+  <section class="community-section">
     <div class="container">
       <div class="community">
         <div class="community__info">
@@ -43,14 +43,16 @@
 </template>
 
 <style scoped lang="scss">
-.section-community {
+.community-section {
   background-image: url("/images/community-mobile-bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 40px 0;
+  padding-bottom: 6px;
   @include tablet {
     background-image: url("/images/community-tablet-bg.png");
+    margin: 36px 0 0;
+    padding: 20px 0 0;
   }
   @include desktop {
     background-image: url("/images/community-desktop-bg.png");

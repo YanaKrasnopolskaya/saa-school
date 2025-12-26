@@ -35,6 +35,10 @@ const props = defineProps({
   border: 2px solid rgba(240, 243, 244, 1);
   border-radius: 12px;
   position: relative;
+  padding-bottom: 14px;
+  @include tablet {
+    padding-bottom: 0;
+  }
   @include tablet-desktop {
     flex-direction: row;
   }
@@ -44,10 +48,10 @@ const props = defineProps({
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 20px;
+    gap: 24px;
     padding: 20px;
     @include tablet {
-      padding: 30px 30px 44px 30px;
+      padding: 30px 30px 10px 30px;
       gap: 24px;
     }
     @include desktop {
@@ -69,21 +73,21 @@ const props = defineProps({
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
   }
   &__list li {
     position: relative;
-    padding-left: 27px;
+    padding: 0 40px 0 27px;
   }
   &__list li::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 6px;
     left: 0;
     border-radius: 50%;
     background: $secondary-color;
-    width: 21px;
-    height: 21px;
+    width: 14px;
+    height: 14px;
   }
   &__list-item {
     font-size: 1rem;
@@ -106,6 +110,11 @@ const props = defineProps({
     justify-content: center;
     align-items: center;
     background: radial-gradient(50.00% 50.00% at 50% 50%, rgba(244, 249, 250, 1), rgba(244, 249, 250, 0.51) 100%);
+    @include tablet {
+      padding: 0;
+      width: 320px;
+      height: 274px;
+    }
   }
 }
 .learning-card--reverse {

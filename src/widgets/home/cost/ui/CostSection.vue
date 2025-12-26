@@ -8,7 +8,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
 </script>
 
 <template>
-  <section class="cost-section">
+  <section class="cost-section" id="cost">
     <div class="container">
       <div class="cost">
         <div class="cost__info">
@@ -50,7 +50,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
   display: flex;
   flex-direction: column;
   gap: 36px;
-  padding: 40px 4px;
+  padding: 68px 6px;
   box-sizing: border-box;
   @include tablet {
     gap: 40px;

@@ -53,6 +53,9 @@ const emit = defineEmits(['submit']);
   align-items: flex-start;
   gap: 40px;
   padding: 20px;
+  @include tablet {
+    padding: 40px;
+  }
   &__notification {
     width: 100%;
     display: flex;
@@ -78,6 +81,11 @@ const emit = defineEmits(['submit']);
   }
   &__button {
     width: 100%;
+    margin-top: -18px;
+    margin-bottom: -18px;
+    @include tablet {
+      margin-top: 24px;
+    }
   }
   &__consent {
     position: relative;

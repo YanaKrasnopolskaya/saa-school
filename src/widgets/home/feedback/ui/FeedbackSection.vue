@@ -31,8 +31,8 @@
   justify-content: center;
   align-items: center;
   @include tablet {
-    margin: 40px 20px;
-    padding: 22px;
+    margin: 66px 20px;
+    padding: 10px 22px 8px;
     flex-direction: row-reverse;
   }
   @include desktop {
@@ -56,7 +56,7 @@
     flex-direction: column;
     gap: 36px;
     @include tablet {
-      gap: 28px;
+      gap: 20px;
     }
     @include desktop {
       gap: 40px;

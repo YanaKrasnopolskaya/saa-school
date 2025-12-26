@@ -33,7 +33,7 @@ const props = defineProps({
   background: $background-color;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 28px;
   align-items: flex-start;
   padding: 16px 12px;
   @include desktop {
@@ -76,6 +76,11 @@ const props = defineProps({
     display: flex;
     flex-direction: column;
     gap: 16px;
+    padding: 0 12px 0 0;
+    @include tablet {
+      gap: 20px;
+      margin-bottom: 18px;
+    }
   }
   &__title {
     font-size: 1.25rem;
@@ -96,7 +101,7 @@ const props = defineProps({
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 18px;
   }
 }
 </style>

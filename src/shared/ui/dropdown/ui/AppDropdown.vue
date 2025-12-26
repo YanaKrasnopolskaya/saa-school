@@ -45,6 +45,9 @@ const toggle = () => {
     line-height: 112%;
     letter-spacing: 0;
     text-align: left;
+    @include tablet {
+      gap: 80px;
+    }
   }
   &__icon {
     flex-shrink: 0;
@@ -57,6 +60,9 @@ const toggle = () => {
   }
   &__content {
     padding: 20px 0 0 30px;
+    @include tablet {
+      max-width: 480px;
+    }
   }
 }
 

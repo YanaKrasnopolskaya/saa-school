@@ -27,7 +27,7 @@ const props = defineProps<Card>()
   gap: 12px;
   padding: 6px 10px 24px 24px;
   @include tablet {
-    padding-bottom: 26px;
+    padding-bottom: 0;
     flex: 0 0 45%;
   }
   @include desktop {
@@ -37,6 +37,8 @@ const props = defineProps<Card>()
   &__img {
     align-self: flex-end;
     margin-bottom: 17px;
+    width: 125px;
+    height: 123px;
     @include tablet {
       margin-bottom: 55px;
     }

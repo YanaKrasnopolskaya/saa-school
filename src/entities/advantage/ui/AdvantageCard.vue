@@ -30,11 +30,15 @@ const props = defineProps({
   gap: 10px;
   justify-content: center;
   align-items: center;
-  padding: 10px 10px 24px;
+  padding: 10px 10px 16px;
+  margin: 0 4px;
+  @include tablet {
+    padding-bottom: 30px;
+  }
   &__img {
     overflow: hidden;
     width: 120px;
-    height: 79px;
+    height: 78px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,9 +68,11 @@ const props = defineProps({
     line-height: 18px;
     letter-spacing: 0;
     text-align: center;
+    white-space: nowrap;
     @include tablet {
       font-size: 1.25em;
       line-height: 25px;
+      white-space: wrap;
     }
     @include desktop {
       font-size: 1.5em;

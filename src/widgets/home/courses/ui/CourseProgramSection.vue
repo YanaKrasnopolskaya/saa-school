@@ -5,7 +5,7 @@ import {COURSE_PROGRAM} from "@/entities/course-program/const/COURSE_PROGRAM";
 </script>
 
 <template>
-  <section class="section-course">
+  <section class="course-section" id="courses">
     <div class="container">
       <div class="course">
         <div class="course__title-wrapper">
@@ -38,11 +38,15 @@ import {COURSE_PROGRAM} from "@/entities/course-program/const/COURSE_PROGRAM";
 
 <style scoped lang="scss">
 .course {
-  padding: 40px 0;
+  padding: 40px 8px 40px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   justify-content: flex-start;
+  @include tablet {
+    padding: 20px 30px 40px;
+    gap: 30px;
+  }
   &__title-wrapper {
     display: flex;
     align-items: flex-start;
@@ -58,6 +62,7 @@ import {COURSE_PROGRAM} from "@/entities/course-program/const/COURSE_PROGRAM";
     padding-left: 12px;
     max-width: 192px;
     @include tablet {
+      padding-left: 0;
       max-width: 460px;
       font-size: 2.5rem;
     }

@@ -39,7 +39,7 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
   justify-content: center;
   @include tablet {
     gap: 40px;
-    padding: 40px 16px 36px;
+    padding: 36px 16px 0;
   }
   @include desktop {
     gap: 50px;

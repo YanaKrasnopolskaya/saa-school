@@ -24,13 +24,14 @@ import {ResumeCard, RESUMES} from "@/entities/resume/index.ts";
 </template>
 
 <style scoped lang="scss">
-.resume-section {
-  padding: 36px 0;
-}
 .resume-container {
   display: flex;
   flex-direction: column;
   gap: 22px;
+  @include tablet {
+    gap: 48px;
+    margin-bottom: 40px;
+  }
   &__title {
     width: 70%;
     position: relative;

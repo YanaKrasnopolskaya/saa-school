@@ -3,7 +3,7 @@
 
 <template>
   <div class="container">
-    <footer class="footer">
+    <footer class="footer" id="contacts">
       <div class="footer__contact">
         <a class="footer__contact-link" href="tel:88003008352">8 800 300 83 52</a>
         <a class="footer__contact-link" href="mailto:info@sadaschool.ru">info@sadaschool.ru</a>
@@ -41,7 +41,7 @@
   @include tablet {
     flex-direction: row;
     justify-content: space-between;
-    padding: 40px 40px 96px;
+    padding: 16px 44px 96px;
   }
   @include desktop {
     padding: 64px 64px 171px;
@@ -77,14 +77,16 @@
     height: 52px;
   }
   &__documents {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 20px;
-    position: relative;
     @include tablet {
+      display: flex;
+      justify-content: space-between;
       gap: 16px;
     }
     @include desktop {
+      display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 20px 48px;
       justify-content: space-between;
@@ -105,6 +107,9 @@
     line-height: 20px;
     letter-spacing: 0;
     text-align: left;
+    @include tablet {
+      width: 313px;
+    }
   }
   &__documents-link--super {
     color: rgba(3, 165, 201, 1);

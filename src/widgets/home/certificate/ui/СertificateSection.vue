@@ -3,7 +3,7 @@ import AppButton from "@/shared/ui/button/ui/AppButton.vue";
 </script>
 
 <template>
-  <section class="section-certificate">
+  <section class="certificate-section">
     <div class="container">
       <div class="certificate">
         <div class="certificate__content">
@@ -24,21 +24,23 @@ import AppButton from "@/shared/ui/button/ui/AppButton.vue";
 </template>
 
 <style scoped lang="scss">
-.section-certificate {
-  margin: 36px 0;
+.certificate-section {
+  margin: 38px 0;
   background-image: url("/images/certificate-mobile-bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   @include tablet {
     background-image: url("/images/certificate-tablet-bg.png");
+    margin: 70px 8px;
+    padding-bottom: 60px;
   }
   @include desktop {
     background-image: url("/images/certificate-desktop-bg.png");
   }
 }
 .certificate {
-  padding: 20px;
+  padding: 22px 14px 20px 18px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -87,6 +89,7 @@ import AppButton from "@/shared/ui/button/ui/AppButton.vue";
     line-height: 23px;
     letter-spacing: 0;
     text-align: left;
+    padding-right: 14px;
     @include tablet-desktop {
       max-width: 444px;
       font-size: 1.5rem;
@@ -96,7 +99,7 @@ import AppButton from "@/shared/ui/button/ui/AppButton.vue";
   }
   &__link {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   &__link-button {
     width: 100%;
@@ -118,11 +121,11 @@ import AppButton from "@/shared/ui/button/ui/AppButton.vue";
   }
   &__extra-image {
     position: absolute;
-    bottom: -50px;
-    right: -20px;
+    bottom: -28px;
+    right: -16px;
     z-index: 2;
     width: 131px;
-    height: 134px;
+    height: 138px;
     @include tablet-desktop {
       width: 147px;
       height: 151px;
@@ -133,8 +136,8 @@ import AppButton from "@/shared/ui/button/ui/AppButton.vue";
   &__success-text {
     position: absolute;
     z-index: 1;
-    bottom: 10px;
-    left: 40%;
+    bottom: 20px;
+    left: 36%;
     display: block;
     border-radius: 10.66px;
     box-shadow: 0 7.1px 17.761272430419922px 0 rgba(0, 44, 62, 0.12);
@@ -150,9 +153,9 @@ import AppButton from "@/shared/ui/button/ui/AppButton.vue";
     @include tablet-desktop {
       font-size: 1.25rem;
       width: 252px;
-      bottom: -30px;
+      bottom: -48px;
       left: auto;
-      right: 20px;
+      right: 10px;
       transform: rotate(-5.59deg);
     }
   }

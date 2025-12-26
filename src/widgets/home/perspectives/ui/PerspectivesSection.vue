@@ -4,7 +4,7 @@ import {GRADES} from "@/entities/grade/const/GRADES";
 </script>
 
 <template>
-  <section class="section-perspectives">
+  <section class="perspectives-section">
     <div class="container">
       <div class="perspectives">
         <div class="perspectives__content">
@@ -47,13 +47,14 @@ import {GRADES} from "@/entities/grade/const/GRADES";
 <style scoped lang="scss">
 .perspectives {
   width: 100%;
-  padding: 36px 24px;
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
   @include tablet {
-    padding: 40px 24px;
+    padding: 60px 24px;
+    gap: 40px;
   }
   @include desktop {
     padding: 70px 64px;
@@ -69,7 +70,7 @@ import {GRADES} from "@/entities/grade/const/GRADES";
     @include tablet {
       justify-content: space-between;
       flex-direction: row;
-
+      align-items: flex-end;
     }
     @include desktop {
       flex-direction: row;
@@ -83,6 +84,7 @@ import {GRADES} from "@/entities/grade/const/GRADES";
     letter-spacing: 0;
     text-align: left;
     @include tablet {
+      width: 294px;
       font-size: 2.5rem;
     }
     @include desktop {
@@ -95,7 +97,7 @@ import {GRADES} from "@/entities/grade/const/GRADES";
     justify-content: space-between;
     align-items: flex-end;
     @include tablet {
-      width: auto;
+      width: 359px;
     }
   }
   &__hh {
@@ -185,7 +187,7 @@ import {GRADES} from "@/entities/grade/const/GRADES";
     }
   }
   &__card {
-    flex: 0 0 60%; // ширина карточки относительно контейнера
+    flex: 0 0 58%; // ширина карточки относительно контейнера
     scroll-snap-align: start; // каждая карточка прилипает к началу
     @include tablet-desktop {
       flex: auto;

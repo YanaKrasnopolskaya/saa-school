@@ -24,9 +24,9 @@ import {INTERNSHIP_CARDS} from "@/entities/internship/index.ts";
   display: flex;
   flex-direction: column;
   gap: 36px;
-  padding: 40px 4px;
+  padding: 20px 4px;
   @include tablet {
-    padding: 40px 8px;
+    padding: 40px 16px;
     gap: 40px;
   }
   @include desktop {
@@ -89,6 +89,7 @@ import {INTERNSHIP_CARDS} from "@/entities/internship/index.ts";
       margin-right: -20px;
       padding-left: 20px;
       padding-right: 20px;
+      gap: 24px;
     }
     &::-webkit-scrollbar {
       display: none;

@@ -101,11 +101,11 @@ const props = defineProps({
   }
   &__price-middle,
   &__price-senior {
-    padding: 19px 25px;
+    padding: 12px 25px;
   }
   &__price-middle {
     @include tablet{
-      padding: 29px 30px 19px;
+      padding: 20px 30px 19px;
     }
     @include desktop{
       padding: 17px 67px;
@@ -113,7 +113,7 @@ const props = defineProps({
   }
   &__price-senior {
     @include tablet{
-      padding: 28px 18px 20px;
+      padding: 20px 18px 20px;
     }
     @include desktop{
       padding: 17px 53px;

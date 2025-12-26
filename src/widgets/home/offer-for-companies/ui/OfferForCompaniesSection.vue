@@ -37,7 +37,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
   align-items: flex-start;
   padding: 36px 16px;
   @include tablet {
-    padding: 40px 16px;
+    padding: 48px 16px;
     gap: 40px;
   }
   @include desktop {

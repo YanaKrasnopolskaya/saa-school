@@ -33,7 +33,7 @@ const handleInput = (e) => {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 11px;
+  gap: 20px;
   &__label {
     font-size: 1.25rem;
     font-weight: 700;

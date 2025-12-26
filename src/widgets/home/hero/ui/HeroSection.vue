@@ -4,11 +4,11 @@ import {ADVANTAGES} from "@/entities/advantage/model/const/ADVANTAGES";
 </script>
 
 <template>
-  <section class="section-hero">
+  <section class="hero-section">
     <div class="container">
       <div class="hero-content">
         <h1 class="hero-content__title">Стань тестировщиком <span class="hero-content__title-accent">за&nbsp;3&nbsp;месяца</span></h1>
-        <p class="hero-content__description">Путь в&nbsp;профессию с&nbsp;аккредитованной IT-компанией</p>
+        <p class="hero-content__description">Путь в&nbsp;профессию с&nbsp;аккредитованной IT-компанией</p>
       </div>
       <div class="hero-features">
         <AdvantageCard v-for="(card, index) in ADVANTAGES"
@@ -33,7 +33,7 @@ import {ADVANTAGES} from "@/entities/advantage/model/const/ADVANTAGES";
 </template>
 
 <style scoped lang="scss">
-.section-hero {
+.hero-section {
   background-image: url("/images/hero-mobile-bg.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -41,13 +41,15 @@ import {ADVANTAGES} from "@/entities/advantage/model/const/ADVANTAGES";
   padding-top: 89px;
   display: flex;
   flex-direction: column;
-  border-top-left-radius: 32px;
-  border-top-right-radius: 32px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   @include tablet {
     background-image: url("/images/hero-tablet-bg.png");
   }
   @include desktop {
     background-image: url("/images/hero-desktop-bg.png");
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
   }
   @include tablet-desktop {
     padding-top: 140px;
@@ -91,7 +93,7 @@ import {ADVANTAGES} from "@/entities/advantage/model/const/ADVANTAGES";
     letter-spacing: 0;
     text-align: center;
     border-radius: 39px;
-    padding: 6px 12px;
+    padding: 6px 20px;
     margin-bottom: 36px;
     max-width: 286px;
     background: rgba(230, 248, 252, 0.08);
@@ -102,7 +104,7 @@ import {ADVANTAGES} from "@/entities/advantage/model/const/ADVANTAGES";
       padding: 12px 24px;
       font-size: 1.25em;
       line-height: 25px;
-      max-width: 558px;
+      max-width: 560px;
       margin-bottom: 46px;
     }
   }
@@ -113,9 +115,9 @@ import {ADVANTAGES} from "@/entities/advantage/model/const/ADVANTAGES";
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 9px;
-  margin-bottom: -28px;
+  margin-bottom: -36px;
   @include tablet {
-    margin-bottom: -64px;
+    margin-bottom: -30px;
   }
   @include desktop {
     margin-bottom: -94px;

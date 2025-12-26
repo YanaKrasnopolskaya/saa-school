@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <section class="section-profession">
+  <section class="profession-section">
     <div class="container">
       <div class="profession">
         <div class="profession__content">
@@ -36,12 +36,12 @@
   align-items: center;
   justify-content: center;
   gap: 24px;
-  margin-top: 64px;
+  margin-top: 72px;
   padding: 40px 0;
   @include tablet {
     gap: 40px;
     margin-top: 104px;
-    padding: 44px 0;
+    padding: 50px 0;
   }
   @include desktop {
     flex-direction: row;
@@ -52,6 +52,10 @@
   }
   &__content {
     padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
     @include desktop {
       padding: 33px 0 0;
     }
@@ -82,7 +86,7 @@
     max-height: 37px;
     background: $secondary-color;
     color: rgba(255, 255, 255, 1);
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     transform: rotate(-4.32deg);
     border-radius: 40px;
     position: absolute;
@@ -90,8 +94,8 @@
     right: 0;
     width: 193px;
     @include tablet {
-      bottom: -45px;
-      right: -37px;
+      bottom: -35px;
+      right: 16px;
       font-size: 1rem;
       max-width: 215px;
       max-height: 42px;
@@ -161,7 +165,7 @@
     @include tablet {
       font-size: 1.25rem;
       max-width: 220px;
-      top: -20px;
+      top: -8px;
       left: -60px;
     }
   }
@@ -170,19 +174,22 @@
     border-radius: 9.46px;
     background: $primary-background-color;
     transform: rotate(-7.35deg);
+    left: -14px;
+    top: -6px;
     @include tablet {
       max-width: 250px;
-      top: -70px;
-      left: -25px;
+      top: -60px;
+      left: -15px;
     }
   }
   &__star-icon {
     position: absolute;
-    top: -25px;
+    top: -28px;
     left: -25px;
     z-index: 10;
+    transform: rotate(10deg);
     @include tablet-desktop {
-      left: -50px;
+      left: -30px;
       width: 80px;
       height: 80px;
     }
@@ -190,10 +197,11 @@
   &__spiral-icon {
     position: absolute;
     bottom: -25px;
-    right: -60px;
+    right: -68px;
     z-index: 10;
     @include tablet {
-      right: -85px;
+      right: -110px;
+      bottom: -35px;
     }
     @include tablet-desktop {
       width: 130px;

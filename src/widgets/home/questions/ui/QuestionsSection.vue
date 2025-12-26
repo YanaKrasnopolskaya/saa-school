@@ -28,7 +28,7 @@ import {QUESTIONS} from "@/entities/questions";
 .questions-section {
   padding: 40px 4px;
   @include tablet {
-    padding: 43px 60px;
+    padding: 10px 60px 60px;
   }
 }
 .questions {

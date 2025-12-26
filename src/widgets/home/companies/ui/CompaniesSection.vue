@@ -4,32 +4,30 @@ import {COMPANY_LOGOS} from "@/entities/companies/index.ts";
 </script>
 
 <template>
-  <section class="section-companies">
+  <section class="companies-section">
     <div class="container">
-      <div class="companies-wrapper">
-        <h2 class="companies-wrapper__title">Наши студенты работают в&nbsp;ведущих компаниях</h2>
-        <div class="companies">
-          <ul class="companies__list">
-            <li v-for="logo in COMPANY_LOGOS" class="companies__list-item">
-              <svg class="companies__icon" aria-hidden="true">
-                <use :href="`${spriteUrl}#${logo}`"></use>
-              </svg>
-            </li>
-          </ul>
-        </div>
+      <div class="companies">
+        <h2 class="companies__title">Наши студенты работают в&nbsp;ведущих компаниях</h2>
+        <ul class="companies__list">
+          <li v-for="logo in COMPANY_LOGOS" class="companies__list-item">
+            <svg class="companies__icon" aria-hidden="true">
+              <use :href="`${spriteUrl}#${logo}`"></use>
+            </svg>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
 </template>
 
 <style scoped lang="scss">
-.companies-wrapper {
+.companies {
   display: flex;
   flex-direction: column;
   gap: 36px;
-  padding: 40px 4px;
+  padding: 80px 8px 10px;
   @include tablet {
-    padding: 40px 0 0;
+    padding: 54px 0 12px;
   }
   @include desktop {
     padding: 70px 64px;
@@ -52,53 +50,37 @@ import {COMPANY_LOGOS} from "@/entities/companies/index.ts";
       line-height: 60px;
     }
   }
-}
-.companies {
-  background: rgb(230, 248, 252) url(/images/certificate-mobile-bg.png) top right / cover no-repeat;
-  padding: 11px 13px 9px;
-  margin-left: -16px;
-  margin-right: -16px;
-  @include tablet {
-    margin-left: 0;
-    margin-right: 0;
-    padding: 22px 20px;
-  }
-  @include desktop {
-    padding: 29px 65px;
-    margin-left: -64px;
-    margin-right: -64px;
-  }
   &__list {
+    background: rgb(230, 248, 252) url(/images/certificate-mobile-bg.png) top right / cover no-repeat;
+    padding: 20px 7px;
+    margin-left: -16px;
+    margin-right: -16px;
     display: grid;
-    grid-template-columns: repeat(2, 160px);
-    gap: 12px 0;
-    align-items: center;
+    grid-template-columns: repeat(2, auto);
+    gap: 6px 16px;
     justify-content: center;
     @include tablet {
-      grid-template-columns: repeat(4, 170px);
-      gap: 20px 0;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 22px 20px;
+      grid-template-columns: repeat(4, auto);
+      gap: 20px 14px;
     }
     @include desktop {
-      grid-template-columns: repeat(4, minmax(180px, 1fr));
+      padding: 29px 65px;
+      margin-left: -64px;
+      margin-right: -64px;
       gap: 32px;
     }
   }
-  &__list-item {
-    width: 100%;
-    padding: 3px 16px;
-    @include tablet {
-      padding: 6px 15px;
-    }
-    @include desktop {
-      padding: 12px 30px;
-    }
-  }
   &__icon {
-    width: 100%;
-    height: auto;
+    width: 140px;
+    height: 56px;
     display: block;
-    object-fit: contain;
-    max-height: 60px;
+    @include tablet-desktop {
+      width: 154px;
+      height: 60px;
+    }
   }
 }
 </style>

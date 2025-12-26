@@ -23,7 +23,7 @@ import {FINANCE_SUPPORT_CARDS, FinanceSupportCard} from "@/entities/finance-supp
   padding: 40px 4px;
   @include tablet {
     gap: 68px;
-    padding: 40px 8px;
+    padding: 60px 16px 40px;
   }
   @include desktop {
     padding: 70px 64px;
