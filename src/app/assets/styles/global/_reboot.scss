@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 *,
 *::after,
@@ -18,10 +19,12 @@ body {
   min-height: 100vh;
   font-family: $ff-mulish;
   font-size: 16px;
-  border-radius: 32px;
   box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.16);
   background: $background-color;
   color: $text-color;
+  @include desktop {
+    border-radius: 32px;
+  }
 }
 
 main {

@@ -1,29 +1,21 @@
-<script setup>
-const props = defineProps({
-  title: String,
-  description: Array,
-  image: {
-    src: String,
-    alt: String,
-    width: Number,
-    height: Number,
-  },
-  reversed: Boolean,
-})
+<script setup lang="ts">
+import type {Learning} from "@/entities/learning/model/types/Learning";
+
+const props = defineProps<Learning>()
 </script>
 
 <template>
   <div class="learning-card" :class="{'learning-card--reverse': reversed}">
     <div class="learning-card__content">
-      <h3 class="learning-card__title">{{props.title}}</h3>
+      <h3 class="learning-card__title" :class="{'learning-card__title--big': bigTitle}">{{title}}</h3>
       <slot name="top"></slot>
       <ul class="learning-card__list">
-        <li class="learning-card__list-item" v-for="item in props.description" v-html="item"></li>
+        <li class="learning-card__list-item" v-for="item in description" v-html="item"></li>
       </ul>
       <slot name="bottom"></slot>
     </div>
-    <div class="learning-card__img">
-      <img :src="props.image.src" :alt="props.image.alt" :width="props.image.width" :height="props.image.height"/>
+    <div class="learning-card__img-wrapper">
+      <img class="learning-card__img" :src="image.src" :alt="image.alt" />
     </div>
   </div>
 </template>
@@ -35,23 +27,21 @@ const props = defineProps({
   border: 2px solid rgba(240, 243, 244, 1);
   border-radius: 12px;
   position: relative;
-  padding-bottom: 14px;
-  @include tablet {
-    padding-bottom: 0;
-  }
+  overflow: hidden;
   @include tablet-desktop {
     flex-direction: row;
+    padding-bottom: 0;
   }
   &__content {
     display: flex;
-    flex: 1 1 50%;
+    flex: 1;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 24px;
-    padding: 20px;
+    gap: 20px;
+    padding: 20px 20px 12px 20px;
     @include tablet {
-      padding: 30px 30px 10px 30px;
+      padding: 30px 30px 20px;
       gap: 24px;
     }
     @include desktop {
@@ -74,10 +64,9 @@ const props = defineProps({
     display: flex;
     flex-direction: column;
     gap: 14px;
-  }
-  &__list li {
-    position: relative;
-    padding: 0 40px 0 27px;
+    @include tablet {
+      gap: 10px;
+    }
   }
   &__list li::before {
     content: "";
@@ -90,36 +79,52 @@ const props = defineProps({
     height: 14px;
   }
   &__list-item {
+    position: relative;
+    padding-left: 27px;
     font-size: 1rem;
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0;
     text-align: left;
     @include tablet {
-      font-size: 1.25rem;
+      font-size: 1.125rem;
       line-height: 23px;
+      padding: 0 16px 0 27px;
     }
     @include desktop {
       line-height: 25px;
     }
   }
-  &__img {
-    padding: 20px 0;
+  &__img-wrapper {
+    height: 300px;
     display: flex;
-    flex: 1 1 50%;
     justify-content: center;
     align-items: center;
     background: radial-gradient(50.00% 50.00% at 50% 50%, rgba(244, 249, 250, 1), rgba(244, 249, 250, 0.51) 100%);
     @include tablet {
-      padding: 0;
-      width: 320px;
-      height: 274px;
+      width: 351px;
+      padding: 20px 30px;
     }
+    @include desktop {
+      width: 513px;
+      padding: 20px 30px;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    display: block;
+    object-fit: contain;
   }
 }
 .learning-card--reverse {
   @include tablet-desktop {
     flex-direction: row-reverse;
   }
+}
+.learning-card__title--big {
+  font-size: 24px;
+  line-height: 30px;
 }
 </style>

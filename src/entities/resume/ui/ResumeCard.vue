@@ -63,6 +63,9 @@ const props = defineProps<Resume>();
   &__points {
     padding: 12px 14px;
     border-bottom: 1px solid rgba(210, 218, 221, 1);
+    @include desktop {
+      padding: 20px 14px;
+    }
   }
   &__points svg {
     width: 47px;
@@ -91,6 +94,7 @@ const props = defineProps<Resume>();
     }
     @include desktop {
       padding: 32px 56px 108px;
+      gap: 14px;
     }
   }
   &__about-wrapper {
@@ -120,6 +124,9 @@ const props = defineProps<Resume>();
     @include tablet-desktop {
       align-items: center;
     }
+    @include desktop {
+      gap: 16px;
+    }
   }
   &__label {
     font-size: 1rem;
@@ -142,10 +149,10 @@ const props = defineProps<Resume>();
     gap: 20px;
     padding: 0 12px 20px;
     @include tablet {
-      padding: 17px 12px 15px 15px;
+      padding: 8px 12px 24px 0;
     }
     @include desktop {
-      padding: 32px 59px;
+      padding: 30px 59px 32px 40px;
       gap: 36px;
     }
   }
@@ -156,6 +163,9 @@ const props = defineProps<Resume>();
     @include tablet-desktop {
       flex-direction: column;
       align-items: center;
+    }
+    @include desktop {
+      gap: 16px;
     }
   }
   &__text {
@@ -178,6 +188,9 @@ const props = defineProps<Resume>();
       flex-direction: column;
       align-items: center;
     }
+    @include desktop {
+      gap: 16px;
+    }
   }
   &__experience-wrapper {
     display: flex;
@@ -193,18 +206,26 @@ const props = defineProps<Resume>();
     gap: 12px;
     list-style-type: disc;
     padding-left: 24px;
+    @include tablet {
+      padding-left: 14px;
+    }
+    @include desktop {
+      padding-left: 28px;
+      gap: 20px;
+    }
+  }
+  &__experience-item {
+    @include desktop {
+      font-size: 1.25rem;
+    }
   }
   &__stack-wrapper {
     display: flex;
     flex-direction: column;
     gap: 16px;
     justify-content: flex-start;
-    @include tablet {
-      padding: 0 20px 0 0;
-    }
     @include desktop {
       gap: 26px;
-      width: 90%;
     }
   }
   &__stack-list {

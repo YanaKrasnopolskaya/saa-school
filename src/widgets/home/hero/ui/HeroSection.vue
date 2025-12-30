@@ -60,6 +60,12 @@ import {ADVANTAGES} from "@/entities/advantage/model/const/ADVANTAGES";
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @include tablet {
+    gap: 10px;
+  }
+  @include desktop {
+    gap: 0;
+  }
   &__title {
     font-size: 2.25em;
     font-weight: 700;
@@ -70,7 +76,7 @@ import {ADVANTAGES} from "@/entities/advantage/model/const/ADVANTAGES";
     color: rgba(255, 255, 255, 1);
     margin-bottom: 20px;
     @include tablet {
-      font-size: 4.25em;
+      font-size: 4em;
     }
     @include desktop {
       font-size: 4.875em;
@@ -107,6 +113,9 @@ import {ADVANTAGES} from "@/entities/advantage/model/const/ADVANTAGES";
       max-width: 560px;
       margin-bottom: 46px;
     }
+    @include desktop {
+      width: 600px;
+    }
   }
 }
 .hero-features {
@@ -117,10 +126,14 @@ import {ADVANTAGES} from "@/entities/advantage/model/const/ADVANTAGES";
   gap: 9px;
   margin-bottom: -36px;
   @include tablet {
-    margin-bottom: -30px;
+    margin-bottom: -64px;
+    gap: 16px 9px;
   }
   @include desktop {
-    margin-bottom: -94px;
+    margin-bottom: -98px;
+    margin-left: -20px;
+    margin-right: -20px;
+    gap: 10px 0;
   }
   @include tablet-desktop {
     grid-template-columns: repeat(6, 1fr);

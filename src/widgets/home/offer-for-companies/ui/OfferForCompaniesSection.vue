@@ -29,21 +29,24 @@ const {isOpenModal, openModal, closeModal} = useModal();
 </template>
 
 <style scoped lang="scss">
+.offer-for-companies-section {
+  padding: 44px 16px;
+  @include desktop {
+    padding: 100px 68px;
+  }
+}
 .offer {
   position: relative;
   display: grid;
   grid-template-rows: repeat(3, auto);
-  gap: 36px;
+  gap: 28px;
   align-items: flex-start;
-  padding: 36px 16px;
   @include tablet {
-    padding: 48px 16px;
     gap: 40px;
   }
   @include desktop {
-    padding: 66px 52px 66px 62px;
     grid-template-rows: repeat(2, auto);
-    gap: 36px;
+    gap: 30px;
   }
   &__title {
     font-size: 2rem;
@@ -99,8 +102,10 @@ const {isOpenModal, openModal, closeModal} = useModal();
     }
   }
   &__btn {
+    margin-top: 16px;
     @include tablet {
       width: 240px;
+      margin-top: 0;
     }
   }
 }

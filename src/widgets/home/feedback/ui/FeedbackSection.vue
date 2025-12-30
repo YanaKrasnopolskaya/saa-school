@@ -20,9 +20,17 @@
 </template>
 
 <style scoped lang="scss">
+.feedback-section {
+  padding: 40px 8px;
+  @include tablet {
+    padding: 40px 16px;
+  }
+  @include tablet {
+    padding: 68px 80px;
+  }
+}
 .feedback {
   padding: 24px 20px 36px;
-  margin: 40px 4px;
   border-radius: 12px;
   background: rgba(230, 248, 252, 1);
   display: flex;
@@ -31,23 +39,21 @@
   justify-content: center;
   align-items: center;
   @include tablet {
-    margin: 66px 20px;
-    padding: 10px 22px 8px;
+    padding: 8px 24px 8px;
     flex-direction: row-reverse;
   }
   @include desktop {
-    margin: 70px 64px;
-    padding: 0 40px;
+
   }
   &__img {
-    width: 134px;
-    height: 162px;
+    width: 200px;
+    height: 140px;
     @include tablet {
       width: 182px;
       height: 205px;
     }
     @include desktop {
-      width: 254px;
+      width: 360px;
       height: 304px;
     }
   }
@@ -56,7 +62,7 @@
     flex-direction: column;
     gap: 36px;
     @include tablet {
-      gap: 20px;
+      gap: 30px;
     }
     @include desktop {
       gap: 40px;

@@ -5,9 +5,9 @@ import {ResumeCard, RESUMES} from "@/entities/resume/index.ts";
 <template>
   <section class="resume-section">
     <div class="container">
-      <div class="resume-container">
-        <h2 class="resume-container__title">Твоё резюме после курса
-          <svg class="resume-container__title-icon" width="40" height="40" aria-hidden="true">
+      <div class="resume">
+        <h2 class="resume__title">Твоё резюме после курса
+          <svg class="resume__title-icon" width="40" height="40" aria-hidden="true">
             <use href="@/app/assets/icons/sprite.svg#course-program-star-icon"></use>
           </svg>
         </h2>
@@ -24,13 +24,21 @@ import {ResumeCard, RESUMES} from "@/entities/resume/index.ts";
 </template>
 
 <style scoped lang="scss">
-.resume-container {
+.resume-section {
+  padding: 34px 0 40px;
+  @include tablet {
+    padding: 44px 16px 40px;
+  }
+  @include desktop {
+    padding: 98px 68px 40px;
+  }
+}
+.resume {
   display: flex;
   flex-direction: column;
   gap: 22px;
   @include tablet {
     gap: 48px;
-    margin-bottom: 40px;
   }
   &__title {
     width: 70%;
@@ -46,6 +54,7 @@ import {ResumeCard, RESUMES} from "@/entities/resume/index.ts";
       display: inline-block;
       font-size: 2.5rem;
       line-height: 50px;
+      padding: 0;
     }
     @include desktop {
       font-size: 3rem;

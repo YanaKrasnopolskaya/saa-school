@@ -16,17 +16,23 @@ import {FINANCE_SUPPORT_CARDS, FinanceSupportCard} from "@/entities/finance-supp
 </template>
 
 <style scoped lang="scss">
+.finance-support-section {
+  padding: 110px 8px 40px;
+  @include tablet {
+    padding: 78px 16px 40px;
+  }
+  @include desktop {
+    padding: 50px 68px 40px;
+  }
+}
 .finance-support {
   display: flex;
   flex-direction: column;
   gap: 36px;
-  padding: 40px 4px;
   @include tablet {
     gap: 68px;
-    padding: 60px 16px 40px;
   }
   @include desktop {
-    padding: 70px 64px;
     gap: 66px;
   }
   &__title {

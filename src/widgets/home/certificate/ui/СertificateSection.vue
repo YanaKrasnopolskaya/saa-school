@@ -25,34 +25,35 @@ import AppButton from "@/shared/ui/button/ui/AppButton.vue";
 
 <style scoped lang="scss">
 .certificate-section {
-  margin: 38px 0;
   background-image: url("/images/certificate-mobile-bg.png");
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 40px 0 40px;
   @include tablet {
     background-image: url("/images/certificate-tablet-bg.png");
-    margin: 70px 8px;
-    padding-bottom: 60px;
+    padding: 24px 8px 16px;
   }
   @include desktop {
     background-image: url("/images/certificate-desktop-bg.png");
+    padding: 60px 50px 40px;
+    margin: 68px 0 40px;
   }
 }
 .certificate {
-  padding: 22px 14px 20px 18px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   justify-content: flex-start;
+  padding: 20px 14px 30px 20px;
   @include tablet {
     gap: 40px;
   }
   @include desktop {
-    padding: 80px 20px 20px 20px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 6px;
   }
   &__content {
     display: flex;
@@ -111,7 +112,7 @@ import AppButton from "@/shared/ui/button/ui/AppButton.vue";
     width: 100%;
     position: relative;
     @include tablet {
-      max-width: 330px;
+      max-width: 360px;
       margin: 0 auto;
     }
   }
@@ -126,11 +127,16 @@ import AppButton from "@/shared/ui/button/ui/AppButton.vue";
     z-index: 2;
     width: 131px;
     height: 138px;
-    @include tablet-desktop {
+    @include tablet {
+      right: -90px;
+      bottom: 40px;
+      width: 160px;
+    }
+    @include desktop {
       width: 147px;
       height: 151px;
-      bottom: 0;
-      right: -80px;
+      bottom: 50px;
+      right: -50px;
     }
   }
   &__success-text {
@@ -150,13 +156,17 @@ import AppButton from "@/shared/ui/button/ui/AppButton.vue";
     padding: 18px 22px;
     width: 210px;
     transform: translateX(-40%) rotate(-5.59deg);
-    @include tablet-desktop {
+    @include tablet {
       font-size: 1.25rem;
       width: 252px;
-      bottom: -48px;
+      bottom: 0;
       left: auto;
-      right: 10px;
+      right: 20px;
       transform: rotate(-5.59deg);
+    }
+    @include desktop {
+      left: auto;
+      right: 50px;
     }
   }
 }

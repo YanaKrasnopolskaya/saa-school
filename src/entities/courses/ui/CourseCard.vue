@@ -53,6 +53,9 @@ const props = defineProps({
     }
     @include desktop {
       flex-direction: column-reverse;
+      max-width: 420px;
+      gap: 12px;
+      padding: 0 10px;
     }
   }
   &__term-wrapper {
@@ -96,6 +99,9 @@ const props = defineProps({
     letter-spacing: 0;
     text-align: left;
     max-width: 490px;
+    @include desktop {
+      max-width: 384px;
+    }
   }
   &__dropdown {
     width: 100%;

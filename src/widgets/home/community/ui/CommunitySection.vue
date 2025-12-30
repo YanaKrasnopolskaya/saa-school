@@ -48,14 +48,14 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 6px;
+  margin: 52px 0 40px;
   @include tablet {
     background-image: url("/images/community-tablet-bg.png");
-    margin: 36px 0 0;
-    padding: 20px 0 0;
+    margin: 14px 0 40px;
   }
   @include desktop {
     background-image: url("/images/community-desktop-bg.png");
+    margin: 80px 0 20px;
   }
 }
 .community {
@@ -63,9 +63,12 @@
   flex-direction: column;
   gap: 30px;
   padding: 20px 20px 0;
+  @include tablet {
+    padding: 40px 16px 0;
+  }
   @include desktop {
-    padding: 66px 0 0;
     gap: 43px;
+    padding: 70px 48px 0;
   }
   &__info {
     display: flex;
@@ -143,7 +146,7 @@
     gap: 12px;
     padding: 190px 35px 20px;
     @include tablet {
-      padding: 116px 60px 50px;
+      padding: 116px 60px 0;
     }
     @include desktop {
       padding: 103px 100px 50px;
@@ -163,11 +166,14 @@
     @include tablet {
       max-width: 294px;
       font-size: 1.125rem;
+      top: 20px;
     }
     @include desktop {
       max-width: 320px;
       font-size: 1.25rem;
       transform: rotate(1.65deg);
+      left: -50px;
+      top: 10px;
     }
   }
   &__advantages-item--center {
@@ -181,6 +187,8 @@
     @include desktop {
       transform: rotate(0);
       margin-top: 0;
+      left: 30px;
+      top: -60px;
     }
   }
   &__advantages-item--bottom {
@@ -192,7 +200,8 @@
     }
     @include desktop {
       transform: rotate(-5.27deg);
-      top: -70px;
+      left: -40px;
+      top: -100px;
       margin-left: 10px;
     }
   }

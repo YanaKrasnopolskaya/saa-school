@@ -21,10 +21,12 @@ const props = defineProps<{
 
 <style scoped lang="scss">
 .course-registration-section {
-  padding: 80px 6px;
+  padding: 46px 6px;
   @include tablet {
-    margin: 0 52px 20px;
-    padding: 60px 6px;
+    padding: 68px 60px 40px;
+  }
+  @include desktop {
+    padding: 50px 10px 40px 20px;
   }
 }
 .course-registration {
@@ -33,7 +35,7 @@ const props = defineProps<{
   gap: 12px;
   @include desktop {
     flex-direction: row;
-    margin-left: -38px;
+    margin-left: -58px;
     margin-right: -38px;
   }
   &__info {

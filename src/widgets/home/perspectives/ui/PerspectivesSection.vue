@@ -45,19 +45,26 @@ import {GRADES} from "@/entities/grade/const/GRADES";
 </template>
 
 <style scoped lang="scss">
+.perspectives-section {
+  padding: 44px 20px;
+  @include tablet {
+    padding: 58px 24px 40px;
+  }
+  @include desktop {
+    padding: 55px 70px 80px;
+  }
+}
 .perspectives {
   width: 100%;
-  padding: 40px 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
   @include tablet {
-    padding: 60px 24px;
     gap: 40px;
   }
   @include desktop {
-    padding: 70px 64px;
+    gap: 60px;
   }
   &__content {
     display: flex;
@@ -89,6 +96,7 @@ import {GRADES} from "@/entities/grade/const/GRADES";
     }
     @include desktop {
       font-size: 3rem;
+      white-space: nowrap;
     }
   }
   &__hh-wrapper {
@@ -98,6 +106,9 @@ import {GRADES} from "@/entities/grade/const/GRADES";
     align-items: flex-end;
     @include tablet {
       width: 359px;
+    }
+    @include desktop {
+      width: 399px;
     }
   }
   &__hh {
@@ -110,10 +121,13 @@ import {GRADES} from "@/entities/grade/const/GRADES";
     border-radius: 12px;
     box-shadow: 0 4px 16px 0 rgba(0, 44, 62, 0.08);
     background: $background-color;
-    @include tablet-desktop {
+    @include tablet {
       flex-direction: row;
       padding: 16px 24px;
       align-items: center;
+    }
+    @include desktop {
+      top: 28px;
     }
   }
   &__hh-num {
@@ -184,6 +198,9 @@ import {GRADES} from "@/entities/grade/const/GRADES";
       overflow: visible;
       justify-content: center;
       height: 255px;
+    }
+    @include desktop {
+      padding-top: 16px;
     }
   }
   &__card {

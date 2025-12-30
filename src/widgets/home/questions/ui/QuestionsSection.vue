@@ -26,16 +26,22 @@ import {QUESTIONS} from "@/entities/questions";
 
 <style scoped lang="scss">
 .questions-section {
-  padding: 40px 4px;
+  padding: 36px 8px 0;
   @include tablet {
-    padding: 10px 60px 60px;
+    padding: 44px 56px 90px;
+  }
+  @include tablet {
+    padding: 110px 28px 90px;
   }
 }
 .questions {
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 40px;
   justify-content: flex-start;
+  @include desktop {
+    gap: 70px;
+  }
   &__title {
     font-size: 2rem;
     font-weight: 700;
@@ -76,10 +82,14 @@ import {QUESTIONS} from "@/entities/questions";
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    gap: 12px;
+    gap: 20px;
     align-items: flex-start;
+    @include tablet {
+      gap: 12px;
+    }
     @include desktop {
       flex-direction: row;
+      gap: 12px 24px;
     }
   }
   &__list {

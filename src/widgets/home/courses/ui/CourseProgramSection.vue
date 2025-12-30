@@ -14,38 +14,51 @@ import {COURSE_PROGRAM} from "@/entities/course-program/const/COURSE_PROGRAM";
             <use href="@/app/assets/icons/sprite.svg#course-program-star-icon"></use>
           </svg>
         </div>
-        <CourseCard
-            v-for="(program, index) in COURSE_PROGRAM"
-            :key="index"
-            :term="program.term"
-            :name="program.title"
-            :description="program.description"
-        >
-          <template #dropdown>
-            <AppDropdown v-for="item in program.items" :label="item.name">
-              <template #dropdown-text>
-                <ul class="course__dropdown-items">
-                  <li class="course__dropdown-item" v-for="text in item.texts">{{text}}</li>
-                </ul>
-              </template>
-            </AppDropdown>
-          </template>
-        </CourseCard>
+        <div class="course__card-wrapper">
+          <CourseCard
+              v-for="(program, index) in COURSE_PROGRAM"
+              :key="index"
+              :term="program.term"
+              :name="program.title"
+              :description="program.description"
+          >
+            <template #dropdown>
+              <AppDropdown v-for="item in program.items" :label="item.name">
+                <template #dropdown-text>
+                  <ul class="course__dropdown-items">
+                    <li class="course__dropdown-item" v-for="text in item.texts">{{text}}</li>
+                  </ul>
+                </template>
+              </AppDropdown>
+            </template>
+          </CourseCard>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <style scoped lang="scss">
+.course-section {
+  padding: 34px 0 40px;
+  @include tablet {
+    padding: 34px 10px 40px;
+  }
+  @include desktop {
+    padding: 68px 50px 40px;
+  }
+}
 .course {
-  padding: 40px 8px 40px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   justify-content: flex-start;
+  padding: 6px 20px ;
   @include tablet {
-    padding: 20px 30px 40px;
     gap: 30px;
+  }
+  @include desktop {
+    gap: 60px;
   }
   &__title-wrapper {
     display: flex;
@@ -74,6 +87,19 @@ import {COURSE_PROGRAM} from "@/entities/course-program/const/COURSE_PROGRAM";
     @include tablet-desktop {
       width: 60px;
       height: 60px;
+    }
+  }
+  &__card-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include tablet {
+      gap: 30px;
+    }
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
     }
   }
   &__dropdown-items {

@@ -35,6 +35,9 @@ const props = defineProps({
   @include tablet {
     padding-bottom: 30px;
   }
+  @include desktop {
+    padding: 30px 50px;
+  }
   &__img {
     overflow: hidden;
     width: 120px;
@@ -93,8 +96,21 @@ const props = defineProps({
 }
 .benefits-card--horizontal {
   flex-direction: row;
+  @include tablet {
+    flex-direction: column;
+  }
+  @include desktop {
+    flex-direction: row;
+  }
+
 }
 .benefits-card--reversed {
   flex-direction: row-reverse;
+  @include tablet {
+    flex-direction: column;
+  }
+  @include desktop {
+    flex-direction: row-reverse;
+  }
 }
 </style>

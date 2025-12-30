@@ -41,10 +41,10 @@
   @include tablet {
     flex-direction: row;
     justify-content: space-between;
-    padding: 16px 44px 96px;
+    padding: 40px 44px 96px;
   }
   @include desktop {
-    padding: 64px 64px 171px;
+    padding: 48px 50px 171px;
   }
   &__contact {
     display: flex;

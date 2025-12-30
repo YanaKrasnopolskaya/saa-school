@@ -14,36 +14,39 @@ import {LearningCard} from "@/entities/learning/index.ts";
             <use href="@/app/assets/icons/sprite.svg#course-program-star-icon"></use>
           </svg>
         </div>
-        <LearningCard v-for="(card, index) in LEARNING_PROGRAM"
-                      :key="index"
-                      :title="card.title"
-                      :description="card.description"
-                      :image="card.image"
-                      :reversed="card.reversed"
-        >
-          <template #top v-if="card.classModifiers && card.classModifiers === ClassModifier.Time">
-            <div class="learning__additional-top">
-              <span class="learning__additional-top-text">6-8 часов <b>в неделю</b></span>
-              <span class="learning__additional-top-svg">
+        <div class="learning__card-wrapper">
+          <LearningCard v-for="(card, index) in LEARNING_PROGRAM"
+                        :key="index"
+                        :title="card.title"
+                        :description="card.description"
+                        :image="card.image"
+                        :reversed="card.reversed"
+                        :big-title="card.bigTitle"
+          >
+            <template #top v-if="card.classModifiers && card.classModifiers === ClassModifier.Time">
+              <div class="learning__additional-top">
+                <span class="learning__additional-top-text">6-8 часов <b>в неделю</b></span>
+                <span class="learning__additional-top-svg">
                 это реально не много
                 <svg class="learning__additional-top-icon" width="15" height="16" aria-hidden="true">
                   <use href="@/app/assets/icons/sprite.svg#blot-icon"></use>
                 </svg>
               </span>
-            </div>
-          </template>
-          <template #bottom v-else-if="card.classModifiers && card.classModifiers === ClassModifier.Course">
-            <div class="learning__additional-bottom">
+              </div>
+            </template>
+            <template #bottom v-else-if="card.classModifiers && card.classModifiers === ClassModifier.Course">
+              <div class="learning__additional-bottom">
               <span class="learning__additional-bottom-svg">
                 Доступ ко всем материалам останется у тебя и после курса
                 <svg width="47" height="45" aria-hidden="true">
                   <use href="@/app/assets/icons/sprite.svg#paperclip-icon"></use>
                 </svg>
               </span>
-              <span class="learning__additional-bottom-text">на 6 месяцев</span>
-            </div>
-          </template>
-        </LearningCard>
+                <span class="learning__additional-bottom-text">на 6 месяцев</span>
+              </div>
+            </template>
+          </LearningCard>
+        </div>
       </div>
     </div>
   </section>
@@ -51,20 +54,21 @@ import {LearningCard} from "@/entities/learning/index.ts";
 
 <style scoped lang="scss">
 .learning-section {
-  padding: 54px 20px 32px;
-  @include tablet {
-    padding: 24px 20px 80px;
+  padding: 44px 16px 60px;
+  @include desktop {
+    padding: 108px 68px 60px;
   }
 }
 .learning {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  position: relative;
   @include tablet {
-    gap: 28px;
+    gap: 20px;
   }
   @include desktop {
-    gap: 61px;
+    gap: 48px;
   }
   &__title-wrapper {
     display: inline-flex;
@@ -72,7 +76,10 @@ import {LearningCard} from "@/entities/learning/index.ts";
     align-items: flex-start;
     justify-content: flex-start;
     gap: 11px;
-    @include tablet-desktop {
+    @include tablet {
+      gap: 30px;
+    }
+    @include desktop {
       gap: 16px;
     }
   }
@@ -102,11 +109,24 @@ import {LearningCard} from "@/entities/learning/index.ts";
       height: 68px;
     }
   }
+  &__card-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    @include tablet {
+      gap: 20px;
+    }
+  }
   &__additional-top {
     display: flex;
     flex-direction: column;
     margin-bottom: 8px;
     margin-top: -8px;
+    padding-bottom: 10px;
+    @include tablet {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
     @include desktop {
       flex-direction: row;
       gap: 8px;
@@ -134,7 +154,11 @@ import {LearningCard} from "@/entities/learning/index.ts";
     border-radius: 300px;
     background: rgba(230, 248, 252, 1);
     transform: rotate(-2.47deg);
-    margin-left: 36px;
+    bottom: -10px;
+    @include tablet {
+      bottom: 0;
+      left: 30px;
+    }
     @include desktop {
       margin-left: 0;
     }
@@ -154,12 +178,13 @@ import {LearningCard} from "@/entities/learning/index.ts";
     margin-bottom: 20px;
     @include tablet {
       position: absolute;
-      bottom: -50px;
+      bottom: -16px;
     }
     @include desktop {
       position: relative;
       align-self: flex-end;
-      bottom: 0;
+      bottom: 30px;
+      margin-bottom: 0;
     }
   }
   &__additional-bottom-svg {
@@ -170,7 +195,8 @@ import {LearningCard} from "@/entities/learning/index.ts";
     background: rgba(230, 248, 252, 1);
     transform: rotate(2.43deg);
     padding: 12px 16px;
-    max-width: 285px;
+    width: 285px;
+    top: -6px;
   }
   &__additional-bottom-svg svg {
     position: absolute;

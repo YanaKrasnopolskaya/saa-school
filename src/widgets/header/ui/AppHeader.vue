@@ -49,7 +49,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
   transform: translateX(-50%);
   width: 100%;
   height: 48px;
-  max-width: calc(100% - 40px);
+  max-width: calc(100% - 30px);
   padding: 12px;
   display: flex;
   align-items: center;
@@ -59,6 +59,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
   @include tablet {
     top: 20px;
     height: 64px;
+    max-width: calc(100% - 36px);
   }
   @include desktop {
     top: 15px;
@@ -79,6 +80,9 @@ const {isOpenModal, openModal, closeModal} = useModal();
   &__cta {
     display: flex;
     align-items: center;
+    @include tablet {
+      padding-right: 10px;
+    }
   }
   &__btn {
     display: none;

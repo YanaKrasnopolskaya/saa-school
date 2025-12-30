@@ -19,7 +19,7 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
               </svg>
             </li>
           </ul>
-          <p class="about__text">Поэтому в&nbsp;нашем курсе мы&nbsp;собрали только&nbsp;то, что действительно пригодится на&nbsp;практике. Теория не&nbsp;ради голочки, разберем реальные кейсы, и&nbsp;будем ипользовать актуальные инструмены.</p>
+          <p class="about__text">Поэтому в нашем курсе мы собрали только то, что действительно пригодится на практике. Теория не ради голочки, разберем реальные кейсы, и будем ипользовать актуальные инструмены.</p>
         </div>
         <div class="about__img-wrapper">
           <img class="about__img" src="/images/teammates.png" alt="Команда">
@@ -31,28 +31,35 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
 </template>
 
 <style scoped lang="scss">
+.about-section {
+  padding: 36px 16px 32px;
+  @include tablet {
+    padding-bottom: 20px;
+  }
+  @include desktop {
+    padding: 8px 68px 46px;
+  }
+}
 .about {
-  padding: 40px 20px 32px;
   display: flex;
   flex-direction: column;
   gap: 36px;
   justify-content: center;
   @include tablet {
     gap: 40px;
-    padding: 36px 16px 0;
   }
   @include desktop {
     gap: 50px;
     flex-direction: row-reverse;
     align-items: center;
-    padding: 34px 44px 48px;
   }
   &__info-wrapper {
     display: flex;
     flex-direction: column;
     gap: 24px;
     @include desktop {
-      padding: 0 40px;
+      padding-left: 40px;
+      gap: 16px;
     }
   }
   &__info {
@@ -86,9 +93,11 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
     line-height: 23px;
     letter-spacing: 0;
     text-align: left;
+    max-width: 315px;
     @include tablet {
       font-size: 1.25rem;
       line-height: 25px;
+      max-width: fit-content;
     }
   }
   &__leaders {
@@ -103,6 +112,12 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
     @include tablet {
       margin-left: -16px;
       margin-right: -16px;
+      padding: 10px;
+    }
+    @include desktop {
+      margin-left: -46px;
+      margin-right: -60px;
+      padding: 10px;
     }
   }
   &__leaders-icon {
@@ -150,10 +165,12 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
       width: 192px;
       left: 40px;
       font-size: 1.25rem;
+      bottom: -24px;
     }
     @include desktop {
       width: 220px;
-      left: -20px;
+      left: -60px;
+      bottom: -8px;
     }
   }
 }

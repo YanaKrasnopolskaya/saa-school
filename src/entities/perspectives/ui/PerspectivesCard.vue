@@ -108,7 +108,7 @@ const props = defineProps({
       padding: 20px 30px 19px;
     }
     @include desktop{
-      padding: 17px 67px;
+      padding: 6px 67px;
     }
   }
   &__price-senior {
@@ -116,7 +116,7 @@ const props = defineProps({
       padding: 20px 18px 20px;
     }
     @include desktop{
-      padding: 17px 53px;
+      padding: 6px 53px;
     }
   }
   &__price-min {
@@ -142,6 +142,9 @@ const props = defineProps({
     background: $background-color;
     box-shadow: 0 4px 16px 0 rgba(0, 44, 62, 0.08);
     padding: 2px 10px;
+    @include tablet {
+      bottom: -6px;
+    }
     @include desktop {
       left: auto;
       right: 26px;

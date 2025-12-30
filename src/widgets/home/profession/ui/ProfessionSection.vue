@@ -30,24 +30,27 @@
 </template>
 
 <style scoped lang="scss">
+.profession-section {
+  padding: 110px 0 40px;
+  @include tablet {
+    padding-top: 150px;
+  }
+  @include tablet {
+    padding: 208px 56px 30px;
+  }
+}
 .profession {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 24px;
-  margin-top: 72px;
-  padding: 40px 0;
   @include tablet {
     gap: 40px;
-    margin-top: 104px;
-    padding: 50px 0;
   }
   @include desktop {
     flex-direction: row;
     gap: 40px;
-    margin-top: 164px;
-    padding: 37px 50px;
     align-items: flex-start;
   }
   &__content {
@@ -102,8 +105,8 @@
     }
     @include desktop {
       bottom: 0;
-      right: 130px;
-      max-width: 215px;
+      right: 30px;
+      width: 215px;
       max-height: 42px;
     }
   }
@@ -128,14 +131,18 @@
     position: relative;
     max-width: 322px;
     @include tablet-desktop {
-      max-width: 481px;
+      max-width: 500px;
     }
   }
   &__image-content img {
     width: 100%;
     height: auto;
+    transform: rotate(2deg);
     @include tablet {
-      max-width: 482px;
+      max-width: 500px;
+    }
+    @include desktop {
+      width: 482px;
     }
   }
   &__image-content-text {
@@ -165,8 +172,12 @@
     @include tablet {
       font-size: 1.25rem;
       max-width: 220px;
-      top: -8px;
+      top: -20px;
       left: -60px;
+    }
+    @include desktop {
+      top: -18px;
+      left: -100px
     }
   }
   &__text--diff {
@@ -178,8 +189,12 @@
     top: -6px;
     @include tablet {
       max-width: 250px;
-      top: -60px;
+      top: -74px;
       left: -15px;
+    }
+    @include desktop {
+      top: -70px;
+      left: -55px;
     }
   }
   &__star-icon {

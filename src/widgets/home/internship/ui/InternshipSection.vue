@@ -20,17 +20,23 @@ import {INTERNSHIP_CARDS} from "@/entities/internship/index.ts";
 </template>
 
 <style scoped lang="scss">
+.internship-section {
+  padding: 46px 8px;
+  @include tablet {
+    padding: 48px 16px;
+  }
+  @include desktop {
+    padding: 80px 68px;
+  }
+}
 .internship {
   display: flex;
   flex-direction: column;
   gap: 36px;
-  padding: 20px 4px;
   @include tablet {
-    padding: 40px 16px;
     gap: 40px;
   }
   @include desktop {
-    padding: 70px 64px;
     gap: 60px;
   }
   &__info {

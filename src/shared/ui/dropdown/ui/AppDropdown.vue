@@ -63,6 +63,9 @@ const toggle = () => {
     @include tablet {
       max-width: 480px;
     }
+    @include desktop {
+      padding: 18px 0 0 24px;
+    }
   }
 }
 

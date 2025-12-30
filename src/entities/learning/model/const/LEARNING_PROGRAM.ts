@@ -7,8 +7,6 @@ export const LEARNING_PROGRAM: Learning[] = [
         image: {
             src: "/images/learning-time.webp",
             alt: "Время обучения",
-            width: 289,
-            height: 247,
         },
         classModifiers: "time",
         reversed: false,
@@ -19,8 +17,6 @@ export const LEARNING_PROGRAM: Learning[] = [
         image: {
             src: "/images/learning-format.webp",
             alt: "Формат обучения",
-            width: 276,
-            height: 244,
         },
         reversed: true
     },
@@ -30,11 +26,10 @@ export const LEARNING_PROGRAM: Learning[] = [
         image: {
             src: "/images/learning-course.webp",
             alt: "Что внутри курса",
-            width: 257,
-            height: 236,
         },
         classModifiers: "course",
-        reversed: false
+        reversed: false,
+        bigTitle: true
     },
     {
         title: "Используем реальные инструменты:",
@@ -42,8 +37,6 @@ export const LEARNING_PROGRAM: Learning[] = [
         image: {
             src: "/images/learning-tools.webp",
             alt: "Инструменты",
-            width: 284,
-            height: 216,
         },
         reversed: true
     },
@@ -53,9 +46,8 @@ export const LEARNING_PROGRAM: Learning[] = [
         image: {
             src: "/images/learning-connection.webp",
             alt: "Контакты",
-            width: 268,
-            height: 230,
         },
-        reversed: false
+        reversed: false,
+        bigTitle: true
     },
 ]
