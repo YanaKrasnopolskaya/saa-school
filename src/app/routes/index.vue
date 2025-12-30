@@ -16,7 +16,6 @@ import {OfferForCompaniesSection} from "@/widgets/home/offer-for-companies";
 import {AboutSection} from "@/widgets/home/about";
 import {QuestionsSection} from "@/widgets/home/questions";
 import {FeedbackSection} from "@/widgets/home/feedback";
-import {AppFooter} from "@/widgets/footer";
 import {CookieBanner} from "@/features/cookie";
 </script>
 

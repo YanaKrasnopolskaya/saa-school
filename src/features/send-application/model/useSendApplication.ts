@@ -5,7 +5,7 @@ export function useSendApplication() {
     const isError = ref(false);
 
     // отправка формы values - данные, extra - дополнительные данные
-    const onSubmit = async <T extends Record<string, any>>(values: T) => {
+    const onSubmit = async <T extends Record<string, string>>(values: T) => {
         isSuccess.value = false;
         isError.value = false
 

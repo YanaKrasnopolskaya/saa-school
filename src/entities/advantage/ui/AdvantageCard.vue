@@ -3,7 +3,7 @@ const props = defineProps({
   title: String,
   description: String,
   reversed: Boolean,
-  horizontal: Boolean,
+  horizontal: Boolean
 })
 </script>
 

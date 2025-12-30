@@ -1,10 +1,7 @@
 <script setup lang="ts">
-const props = defineProps({
-  name: String,
-  period: String,
-  minPrice: String,
-  maxPrice: String
-})
+import type {Grade} from "@/entities/grade";
+
+const props = defineProps<Grade>()
 </script>
 
 <template>
