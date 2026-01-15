@@ -60,7 +60,7 @@ defineProps<Advantages>();
 }
 .advantage-card--horizontal {
   flex-direction: row;
-  padding: 13px 24px 12.73px;
+  padding: 13px 24px 12.7px;
   gap: 2px;
 }
 .advantage-card--horizontal .advantage-card__content{
