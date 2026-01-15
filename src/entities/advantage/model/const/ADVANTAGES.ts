@@ -7,13 +7,17 @@ export  const ADVANTAGES: Advantages[] = [
         image: {
             src: "/images/hero-img-1.png",
             alt: "",
-            width: 200,
-            height: 132,
+            sizes: {
+                mobile: { width: 119, height: 78 },
+                tablet: { width: 166, height: 109 },
+                desktop: { width: 201, height: 132}
+            },
         },
         reversed: false,
         horizontal: false,
         more: "до 10 человек",
-        differentBg: false
+        differentBg: false,
+        uniqueClass: 'group'
     },
     {
         title: "AI ассистенты",
@@ -21,12 +25,16 @@ export  const ADVANTAGES: Advantages[] = [
         image: {
             src: "/images/hero-img-2.png",
             alt: "AI ассистенты фото",
-            width: 175,
-            height: 102,
+            sizes: {
+                mobile: { width: 104, height: 61 },
+                tablet: { width: 144, height: 84 },
+                desktop: { width: 175, height: 102}
+            },
         },
         reversed: false,
         horizontal: false,
-        differentBg: false
+        differentBg: false,
+        uniqueClass: 'ai'
     },
     {
         title: "Как в настоящем проекте",
@@ -34,12 +42,16 @@ export  const ADVANTAGES: Advantages[] = [
         image: {
             src: "/images/hero-img-3.png",
             alt: "Настоящий проект фото",
-            width: 163,
-            height: 125,
+            sizes: {
+                mobile: { width: 98, height: 75 },
+                tablet: { width: 135, height: 103 },
+                desktop: { width: 163, height: 124}
+            },
         },
         reversed: false,
         horizontal: true,
-        differentBg: false
+        differentBg: false,
+        uniqueClass: 'project'
     },
     {
         title: "Помогаем с поиском работы",
@@ -47,12 +59,16 @@ export  const ADVANTAGES: Advantages[] = [
         image: {
             src: "/images/hero-img-4.png",
             alt: "Поиск работы фото",
-            width: 118,
-            height: 117,
+            sizes: {
+                mobile: { width: 68, height: 68 },
+                tablet: { width: 97, height: 97 },
+                desktop: { width: 117, height: 117}
+            },
         },
         reversed: true,
         horizontal: true,
-        differentBg: true
+        differentBg: true,
+        uniqueClass: 'help'
     },
     {
         title: "Сертификат Минцифры",
@@ -60,11 +76,15 @@ export  const ADVANTAGES: Advantages[] = [
         image: {
             src: "/images/hero-img-5.png",
             alt: "Сертификат Минцифры фото",
-            width: 183,
-            height: 150,
+            sizes: {
+                mobile: { width: 96, height: 78 },
+                tablet: { width: 140, height: 114 },
+                desktop: { width: 183, height: 150}
+            },
         },
         reversed: false,
         horizontal: true,
-        differentBg: true
+        differentBg: true,
+        uniqueClass: 'certificate'
     },
 ]

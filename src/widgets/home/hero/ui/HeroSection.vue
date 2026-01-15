@@ -12,17 +12,16 @@ import {ADVANTAGES} from "@/entities/advantage/model/const/ADVANTAGES";
       </div>
       <div class="hero-features">
         <AdvantageCard v-for="(card, index) in ADVANTAGES"
-                        :key="index"
-                        class="hero-features__item"
-                        :class="{'hero-features__item-horizontal': card.horizontal, 'hero-features__item--different-bg': card.differentBg}"
-                        :title="card.title"
-                        :description="card.description"
-                        :reversed="card.reversed"
-                        :horizontal="card.horizontal"
+                       :key="index"
+                       class="hero-features__item"
+                       :class="{'hero-features__item-horizontal': card.horizontal, 'hero-features__item--different-bg': card.differentBg}"
+                       :image="card.image"
+                       :title="card.title"
+                       :description="card.description"
+                       :reversed="card.reversed"
+                       :horizontal="card.horizontal"
+                       :uniqueClass="card.uniqueClass"
         >
-          <template #image>
-            <img class="hero-features__img" :src="card.image.src" :alt="card.image.alt" :width="card.image.width" :height="card.image.height"/>
-          </template>
           <template #more v-if="card.more">
             <span class="hero-features__more">{{card.more}}</span>
           </template>
@@ -68,7 +67,7 @@ import {ADVANTAGES} from "@/entities/advantage/model/const/ADVANTAGES";
   }
   &__title {
     font-size: 2.25em;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 100%;
     letter-spacing: 0;
     text-align: center;
@@ -124,7 +123,7 @@ import {ADVANTAGES} from "@/entities/advantage/model/const/ADVANTAGES";
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 9px;
-  margin-bottom: -36px;
+  margin-bottom: -24px;
   @include tablet {
     margin-bottom: -64px;
     gap: 16px 9px;
@@ -144,11 +143,6 @@ import {ADVANTAGES} from "@/entities/advantage/model/const/ADVANTAGES";
       grid-column: span 2;
       flex-direction: column !important;
     }
-  }
-  &__img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
   }
   &__item-horizontal {
     grid-column: span 2;

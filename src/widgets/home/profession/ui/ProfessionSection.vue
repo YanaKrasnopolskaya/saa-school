@@ -6,7 +6,7 @@
     <div class="container">
       <div class="profession">
         <div class="profession__content">
-          <h2 class="profession__title">Тестировщик &mdash;<br>это главный зануда в&nbsp;компании <span class="profession__title-accent">И&nbsp;его за&nbsp;это обожают</span></h2>
+          <h2 class="profession__title">Тестировщик &mdash;<br>это главный зануда в компании <span class="profession__title-accent">И&nbsp;его за&nbsp;это обожают</span></h2>
           <p class="profession__description">Он&nbsp;находит ошибки до&nbsp;того, как это сделают пользователи. И&nbsp;заодно помогает компании экономить деньги.</p>
         </div>
         <div class="profession__image-content">
@@ -44,7 +44,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 22px;
   @include tablet {
     gap: 40px;
   }
@@ -54,7 +54,7 @@
     align-items: flex-start;
   }
   &__content {
-    padding: 0 20px;
+    padding: 0 18px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -129,7 +129,7 @@
   }
   &__image-content {
     position: relative;
-    max-width: 322px;
+    max-width: 334px;
     @include tablet-desktop {
       max-width: 500px;
     }
@@ -137,7 +137,6 @@
   &__image-content img {
     width: 100%;
     height: auto;
-    transform: rotate(2deg);
     @include tablet {
       max-width: 500px;
     }
@@ -157,6 +156,8 @@
   }
   &__text {
     position: relative;
+    top: -8px;
+    left: 3px;
     z-index: 1;
     color: $text-color;
     font-size: 1.125rem;
@@ -168,7 +169,7 @@
     box-shadow: 0 4px 16px 0 rgba(0, 44, 62, 0.08);
     background: $background-color;
     padding: 16px 20px;
-    max-width: 200px;
+    max-width: 220px;
     @include tablet {
       font-size: 1.25rem;
       max-width: 220px;
@@ -186,7 +187,7 @@
     background: $primary-background-color;
     transform: rotate(-7.35deg);
     left: -14px;
-    top: -6px;
+    top: -13px;
     @include tablet {
       max-width: 250px;
       top: -74px;
@@ -199,8 +200,8 @@
   }
   &__star-icon {
     position: absolute;
-    top: -28px;
-    left: -25px;
+    top: -30px;
+    left: -28px;
     z-index: 10;
     transform: rotate(10deg);
     @include tablet-desktop {
@@ -211,8 +212,8 @@
   }
   &__spiral-icon {
     position: absolute;
-    bottom: -25px;
-    right: -68px;
+    bottom: -26px;
+    right: -62px;
     z-index: 10;
     @include tablet {
       right: -110px;
