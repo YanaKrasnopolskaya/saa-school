@@ -101,6 +101,7 @@ const props = defineProps<Grade>()
     padding: 12px 25px;
   }
   &__price-middle {
+    padding: 10.5px 0 0 2px;
     @include tablet{
       padding: 20px 30px 19px;
     }

@@ -54,7 +54,7 @@ import {LearningCard} from "@/entities/learning/index.ts";
 
 <style scoped lang="scss">
 .learning-section {
-  padding: 44px 16px 60px;
+  padding: 43px 16px 60px;
   @include desktop {
     padding: 108px 68px 60px;
   }
@@ -100,6 +100,9 @@ import {LearningCard} from "@/entities/learning/index.ts";
     }
   }
   &__title-icon {
+    position: relative;
+    top: -10px;
+    left: 3px;
     @include tablet {
       width: 60px;
       height: 60px;

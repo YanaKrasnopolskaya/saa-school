@@ -35,7 +35,7 @@ const props = defineProps({
   flex-direction: column;
   gap: 28px;
   align-items: flex-start;
-  padding: 16px 12px;
+  padding: 17.5px 12px 16px;
   @include desktop {
     flex-direction: row;
     justify-content: space-between;
@@ -78,8 +78,7 @@ const props = defineProps({
   &__about {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    padding: 0 12px 0 0;
+    gap: 17px;
     @include tablet {
       gap: 20px;
       margin-bottom: 18px;
@@ -95,7 +94,7 @@ const props = defineProps({
   &__description {
     font-size: 1rem;
     font-weight: 400;
-    line-height: 110%;
+    line-height: 113%;
     letter-spacing: 0;
     text-align: left;
     max-width: 490px;

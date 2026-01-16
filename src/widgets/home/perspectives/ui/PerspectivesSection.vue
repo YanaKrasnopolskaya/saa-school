@@ -46,7 +46,7 @@ import {GRADES} from "@/entities/grade/const/GRADES";
 
 <style scoped lang="scss">
 .perspectives-section {
-  padding: 44px 20px;
+  padding: 34px 17px;
   @include tablet {
     padding: 58px 24px 40px;
   }
@@ -59,7 +59,7 @@ import {GRADES} from "@/entities/grade/const/GRADES";
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 12px;
+  gap: 13.5px;
   @include tablet {
     gap: 40px;
   }
@@ -174,6 +174,8 @@ import {GRADES} from "@/entities/grade/const/GRADES";
     }
   }
   &__hh-desc-icon {
+    position: relative;
+    right: -7.5px;
     @include tablet-desktop {
       display: none;
     }

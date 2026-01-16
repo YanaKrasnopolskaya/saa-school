@@ -29,7 +29,7 @@ import AppButton from "@/shared/ui/button/ui/AppButton.vue";
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 40px 0 40px;
+  margin: 40px 0;
   @include tablet {
     background-image: url("/images/certificate-tablet-bg.png");
     padding: 24px 8px 16px;
@@ -43,9 +43,9 @@ import AppButton from "@/shared/ui/button/ui/AppButton.vue";
 .certificate {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 17px;
   justify-content: flex-start;
-  padding: 20px 14px 30px 20px;
+  padding: 20px 14px 36px 17px;
   @include tablet {
     gap: 40px;
   }
@@ -142,7 +142,7 @@ import AppButton from "@/shared/ui/button/ui/AppButton.vue";
   &__success-text {
     position: absolute;
     z-index: 1;
-    bottom: 20px;
+    bottom: 12px;
     left: 36%;
     display: block;
     border-radius: 10.66px;

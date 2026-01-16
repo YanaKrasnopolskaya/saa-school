@@ -21,6 +21,7 @@ import {COURSE_PROGRAM} from "@/entities/course-program/const/COURSE_PROGRAM";
               :term="program.term"
               :name="program.title"
               :description="program.description"
+              class="course__card"
           >
             <template #dropdown>
               <AppDropdown v-for="item in program.items" :label="item.name">
@@ -40,7 +41,7 @@ import {COURSE_PROGRAM} from "@/entities/course-program/const/COURSE_PROGRAM";
 
 <style scoped lang="scss">
 .course-section {
-  padding: 34px 0 40px;
+  padding: 40px 0;
   @include tablet {
     padding: 34px 10px 40px;
   }
@@ -51,9 +52,9 @@ import {COURSE_PROGRAM} from "@/entities/course-program/const/COURSE_PROGRAM";
 .course {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 19px;
   justify-content: flex-start;
-  padding: 6px 20px ;
+  padding: 4px;
   @include tablet {
     gap: 30px;
   }
@@ -101,6 +102,9 @@ import {COURSE_PROGRAM} from "@/entities/course-program/const/COURSE_PROGRAM";
       flex-direction: column;
       gap: 28px;
     }
+  }
+  &__card:first-child :deep(.course-card__title) {
+    width: 250px;
   }
   &__dropdown-items {
     list-style: disc;
