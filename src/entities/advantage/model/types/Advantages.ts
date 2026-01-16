@@ -4,11 +4,6 @@ export interface Advantages {
     image: {
         src: string,
         alt: string,
-        sizes: {
-            mobile: { width: number, height: number },
-            tablet: { width: number, height: number },
-            desktop: { width: number, height: number}
-        }
     },
     reversed?: boolean
     horizontal?: boolean

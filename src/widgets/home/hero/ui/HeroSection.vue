@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import AdvantageCard from "../../../../entities/advantage/ui/AdvantageCard.vue";
-import {ADVANTAGES} from "@/entities/advantage/model/const/ADVANTAGES";
+import {AdvantageCard, ADVANTAGES} from "@/entities/advantage";
 </script>
 
 <template>
@@ -12,18 +11,18 @@ import {ADVANTAGES} from "@/entities/advantage/model/const/ADVANTAGES";
       </div>
       <div class="hero-features">
         <AdvantageCard v-for="(card, index) in ADVANTAGES"
-                       :key="index"
-                       class="hero-features__item"
-                       :class="{'hero-features__item-horizontal': card.horizontal, 'hero-features__item--different-bg': card.differentBg}"
-                       :image="card.image"
                        :title="card.title"
                        :description="card.description"
-                       :reversed="card.reversed"
+                       :image="card.image"
+                       :differentBg="card.differentBg"
+                       :unique-class="card.uniqueClass"
+                       :key="index"
                        :horizontal="card.horizontal"
-                       :uniqueClass="card.uniqueClass"
+                       :reversed="card.reversed"
+                       :class="{'hero-features__horizontal': card.horizontal, 'hero-features__reversed': card.reversed}"
         >
-          <template #more v-if="card.more">
-            <span class="hero-features__more">{{card.more}}</span>
+          <template #more v-if="card.uniqueClass == 'group'">
+            <span class="hero-features__more"><span class="hero-features__more-point"></span>до 10 человек</span>
           </template>
         </AdvantageCard>
       </div>
@@ -118,67 +117,36 @@ import {ADVANTAGES} from "@/entities/advantage/model/const/ADVANTAGES";
   }
 }
 .hero-features {
-  position: relative;
-  z-index: 10;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 9px;
   margin-bottom: -24px;
-  @include tablet {
-    margin-bottom: -64px;
-    gap: 16px 9px;
-  }
-  @include desktop {
-    margin-bottom: -98px;
-    margin-left: -20px;
-    margin-right: -20px;
-    gap: 10px 0;
-  }
-  @include tablet-desktop {
-    grid-template-columns: repeat(6, 1fr);
-    &__item {
-      grid-column: span 2;
-    }
-    &__item-horizontal:nth-child(3) {
-      grid-column: span 2;
-      flex-direction: column !important;
-    }
-  }
-  &__item-horizontal {
+  &__horizontal {
     grid-column: span 2;
-    @include tablet-desktop {
-      grid-column: span 3;
-    }
-  }
-  &__item--different-bg {
-    background: $primary-background-color !important;
   }
   &__more {
-    position: relative;
-    display: block;
-    padding: 3px 4px 3px 17px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+    padding: 2.88px 3.6px 2.88px 3.6px;
     border-radius: 8.64px;
     background: rgba(51, 196, 233, 0.12);
-    color: rgba(31, 130, 155, 1);
-    font-size: 0.75em;
+    font-size: 12px;
     font-weight: 400;
     line-height: 112%;
     letter-spacing: 0;
     text-align: center;
-    @include tablet-desktop {
-      font-size: 1em;
-    }
+    color: rgba(31, 130, 155, 1);
+    white-space: nowrap;
   }
-  &__more:after {
-    content: "";
-    position: absolute;
+  &__more-point {
+    display: block;
     width: 8.63px;
     height: 8.65px;
     background: rgba(17, 127, 155, 1);
     border-radius: 50%;
-    top: 50%;
-    left: 4px;
-    transform: translateY(-50%);
   }
 }
 </style>
