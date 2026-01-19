@@ -8,8 +8,8 @@ import {INTERNSHIP_CARDS} from "@/entities/internship/index.ts";
     <div class="container">
       <div class="internship">
         <div class="internship__info">
-          <h2 class="internship__info-title">Оплачиваемая стажировка в&nbsp;IT-компании</h2>
-          <p class="internship__info-description">Эта возможность&nbsp;&mdash; для лучшего участника потока. Мы&nbsp;верим, что&nbsp;упорство и&nbsp;интерес к&nbsp;делу должны вознаграждаться</p>
+          <h2 class="internship__info-title">Оплачиваемая стажировка<br> в&nbsp;IT-компании</h2>
+          <p class="internship__info-description">Эта возможность&nbsp;&mdash; для лучшего участника потока. Мы&nbsp;верим, что упорство и&nbsp;интерес к&nbsp;делу должны вознаграждаться</p>
         </div>
         <div class="internship__card-wrapper">
           <InternshipCard v-for="card in INTERNSHIP_CARDS" :title="card.title" :img="card.img" :description="card.description" :bg="card.bg" />
@@ -21,7 +21,7 @@ import {INTERNSHIP_CARDS} from "@/entities/internship/index.ts";
 
 <style scoped lang="scss">
 .internship-section {
-  padding: 46px 8px;
+  padding: 42px 4px;
   @include tablet {
     padding: 48px 16px;
   }
@@ -86,7 +86,7 @@ import {INTERNSHIP_CARDS} from "@/entities/internship/index.ts";
   &__card-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 11px;
     @include tablet {
       flex-direction: row;
       overflow-x: auto;

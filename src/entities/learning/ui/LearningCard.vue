@@ -5,9 +5,9 @@ const props = defineProps<Learning>()
 </script>
 
 <template>
-  <div class="learning-card" :class="{'learning-card--reverse': reversed}">
+  <div class="learning-card" :class="[{'learning-card--reverse': reversed}, `learning-card--${classModifiers}`]">
     <div class="learning-card__content">
-      <h3 class="learning-card__title" :class="{'learning-card__title--big': bigTitle}">{{title}}</h3>
+      <h3 class="learning-card__title" :class="{'learning-card__title--big': bigTitle}" v-html="title"></h3>
       <slot name="top"></slot>
       <ul class="learning-card__list">
         <li class="learning-card__list-item" v-for="item in description" v-html="item"></li>
@@ -22,6 +22,7 @@ const props = defineProps<Learning>()
 
 <style lang="scss" scoped>
 .learning-card {
+  width: 313px;
   display: flex;
   flex-direction: column;
   border: 2px solid rgba(240, 243, 244, 1);
@@ -79,6 +80,7 @@ const props = defineProps<Learning>()
     height: 14px;
   }
   &__list-item {
+    width: 228px;
     position: relative;
     padding-left: 27px;
     font-size: 1rem;
@@ -111,10 +113,7 @@ const props = defineProps<Learning>()
     }
   }
   &__img {
-    width: 100%;
-    height: 100%;
-    object-position: center;
-    display: block;
+    object-position: top;
     object-fit: contain;
   }
 }
@@ -126,5 +125,67 @@ const props = defineProps<Learning>()
 .learning-card__title--big {
   font-size: 24px;
   line-height: 30px;
+}
+.learning-card--time .learning-card__img{
+  width: 313px;
+  height: 260px;
+  padding-top: 15px;
+  padding-left: 12px;
+}
+.learning-card--format {
+  padding-bottom: 6px;
+}
+.learning-card--format .learning-card__img{
+  width: 276px;
+  height: 244px;
+  padding-top: 10px;
+}
+.learning-card--format .learning-card__list-item {
+  width: 273px;
+}
+.learning-card--course .learning-card__content{
+  padding-bottom: 0;
+}
+.learning-card--course .learning-card__list {
+  gap: 12px;
+}
+.learning-card--course .learning-card__list-item {
+  font-size: 18px;
+  line-height: 23px;
+  width: 100%;
+}
+.learning-card--course .learning-card__img {
+  width: 257px;
+  height: 236px;
+  padding-bottom: 8px;
+}
+.learning-card--tools {
+  padding-bottom: 23px;
+}
+.learning-card--tools .learning-card__list-item{
+  width: 263px;
+}
+.learning-card--tools .learning-card__img-wrapper {
+  padding-top: 40px;
+  padding-left: 20px;
+}
+.learning-card--tools .learning-card__img {
+  width: 284px;
+  height: 216px;
+}
+.learning-card--feedback {
+  padding-bottom: 6px;
+}
+.learning-card--feedback .learning-card__list-item {
+  width: 270px;
+  font-size: 18px;
+  line-height: 23px;
+}
+.learning-card--feedback .learning-card__img-wrapper {
+  padding-top: 16px;
+}
+.learning-card--feedback .learning-card__img {
+  width: 278px;
+  height: 260px;
 }
 </style>

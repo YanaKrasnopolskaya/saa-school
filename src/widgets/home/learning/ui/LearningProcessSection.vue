@@ -22,6 +22,7 @@ import {LearningCard} from "@/entities/learning/index.ts";
                         :image="card.image"
                         :reversed="card.reversed"
                         :big-title="card.bigTitle"
+                        :class-modifiers="card.classModifiers"
           >
             <template #top v-if="card.classModifiers && card.classModifiers === ClassModifier.Time">
               <div class="learning__additional-top">
@@ -54,7 +55,7 @@ import {LearningCard} from "@/entities/learning/index.ts";
 
 <style scoped lang="scss">
 .learning-section {
-  padding: 43px 16px 60px;
+  padding: 40px 16px 60px;
   @include desktop {
     padding: 108px 68px 60px;
   }
@@ -115,7 +116,7 @@ import {LearningCard} from "@/entities/learning/index.ts";
   &__card-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 10px;
     @include tablet {
       gap: 20px;
     }
@@ -157,7 +158,7 @@ import {LearningCard} from "@/entities/learning/index.ts";
     border-radius: 300px;
     background: rgba(230, 248, 252, 1);
     transform: rotate(-2.47deg);
-    bottom: -10px;
+    bottom: -12px;
     @include tablet {
       bottom: 0;
       left: 30px;
@@ -199,7 +200,7 @@ import {LearningCard} from "@/entities/learning/index.ts";
     transform: rotate(2.43deg);
     padding: 12px 16px;
     width: 285px;
-    top: -6px;
+    top: -17px;
   }
   &__additional-bottom-svg svg {
     position: absolute;
@@ -208,8 +209,8 @@ import {LearningCard} from "@/entities/learning/index.ts";
   }
   &__additional-bottom-text {
     position: absolute;
-    bottom: -15px;
-    right: 43px;
+    bottom: -2px;
+    right: 47px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;

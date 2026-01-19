@@ -1,1 +1,4 @@
-export type CompanyLogo = string;
+export interface CompanyLogo {
+    src: string,
+    alt: string,
+}

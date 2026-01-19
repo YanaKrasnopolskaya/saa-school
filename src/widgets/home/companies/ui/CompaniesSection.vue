@@ -10,9 +10,7 @@ import {COMPANY_LOGOS} from "@/entities/companies/index.ts";
         <h2 class="companies__title">Наши студенты работают в&nbsp;ведущих компаниях</h2>
         <ul class="companies__list">
           <li v-for="logo in COMPANY_LOGOS" class="companies__list-item">
-            <svg class="companies__icon" aria-hidden="true">
-              <use :href="`${spriteUrl}#${logo}`"></use>
-            </svg>
+            <img :src="logo.src" :alt="logo.alt">
           </li>
         </ul>
       </div>
@@ -22,7 +20,7 @@ import {COMPANY_LOGOS} from "@/entities/companies/index.ts";
 
 <style scoped lang="scss">
 .companies-section {
-  padding: 40px 8px 0;
+  padding: 41px 4px 0;
   @include tablet {
     padding: 54px 0 0;
   }
@@ -33,14 +31,14 @@ import {COMPANY_LOGOS} from "@/entities/companies/index.ts";
 .companies {
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 40px;
   &__title {
     font-size: 2rem;
     font-weight: 700;
     line-height: 40px;
     letter-spacing: 0;
     text-align: left;
-    padding: 0 35px 0 12px;
+    padding: 0 35px 0 14px;
     @include tablet {
       padding: 0 0 0 20px;
       font-size: 2.5rem;
@@ -55,12 +53,12 @@ import {COMPANY_LOGOS} from "@/entities/companies/index.ts";
   }
   &__list {
     background: rgb(230, 248, 252) url(/images/certificate-mobile-bg.png) top right / cover no-repeat;
-    padding: 20px 7px;
+    padding: 7px 17px;
     margin-left: -8px;
     margin-right: -8px;
     display: grid;
     grid-template-columns: repeat(2, auto);
-    gap: 6px 16px;
+    gap: 14px 0;
     justify-content: center;
     @include tablet {
       margin-left: 0;
@@ -76,14 +74,14 @@ import {COMPANY_LOGOS} from "@/entities/companies/index.ts";
       gap: 32px 80px;
     }
   }
-  &__icon {
-    width: 140px;
-    height: 56px;
-    display: block;
-    @include tablet-desktop {
-      width: 154px;
-      height: 60px;
-    }
+  &__list-item {
+    width: 161px;
+    height: 57px;
+  }
+  &__list-item svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 }
 </style>

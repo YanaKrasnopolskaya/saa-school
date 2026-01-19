@@ -82,12 +82,13 @@ const emit = defineEmits(['submit']);
   &__button {
     width: 100%;
     margin-top: -18px;
-    margin-bottom: -18px;
+    margin-bottom: -20px;
     @include tablet {
       margin-top: 24px;
     }
   }
   &__consent {
+    width: 300px;
     position: relative;
     font-size: 0.875rem;
     font-weight: 400;

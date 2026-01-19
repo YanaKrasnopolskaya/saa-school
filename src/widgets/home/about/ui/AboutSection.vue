@@ -14,9 +14,7 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
           </div>
           <ul class="about__leaders">
             <li v-for="leader in MARKET_LEADERS" class="about__leaders-item">
-              <svg class="about__leaders-icon" aria-hidden="true">
-                <use :href="`${spriteUrl}#${leader}`"></use>
-              </svg>
+              <img :src="leader.src" :alt="leader.alt">
             </li>
           </ul>
           <p class="about__text">Поэтому в нашем курсе мы собрали только то, что действительно пригодится на практике. Теория не ради голочки, разберем реальные кейсы, и будем ипользовать актуальные инструмены.</p>
@@ -104,7 +102,7 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
     background: rgb(230, 248, 252) url(/images/certificate-mobile-bg.png) top right / cover no-repeat;
     display: grid;
     grid-template-columns: repeat(2, auto);
-    padding: 20px;
+    padding: 23px 14px;
     gap: 12px 0;
     justify-content: center;
     margin-left: -20px;
@@ -120,17 +118,12 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
       padding: 10px;
     }
   }
-  &__leaders-icon {
+  &__leaders-item {
     width: 163px;
     height: 52px;
-    @include tablet-desktop {
-      width: 194px;
-      height: 60px;
-    }
   }
   &__img-wrapper {
     position: relative;
-    margin: 0 auto;
   }
   &__img {
     width: 313px;
@@ -159,8 +152,8 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
     letter-spacing: 0;
     text-align: center;
     position: absolute;
-    bottom: -10px;
-    left: -8px;
+    bottom: -8px;
+    left: -2px;
     @include tablet {
       width: 192px;
       left: 40px;

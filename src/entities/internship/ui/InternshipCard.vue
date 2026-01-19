@@ -7,8 +7,8 @@ const props = defineProps<Card>()
 <template>
   <div class="internship-card" :class="bg">
     <img class="internship-card__img" :src="img.src" :alt="img.alt" :width="img.width" :height="img.height"/>
-    <div class="internship-card__title">{{title}}</div>
-    <div class="internship-card__description">{{description}}</div>
+    <div class="internship-card__title" v-html="title"></div>
+    <div class="internship-card__description" v-html="description"></div>
   </div>
 </template>
 
@@ -25,7 +25,7 @@ const props = defineProps<Card>()
   flex-direction: column;
   justify-content: flex-start;
   gap: 12px;
-  padding: 6px 10px 24px 24px;
+  padding: 6px 10px 23px 24px;
   @include tablet {
     padding-bottom: 0;
     flex: 0 0 45%;

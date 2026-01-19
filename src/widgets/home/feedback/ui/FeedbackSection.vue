@@ -21,7 +21,7 @@
 
 <style scoped lang="scss">
 .feedback-section {
-  padding: 40px 8px;
+  padding: 38px 4px;
   @include tablet {
     padding: 40px 16px;
   }
@@ -30,7 +30,7 @@
   }
 }
 .feedback {
-  padding: 24px 20px 36px;
+  padding: 20px 19px 36px;
   border-radius: 12px;
   background: rgba(230, 248, 252, 1);
   display: flex;

@@ -17,7 +17,7 @@ import {FINANCE_SUPPORT_CARDS, FinanceSupportCard} from "@/entities/finance-supp
 
 <style scoped lang="scss">
 .finance-support-section {
-  padding: 110px 8px 40px;
+  padding: 40px 4px 40px;
   @include tablet {
     padding: 78px 16px 40px;
   }
@@ -36,6 +36,7 @@ import {FINANCE_SUPPORT_CARDS, FinanceSupportCard} from "@/entities/finance-supp
     gap: 66px;
   }
   &__title {
+    width: 256px;
     font-size: 2rem;
     font-weight: 700;
     line-height: 110%;

@@ -18,7 +18,7 @@
         <div class="community__advantages-wrapper">
           <div class="community__advantages">
             <p class="community__advantages-item">
-              Доверительная атмосфера&nbsp;&mdash; здесь никто не&nbsp;осуждает и&nbsp;не&nbsp;критикует за&nbsp;&laquo;неправильные&raquo; вопросы
+              Доверительная<br> атмосфера&nbsp;&mdash; здесь никто не&nbsp;осуждает и&nbsp;не&nbsp;критикует за&nbsp;&laquo;неправильные&raquo; вопросы
               <svg class="community__advantages-icon" width="80" height="80" aria-hidden="true">
                 <use href="@/app/assets/icons/sprite.svg#community-icon1"></use>
               </svg>
@@ -48,7 +48,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 52px 0 40px;
+  margin: 20px 0 40px;
   @include tablet {
     background-image: url("/images/community-tablet-bg.png");
     margin: 14px 0 40px;
@@ -62,7 +62,7 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding: 20px 20px 0;
+  padding: 20px 16px 0;
   @include tablet {
     padding: 40px 16px 0;
   }
@@ -130,7 +130,7 @@
     background-image: url("/images/community-mobile.png");
     background-position: bottom;
     background-repeat: no-repeat;
-    background-size: 310px;
+    background-size: 316px;
     @include tablet {
       background-image: url("/images/community-tablet.png");
       background-size: 530px;
@@ -177,7 +177,8 @@
     }
   }
   &__advantages-item--center {
-    transform: translateX(10px);
+    width: 228px;
+    transform: translateX(16px);
     border-radius: 12px 0 12px 12px;
     @include tablet {
       margin-top: 192px;

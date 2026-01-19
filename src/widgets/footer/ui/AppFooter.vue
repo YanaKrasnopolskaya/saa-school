@@ -6,7 +6,7 @@
     <footer class="footer" id="contacts">
       <div class="footer__contact">
         <a class="footer__contact-link" href="tel:88003008352">8 800 300 83 52</a>
-        <a class="footer__contact-link" href="mailto:info@sadaschool.ru">info@sadaschool.ru</a>
+        <a class="footer__contact-link" href="mailto:info@saaschool.ru">info@saaschool.ru</a>
         <div class="footer__contact-socials">
           <a href="#" class="footer__contact-social">
             <svg class="footer__vk-icon" width="35" height="22" aria-hidden="true">

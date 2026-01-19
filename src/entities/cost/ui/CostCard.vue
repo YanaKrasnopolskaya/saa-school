@@ -33,7 +33,7 @@ const props = defineProps<CostCardInterface>();
   background: $background-color;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 22px;
   @include tablet {
     flex: 0 0 70%;
     padding: 40px;
@@ -45,7 +45,7 @@ const props = defineProps<CostCardInterface>();
   &__info {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 10px;
   }
   &__info-title {
     font-size: 1.5rem;
@@ -72,7 +72,7 @@ const props = defineProps<CostCardInterface>();
   &__price-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 22px;
   }
   &__price {
     font-size: 2rem;
@@ -85,7 +85,6 @@ const props = defineProps<CostCardInterface>();
     }
   }
   &__price span {
-    margin-top: 10px;
     display: block;
   }
   &__list {
@@ -93,7 +92,7 @@ const props = defineProps<CostCardInterface>();
     padding-left: 24px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
   }
   &__list-item {
     font-size: 1rem;

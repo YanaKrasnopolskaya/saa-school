@@ -18,11 +18,12 @@ export const LEARNING_PROGRAM: Learning[] = [
             src: "/images/learning-format.webp",
             alt: "Формат обучения",
         },
+        classModifiers: "format",
         reversed: true
     },
     {
         title: "Что внутри курса:",
-        description: ["<b>Онлайн-лекции</b> от профессионалов", "<b>Тренажеры</b> с десятками заданий", "<b>Домашки</b> и проекты с проверкой от ментора"],
+        description: ["<b>Онлайн-лекции</b> <br>от профессионалов", "<b>Тренажеры</b> с десятками заданий", "<b>Домашки</b> и проекты <br>с проверкой от ментора"],
         image: {
             src: "/images/learning-course.webp",
             alt: "Что внутри курса",
@@ -32,12 +33,13 @@ export const LEARNING_PROGRAM: Learning[] = [
         bigTitle: true
     },
     {
-        title: "Используем реальные инструменты:",
-        description: ["Таск-трекеры, TMS, спринты и канбан-доски — это то, что ты будешь использовать в реальных проектах.", "Мы даём тебе навыки <b>для реальной работы</b>"],
+        title: "Используем<br> реальные инструменты:",
+        description: ["Таск-трекеры, TMS, спринты<br> и канбан-доски — это то, что ты будешь использовать в реальных проектах.", "Мы даём тебе навыки <b>для реальной работы</b>"],
         image: {
             src: "/images/learning-tools.webp",
             alt: "Инструменты",
         },
+        classModifiers: "tools",
         reversed: true
     },
     {
@@ -47,6 +49,7 @@ export const LEARNING_PROGRAM: Learning[] = [
             src: "/images/learning-connection.webp",
             alt: "Контакты",
         },
+        classModifiers: "feedback",
         reversed: false,
         bigTitle: true
     },

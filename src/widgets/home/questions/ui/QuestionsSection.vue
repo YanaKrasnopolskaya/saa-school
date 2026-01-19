@@ -26,7 +26,7 @@ import {QUESTIONS} from "@/entities/questions";
 
 <style scoped lang="scss">
 .questions-section {
-  padding: 36px 8px 0;
+  padding: 56px 4px 40px;
   @include tablet {
     padding: 44px 56px 90px;
   }
@@ -82,7 +82,7 @@ import {QUESTIONS} from "@/entities/questions";
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    gap: 20px;
+    gap: 12.5px;
     align-items: flex-start;
     @include tablet {
       gap: 12px;
@@ -96,6 +96,10 @@ import {QUESTIONS} from "@/entities/questions";
     flex: 0 0 48%;
   }
   &__answer {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 112%;
+    width: 283px;
     margin-left: -30px;
   }
 }

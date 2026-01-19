@@ -6,8 +6,8 @@ export const FINANCE_SUPPORT_CARDS: FinanceSupportCardInterface[] = [
             src: '/images/payment-option-card-1.png',
             alt: 'Налоговый вычет',
         },
-        title: 'Оформим налоговый вычет',
-        description: 'Сможешь вернуть 13% от стоимости курса, а мы поможем с документами'
+        title: 'Оформим<br> налоговый вычет',
+        description: 'Сможешь <b>вернуть 13%</b> от стоимости курса, а мы поможем с&nbsp;документами'
     },
     {
         image: {

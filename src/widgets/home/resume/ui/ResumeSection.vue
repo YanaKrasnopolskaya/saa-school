@@ -25,7 +25,7 @@ import {ResumeCard, RESUMES} from "@/entities/resume/index.ts";
 
 <style scoped lang="scss">
 .resume-section {
-  padding: 34px 0 40px;
+  padding: 28px 0 40px;
   @include tablet {
     padding: 44px 16px 40px;
   }
@@ -36,7 +36,7 @@ import {ResumeCard, RESUMES} from "@/entities/resume/index.ts";
 .resume {
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 19px;
   @include tablet {
     gap: 48px;
   }

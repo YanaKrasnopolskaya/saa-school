@@ -33,7 +33,7 @@ const handleInput = (e) => {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 20px;
+  gap: 18px;
   &__label {
     font-size: 1.25rem;
     font-weight: 700;
@@ -67,7 +67,7 @@ const handleInput = (e) => {
     width: 100%;
     border: none;
     background: transparent;
-    padding: 6px 0;
+    padding: 7px 0;
     font-size: 1rem;
     &::placeholder {
       font-size: 1rem;

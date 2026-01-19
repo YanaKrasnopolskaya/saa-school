@@ -12,8 +12,8 @@ const {isOpenModal, openModal, closeModal} = useModal();
       <div class="offer">
         <h2 class="offer__title">Предложение для компаний</h2>
         <div class="offer__info">
-          <p class="offer__info-text">Вы можете обучить сотрудников на этом курсе. <b>Адаптируем программу под ваш бизнес</b>
-            и предоставим отчёты об успеваемости. При обучении сразу нескольких сотрудников — более выгодная стоимость.</p>
+          <p class="offer__info-text">Вы можете обучить сотрудников на&nbsp;этом курсе. <b>Адаптируем программу под ваш бизнес</b>
+            и&nbsp;предоставим отчёты об успеваемости. При обучении сразу нескольких сотрудников — более выгодная стоимость.</p>
           <span class="offer__info-text">Оставьте заявку, и мы вышлем вам <a href="#"><b>индивидуальное предложение.</b></a></span>
         </div>
         <img class="offer__img" src="/images/b2b.png" alt="Предложение для компаний">
@@ -49,6 +49,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
     gap: 30px;
   }
   &__title {
+    width: 264px;
     font-size: 2rem;
     font-weight: 700;
     line-height: 110%;
@@ -75,6 +76,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
     }
   }
   &__info-text {
+    width: 315px;
     font-size: 1.125rem;
     font-weight: 400;
     line-height: 120%;

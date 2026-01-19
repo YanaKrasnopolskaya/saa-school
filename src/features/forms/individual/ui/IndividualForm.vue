@@ -62,7 +62,7 @@ const submit = handleSubmit(async (values) => {
           <span v-if="!phone?.trim()" class="prefix-code" :class="{'prefix-code--dark' : darkTheme}">{{phoneCode}}</span>
         </template>
       </AppInput>
-      <AppInput  label="Ник в Telegram" placeholder="@primer" v-model="telegram" :error="!!telegramError && telegramMeta.touched" :dark-theme="darkTheme"/>
+      <AppInput label="Ник в Telegram" placeholder="@primer" v-model="telegram" :error="!!telegramError && telegramMeta.touched" :dark-theme="darkTheme" :required="false"/>
     </template>
     <template #extra-fields>
       <Transition name="fade-down">

@@ -8,8 +8,8 @@ const props = defineProps<FinanceSupportCardInterface>();
   <div class="card">
     <img class="card__img" :src="image.src" :alt="image.alt" />
     <div class="card__info">
-      <h3 class="card__info-title">{{title}}</h3>
-      <p class="card__info-description">{{description}}</p>
+      <h3 class="card__info-title" v-html="title"></h3>
+      <p class="card__info-description" v-html="description"></p>
     </div>
     <a class="card__link" href="#" v-if="moreInfo">{{moreInfo}}</a>
   </div>
@@ -39,8 +39,8 @@ const props = defineProps<FinanceSupportCardInterface>();
     width: 100px;
     height: 98px;
     position: absolute;
-    top: -28px;
-    right: 0;
+    top: -15px;
+    right: 17px;
     @include tablet {
       width: 113px;
       height: 111px;
@@ -63,7 +63,7 @@ const props = defineProps<FinanceSupportCardInterface>();
     line-height: 30px;
     letter-spacing: 0;
     text-align: left;
-    max-width: 255px;
+    max-width: 270px;
   }
   &__info-description {
     font-size: 1rem;
@@ -71,7 +71,7 @@ const props = defineProps<FinanceSupportCardInterface>();
     line-height: 20px;
     letter-spacing: 0;
     text-align: left;
-    max-width: 270px;
+    max-width: 282px;
     @include desktop {
       max-width: 407px;
     }

@@ -15,7 +15,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
           <h2 class="cost__info-title">Стоимость и&nbsp;варианты оплаты<svg class="cost__info-icon" width="66" height="66" aria-hidden="true">
             <use href="@/app/assets/icons/sprite.svg#course-program-star-icon"></use>
           </svg></h2>
-          <p class="cost__info-description">Честная стоимость&nbsp;&mdash; никаких мифических акций</p>
+          <p class="cost__info-description">Честная стоимость&nbsp;&mdash; <br>никаких мифических акций</p>
         </div>
         <div class="cost__card-wrapper">
           <svg class="cost__card-icon" width="117" height="156" aria-hidden="true">
@@ -31,7 +31,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
                     :discounted-price="card.discountedPrice"
                     :unique="card.unique">
             <template #cost-button>
-              <AppButton type="button" @click="openModal">Записаться</AppButton>
+              <AppButton class="cost__btn" type="button" @click="openModal">Записаться</AppButton>
             </template>
           </CostCard>
         </div>
@@ -47,7 +47,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
 
 <style scoped lang="scss">
 .cost-section {
-  padding: 40px 8px;
+  padding: 47px 4px 40px;
   @include tablet {
     padding: 30px 0;
   }
@@ -154,6 +154,9 @@ const {isOpenModal, openModal, closeModal} = useModal();
       bottom: -20px;
       left: 0;
     }
+  }
+  &__btn {
+    margin-bottom: 54px;
   }
 }
 </style>
