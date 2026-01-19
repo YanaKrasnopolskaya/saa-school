@@ -28,14 +28,15 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .course-card {
+  width: 339px;
   border-radius: 16px;
   box-shadow: 0 4px 16px 0 rgba(0, 44, 62, 0.08);
   background: $background-color;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 27px;
   align-items: flex-start;
-  padding: 17.5px 12px 16px;
+  padding: 15px 12px 20px;
   @include desktop {
     flex-direction: row;
     justify-content: space-between;
@@ -78,7 +79,7 @@ const props = defineProps({
   &__about {
     display: flex;
     flex-direction: column;
-    gap: 17px;
+    gap: 15px;
     @include tablet {
       gap: 20px;
       margin-bottom: 18px;
@@ -106,7 +107,7 @@ const props = defineProps({
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 16px;
   }
 }
 </style>

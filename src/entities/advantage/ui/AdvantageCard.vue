@@ -20,6 +20,7 @@ defineProps<Advantages>();
 <style scoped lang="scss">
 .advantage-card {
   width: 168px;
+  height: 212px;
   border-radius: 10px;
   box-shadow: 0 8.64px 14.398340225219727px 0 rgba(12, 57, 75, 0.12);
   background: rgba(255, 255, 255, 1);
@@ -101,8 +102,8 @@ defineProps<Advantages>();
   }
 }
 .advantage-card__img--project {
-  width: 110px;
-  height: 85px;
+  width: 97.35px;
+  height: 74.27px;
   @include tablet {
     width: 135px;
     height: 103px;
@@ -137,20 +138,30 @@ defineProps<Advantages>();
   }
 }
 .advantage-card--horizontal {
-  flex-direction: row;
   width: 345px;
-  padding: 10px 23px 6px 20px;
-  gap: 6px;
+  height: 100px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 14px 24px 12.73px 34px;
 }
 .advantage-card--horizontal .advantage-card__img-wrapper {
   height: auto;
+  flex: 1;
 }
 .advantage-card--horizontal .advantage-card__content {
   width: 218px;
-  gap: 5px;
+  gap: 8px;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  flex-shrink: 0;
 }
 .advantage-card--reversed {
   flex-direction: row-reverse;
-  padding: 8px 20px 12px 8px;
+  padding: 13px 24px 12.73px 24px;
+  gap: 10px;
+}
+.advantage-card--reversed .advantage-card__content {
+  padding-top: 8px;
 }
 </style>

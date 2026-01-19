@@ -31,7 +31,7 @@
 
 <style scoped lang="scss">
 .profession-section {
-  padding: 110px 0 40px;
+  padding: 107px 0 40px;
   @include tablet {
     padding-top: 150px;
   }

@@ -41,7 +41,7 @@ import {COURSE_PROGRAM} from "@/entities/course-program/const/COURSE_PROGRAM";
 
 <style scoped lang="scss">
 .course-section {
-  padding: 40px 0;
+  padding: 40px 0 37px;
   @include tablet {
     padding: 34px 10px 40px;
   }
@@ -52,7 +52,7 @@ import {COURSE_PROGRAM} from "@/entities/course-program/const/COURSE_PROGRAM";
 .course {
   display: flex;
   flex-direction: column;
-  gap: 19px;
+  gap: 20px;
   justify-content: flex-start;
   padding: 4px;
   @include tablet {
@@ -117,5 +117,9 @@ import {COURSE_PROGRAM} from "@/entities/course-program/const/COURSE_PROGRAM";
     flex-direction: column;
     gap: 4px;
   }
+}
+.course__card-wrapper .course__card:last-of-type {
+  gap: 31px;
+  padding-bottom: 16px;
 }
 </style>

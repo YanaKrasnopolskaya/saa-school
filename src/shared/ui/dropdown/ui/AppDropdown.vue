@@ -27,7 +27,7 @@ const toggle = () => {
 
 <style scoped lang="scss">
 .dropdown {
-  padding: 15px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   border-radius: 8px;
