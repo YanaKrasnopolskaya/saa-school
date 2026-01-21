@@ -36,7 +36,7 @@ const emit = defineEmits(['submit']);
           <use href="@/app/assets/icons/sprite.svg#check-mark-icon"></use>
         </svg>
       </span>
-      <span>Я&nbsp;согласен (-а) на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;
+      <span class="application-form__consent-text">Я&nbsp;согласен (-а) на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;
         <a href="#">Политикой конфиденциальности</a>.
       </span>
     </label>
@@ -54,7 +54,7 @@ const emit = defineEmits(['submit']);
   gap: 40px;
   padding: 20px;
   @include tablet {
-    padding: 40px;
+    padding: 40px 40px 36px 40px;
   }
   &__notification {
     width: 100%;
@@ -81,10 +81,10 @@ const emit = defineEmits(['submit']);
   }
   &__button {
     width: 100%;
-    margin-top: -18px;
+    margin-top: -20px;
     margin-bottom: -20px;
     @include tablet {
-      margin-top: 24px;
+      margin-top: 30px;
     }
   }
   &__consent {
@@ -96,6 +96,9 @@ const emit = defineEmits(['submit']);
     letter-spacing: 0;
     text-align: left;
     padding-left: 36px;
+    @include tablet {
+      width: 380px;
+    }
   }
   &__consent input {
     position: absolute;
@@ -124,6 +127,17 @@ const emit = defineEmits(['submit']);
   }
   &__checkbox svg {
     opacity: 0;
+  }
+  &__consent-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0;
+    text-align: left;
+    @include tablet {
+      font-size: 12px;
+      line-height: 15px;
+    }
   }
 }
 .application-form--dark {

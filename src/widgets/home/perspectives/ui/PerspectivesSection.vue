@@ -48,7 +48,7 @@ import {GRADES} from "@/entities/grade/const/GRADES";
 .perspectives-section {
   padding: 34px 17px;
   @include tablet {
-    padding: 58px 24px 40px;
+    padding: 58px 20px 40px;
   }
   @include desktop {
     padding: 55px 70px 80px;
@@ -78,6 +78,7 @@ import {GRADES} from "@/entities/grade/const/GRADES";
       justify-content: space-between;
       flex-direction: row;
       align-items: flex-end;
+      margin-bottom: 20px;
     }
     @include desktop {
       flex-direction: row;
@@ -123,7 +124,7 @@ import {GRADES} from "@/entities/grade/const/GRADES";
     background: $background-color;
     @include tablet {
       flex-direction: row;
-      padding: 16px 24px;
+      padding: 18px 24px;
       align-items: center;
     }
     @include desktop {
@@ -169,8 +170,10 @@ import {GRADES} from "@/entities/grade/const/GRADES";
     right: 0;
     @include tablet {
       transform: rotate(-28.75deg);
-      top: -20px;
-      left: -34px;
+      top: -8px;
+      left: -28px;
+      width: 57px;
+      height: 57px;
     }
   }
   &__hh-desc-icon {

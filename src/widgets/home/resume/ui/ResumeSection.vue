@@ -27,7 +27,7 @@ import {ResumeCard, RESUMES} from "@/entities/resume/index.ts";
 .resume-section {
   padding: 28px 0 40px;
   @include tablet {
-    padding: 44px 16px 40px;
+    padding: 46px 12px 40px;
   }
   @include desktop {
     padding: 98px 68px 40px;
@@ -36,7 +36,7 @@ import {ResumeCard, RESUMES} from "@/entities/resume/index.ts";
 .resume {
   display: flex;
   flex-direction: column;
-  gap: 19px;
+  gap: 21px;
   @include tablet {
     gap: 48px;
   }
@@ -63,12 +63,13 @@ import {ResumeCard, RESUMES} from "@/entities/resume/index.ts";
   }
   &__title svg {
     position: absolute;
-    top: -10px;
+    top: -5px;
     right: -30px;
     @include tablet {
-      width: 60px;
-      height: 60px;
-      right: -70px;
+      width: 70px;
+      height: 70px;
+      right: -86px;
+      top: -14px;
     }
     @include desktop {
       width: 66px;

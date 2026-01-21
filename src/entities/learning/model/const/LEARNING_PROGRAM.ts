@@ -3,7 +3,7 @@ import type {Learning} from "@/entities/learning/model/types/Learning";
 export const LEARNING_PROGRAM: Learning[] = [
     {
         title: "Время на обучение:",
-        description: ["3 занятия <b>по часу</b> в день <b>по будням</b>", "3-5 часов на практику <b>в любое удобное время</b>"],
+        description: ["3 занятия <b>по часу</b> в день <b>по будням</b>", "3-5 часов на практику <b>в&nbsp;любое удобное время</b>"],
         image: {
             src: "/images/learning-time.webp",
             alt: "Время обучения",
@@ -13,7 +13,7 @@ export const LEARNING_PROGRAM: Learning[] = [
     },
     {
         title: "Формат обучения:",
-        description: ["<b>Часовые лекции</b>, удобные для восприятия", "Презентации и практические задания помогут <b>лучше усвоить материал</b>"],
+        description: ["<b>Часовые лекции</b>, удобные для&nbsp;восприятия", "Презентации и практические задания помогут <b>лучше усвоить материал</b>"],
         image: {
             src: "/images/learning-format.webp",
             alt: "Формат обучения",

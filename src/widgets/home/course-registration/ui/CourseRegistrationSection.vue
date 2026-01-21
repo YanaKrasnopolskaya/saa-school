@@ -7,7 +7,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <section class="course-registration-section">
+  <section :class="['course-registration-section', {'course-registration-section--dark' : darkTheme}]">
     <div class="container">
       <div class="course-registration">
         <div class="course-registration__info" :class="{'course-registration__info--dark' : darkTheme}">
@@ -21,9 +21,9 @@ const props = defineProps<{
 
 <style scoped lang="scss">
 .course-registration-section {
-  padding: 49px 4px;
+  padding: 60px 4px 51px;
   @include tablet {
-    padding: 68px 60px 40px;
+    padding: 48px 56px 40px;
   }
   @include desktop {
     padding: 50px 10px 40px 20px;
@@ -66,7 +66,7 @@ const props = defineProps<{
     }
   }
   &__form--dark {
-    padding: 8px 20px;
+    padding: 11px 20px;
   }
 }
 .course-registration__info--dark {

@@ -27,8 +27,9 @@ const props = defineProps<Card>()
   gap: 12px;
   padding: 6px 10px 23px 24px;
   @include tablet {
-    padding-bottom: 0;
-    flex: 0 0 45%;
+    padding-bottom: 27px;
+    flex: 0 0 334px;
+    gap: 8.5px;
   }
   @include desktop {
     padding-bottom: 40px;

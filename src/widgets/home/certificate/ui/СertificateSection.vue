@@ -47,7 +47,8 @@ import AppButton from "@/shared/ui/button/ui/AppButton.vue";
   justify-content: flex-start;
   padding: 20px 14px 36px 17px;
   @include tablet {
-    gap: 40px;
+    gap: 30px;
+    padding: 16px 14px 36px 14px;
   }
   @include desktop {
     flex-direction: row;
@@ -95,7 +96,8 @@ import AppButton from "@/shared/ui/button/ui/AppButton.vue";
       max-width: 444px;
       font-size: 1.5rem;
       line-height: 30px;
-      margin-bottom: 20px;
+      margin-bottom: 23px;
+      padding-right: 10px;
     }
   }
   &__link {
@@ -128,8 +130,8 @@ import AppButton from "@/shared/ui/button/ui/AppButton.vue";
     width: 131px;
     height: 138px;
     @include tablet {
-      right: -90px;
-      bottom: 40px;
+      right: -95px;
+      bottom: 36px;
       width: 160px;
     }
     @include desktop {
@@ -159,9 +161,9 @@ import AppButton from "@/shared/ui/button/ui/AppButton.vue";
     @include tablet {
       font-size: 1.25rem;
       width: 252px;
-      bottom: 0;
+      bottom: -12px;
       left: auto;
-      right: 20px;
+      right: 18px;
       transform: rotate(-5.59deg);
     }
     @include desktop {

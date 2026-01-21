@@ -6,7 +6,7 @@
     <div class="container">
       <div class="community">
         <div class="community__info">
-          <h2 class="community__info-title">Твой круг общения&nbsp;&mdash; уже здесь
+          <h2 class="community__info-title">Твой круг <span>общения&nbsp;— уже здесь</span>
             <span>
               <svg class="community__info-icon" width="40" height="40" aria-hidden="true">
               <use href="@/app/assets/icons/sprite.svg#course-program-star-icon"></use>
@@ -48,7 +48,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 20px 0 40px;
+  margin: 20px 0 30px;
   @include tablet {
     background-image: url("/images/community-tablet-bg.png");
     margin: 14px 0 40px;
@@ -64,7 +64,8 @@
   gap: 30px;
   padding: 20px 16px 0;
   @include tablet {
-    padding: 40px 16px 0;
+    padding: 40px 14px 0;
+    gap: 46px;
   }
   @include desktop {
     gap: 43px;
@@ -97,16 +98,19 @@
       font-size: 3rem;
       line-height: 60px;
     }
+    & span {
+      display: block;
+    }
   }
   &__info-icon {
     position: absolute;
     bottom: 0;
     right: -24px;
     @include tablet {
-      top: 50%;
-      transform: translateY(-50%);
-      width: 60px;
-      height: 60px;
+      top: 14px;
+      right: -54px;
+      width: 70px;
+      height: 70px;
     }
   }
   &__info-description {
@@ -134,6 +138,8 @@
     @include tablet {
       background-image: url("/images/community-tablet.png");
       background-size: 530px;
+      margin-bottom: -5px;
+      padding-top: 10px;
     }
     @include desktop {
       background-image: url("/images/community-desktop.png");
@@ -144,9 +150,9 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    padding: 190px 35px 20px;
+    padding: 191px 35px 20px;
     @include tablet {
-      padding: 116px 60px 0;
+      padding: 126px 64px 0;
     }
     @include desktop {
       padding: 103px 100px 50px;
@@ -163,10 +169,12 @@
     line-height: 110%;
     letter-spacing: 0;
     text-align: left;
+    top: 4px;
+    width: 238px;
     @include tablet {
-      max-width: 294px;
+      top: -15px;
+      width: 294px;
       font-size: 1.125rem;
-      top: 20px;
     }
     @include desktop {
       max-width: 320px;
@@ -180,8 +188,11 @@
     width: 228px;
     transform: translateX(16px);
     border-radius: 12px 0 12px 12px;
+    top: 3px;
     @include tablet {
-      margin-top: 192px;
+      top: -14px;
+      width: 283px;
+      margin-top: 180px;
       margin-left: auto;
       transform: translateX(0);
     }
@@ -193,11 +204,12 @@
     }
   }
   &__advantages-item--bottom {
-    width: calc(100% - 20px);
+    width: 217px;
+    top: 1px;
     @include tablet {
-      max-width: 268px;
+      width: 268px;
       position: relative;
-      top: -40px
+      top: -58px
     }
     @include desktop {
       transform: rotate(-5.27deg);
@@ -211,17 +223,17 @@
     top: -12px;
     left: -68px;
     @include tablet {
-      width: 90px;
-      height: 90px;
-      top: -12px;
-      left: -80px;
+      width: 110px;
+      height: 110px;
+      top: -16px;
+      left: -91px;
     }
   }
   &__advantages-item--center svg {
     left: auto;
     right: -68px;
     @include tablet {
-      right: -80px;
+      right: -90px;
     }
   }
 }

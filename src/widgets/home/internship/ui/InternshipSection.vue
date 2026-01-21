@@ -23,7 +23,7 @@ import {INTERNSHIP_CARDS} from "@/entities/internship/index.ts";
 .internship-section {
   padding: 42px 4px;
   @include tablet {
-    padding: 48px 16px;
+    padding: 41px 13px;
   }
   @include desktop {
     padding: 80px 68px;
@@ -46,8 +46,9 @@ import {INTERNSHIP_CARDS} from "@/entities/internship/index.ts";
     gap: 20px;
     padding-left: 12px;
     @include tablet{
+      gap: 21px;
       padding-left: 0;
-      max-width: 600px;
+      max-width: 626px;
     }
     @include desktop {
       gap: 26px;
@@ -95,7 +96,7 @@ import {INTERNSHIP_CARDS} from "@/entities/internship/index.ts";
       margin-right: -20px;
       padding-left: 20px;
       padding-right: 20px;
-      gap: 24px;
+      gap: 12px;
     }
     &::-webkit-scrollbar {
       display: none;

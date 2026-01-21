@@ -15,7 +15,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
           <h2 class="cost__info-title">Стоимость и&nbsp;варианты оплаты<svg class="cost__info-icon" width="66" height="66" aria-hidden="true">
             <use href="@/app/assets/icons/sprite.svg#course-program-star-icon"></use>
           </svg></h2>
-          <p class="cost__info-description">Честная стоимость&nbsp;&mdash; <br>никаких мифических акций</p>
+          <p class="cost__info-description">Честная стоимость&nbsp;&mdash; никаких мифических акций</p>
         </div>
         <div class="cost__card-wrapper">
           <svg class="cost__card-icon" width="117" height="156" aria-hidden="true">
@@ -49,7 +49,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
 .cost-section {
   padding: 47px 4px 40px;
   @include tablet {
-    padding: 30px 0;
+    padding: 41.5px 0;
   }
   @include desktop {
     padding: 88px 60px;
@@ -62,7 +62,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
   box-sizing: border-box;
   @include tablet {
     gap: 40px;
-    padding: 0 16px;
+    padding: 0 13px;
   }
   @include desktop {
     gap: 66px;
@@ -109,14 +109,16 @@ const {isOpenModal, openModal, closeModal} = useModal();
     line-height: 112%;
     letter-spacing: 0;
     text-align: left;
+    width: 244px;
     @include tablet-desktop {
+      width: 483px;
       font-size: 1.25rem;
     }
   }
   &__card-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
     justify-content: flex-start;
     position: relative;
     box-sizing: border-box;
@@ -129,6 +131,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
       margin-right: -20px;
       padding-left: 20px;
       padding-right: 20px;
+      overflow: inherit;
       &::-webkit-scrollbar {
         display: none;
       }
@@ -147,8 +150,8 @@ const {isOpenModal, openModal, closeModal} = useModal();
     @include tablet {
       display: block;
       position: absolute;
-      bottom: -20px;
-      left: 20px;
+      bottom: -26px;
+      left: 22px;
     }
     @include desktop {
       bottom: -20px;
@@ -157,6 +160,10 @@ const {isOpenModal, openModal, closeModal} = useModal();
   }
   &__btn {
     margin-bottom: 54px;
+    @include tablet {
+      margin-bottom: -10px;
+      margin-top: -8px;
+    }
   }
 }
 </style>

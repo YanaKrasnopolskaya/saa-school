@@ -47,8 +47,11 @@ const props = defineProps<Grade>()
     letter-spacing: 0;
     text-align: center;
     padding: 4px 8px;
-    @include tablet-desktop{
+    @include tablet{
+      position: relative;
+      left: -8px;
       font-size: 1.375rem;
+      padding: 5.33px 10.65px;
     }
   }
   &__desc-period {
@@ -58,8 +61,10 @@ const props = defineProps<Grade>()
     line-height: 112%;
     letter-spacing: 0;
     text-align: left;
-    @include tablet-desktop{
+    @include tablet{
       font-size: 1.375rem;
+      position: relative;
+      left: -3px;
     }
   }
   &__line {
@@ -96,6 +101,11 @@ const props = defineProps<Grade>()
       font-size: 3rem;
     }
   }
+  &__price-junior {
+    @include tablet {
+      padding: 40px 0;
+    }
+  }
   &__price-middle,
   &__price-senior {
     padding: 12px 25px;
@@ -103,7 +113,7 @@ const props = defineProps<Grade>()
   &__price-middle {
     padding: 10.5px 0 0 2px;
     @include tablet{
-      padding: 20px 30px 19px;
+      padding: 10px 30px 10px;
     }
     @include desktop{
       padding: 6px 67px;
@@ -111,7 +121,7 @@ const props = defineProps<Grade>()
   }
   &__price-senior {
     @include tablet{
-      padding: 20px 18px 20px;
+      padding: 15px 18px;
     }
     @include desktop{
       padding: 6px 53px;
@@ -141,7 +151,7 @@ const props = defineProps<Grade>()
     box-shadow: 0 4px 16px 0 rgba(0, 44, 62, 0.08);
     padding: 2px 10px;
     @include tablet {
-      bottom: -6px;
+      bottom: -14px;
     }
     @include desktop {
       left: auto;
@@ -156,7 +166,7 @@ const props = defineProps<Grade>()
 .perspectives-card--middle {
   gap: 44px;
   @include tablet {
-    gap: 54px;
+    gap: 60px;
   }
   @include desktop {
     gap: 59px;

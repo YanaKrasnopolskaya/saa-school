@@ -30,7 +30,7 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
 
 <style scoped lang="scss">
 .about-section {
-  padding: 36px 16px 32px;
+  padding: 36px 16px 20px;
   @include tablet {
     padding-bottom: 20px;
   }

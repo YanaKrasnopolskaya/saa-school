@@ -33,10 +33,7 @@
 .profession-section {
   padding: 107px 0 40px;
   @include tablet {
-    padding-top: 150px;
-  }
-  @include tablet {
-    padding: 208px 56px 30px;
+    padding: 153px 3px 40px;
   }
 }
 .profession {
@@ -85,7 +82,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 193px;
     max-height: 37px;
     background: $secondary-color;
     color: rgba(255, 255, 255, 1);
@@ -93,14 +89,14 @@
     transform: rotate(-4.32deg);
     border-radius: 40px;
     position: absolute;
-    bottom: -37px;
-    right: 0;
+    bottom: -40px;
+    right: -5px;
     width: 193px;
     @include tablet {
-      bottom: -35px;
-      right: 16px;
+      bottom: -38px;
+      right: 3px;
       font-size: 1rem;
-      max-width: 215px;
+      width: 215px;
       max-height: 42px;
     }
     @include desktop {
@@ -138,7 +134,11 @@
     width: 100%;
     height: auto;
     @include tablet {
+      position: relative;
+      top: 7px;
+      left: 25px;
       max-width: 500px;
+      transform: rotate(1.5deg);
     }
     @include desktop {
       width: 482px;
@@ -190,8 +190,8 @@
     top: -13px;
     @include tablet {
       max-width: 250px;
-      top: -74px;
-      left: -15px;
+      top: -71px;
+      left: -5px;
     }
     @include desktop {
       top: -70px;
@@ -204,10 +204,11 @@
     left: -28px;
     z-index: 10;
     transform: rotate(10deg);
-    @include tablet-desktop {
-      left: -30px;
-      width: 80px;
-      height: 80px;
+    @include tablet {
+      top: -34px;
+      left: -40px;
+      width: 76px;
+      height: 76px;
     }
   }
   &__spiral-icon {
@@ -216,12 +217,10 @@
     right: -62px;
     z-index: 10;
     @include tablet {
-      right: -110px;
-      bottom: -35px;
-    }
-    @include tablet-desktop {
-      width: 130px;
-      height: 100px;
+      right: -123px;
+      bottom: -47px;
+      width: 150px;
+      height: 120px;
     }
   }
 }

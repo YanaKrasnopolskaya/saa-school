@@ -37,6 +37,11 @@ const props = defineProps({
   gap: 27px;
   align-items: flex-start;
   padding: 15px 12px 20px;
+  @include tablet {
+    width: 100%;
+    gap: 50px;
+    padding: 15px 16px 16px 20px;
+  }
   @include desktop {
     flex-direction: row;
     justify-content: space-between;
@@ -81,8 +86,8 @@ const props = defineProps({
     flex-direction: column;
     gap: 15px;
     @include tablet {
-      gap: 20px;
-      margin-bottom: 18px;
+      gap: 15px;
+
     }
   }
   &__title {
@@ -108,6 +113,9 @@ const props = defineProps({
     display: flex;
     flex-direction: column;
     gap: 16px;
+    @include tablet {
+      gap: 20px;
+    }
   }
 }
 </style>

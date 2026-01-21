@@ -59,10 +59,15 @@ const props = defineProps<Resume>();
   flex-direction: column;
   justify-content: flex-start;
   position: relative;
-  padding: 0 6px;
+  @include tablet {
+    margin: 0 4px;
+  }
   &__points {
     padding: 12px 14px;
     border-bottom: 1px solid rgba(210, 218, 221, 1);
+    @include tablet {
+      padding: 8px 14px 10px;
+    }
     @include desktop {
       padding: 20px 14px;
     }
@@ -80,17 +85,20 @@ const props = defineProps<Resume>();
   display: flex;
   flex-direction: column;
   gap: 20px;
-  @include tablet-desktop {
+  padding: 0 5px;
+  @include tablet {
     flex-direction: row;
+    gap: 15px;
   }
   &__description {
-    padding: 20px 12px 0;
+    padding: 20px 12px 0 11px;
     display: flex;
     flex-direction: column;
     gap: 20px;
     @include tablet {
       border-right: 1px solid rgba(217, 217, 217, 1);
-      padding: 16px 16px 0;
+      padding: 16px 14px 0 10px;
+      gap: 20px;
     }
     @include desktop {
       padding: 32px 56px 108px;
@@ -104,8 +112,9 @@ const props = defineProps<Resume>();
     align-items: center;
     gap: 20px;
     padding-bottom: 6px;
-    @include tablet-desktop {
+    @include tablet {
       flex-direction: column;
+      padding-bottom: 0;
     }
   }
   &__about-wrapper img {
@@ -121,7 +130,8 @@ const props = defineProps<Resume>();
     flex-direction: column;
     gap: 8px;
     justify-content: flex-start;
-    @include tablet-desktop {
+    @include tablet {
+      gap: 16px;
       align-items: center;
     }
     @include desktop {
@@ -149,7 +159,7 @@ const props = defineProps<Resume>();
     gap: 20px;
     padding: 0 12px 20px;
     @include tablet {
-      padding: 8px 12px 24px 0;
+      padding: 16px 12px 24px 0;
     }
     @include desktop {
       padding: 30px 59px 32px 40px;
@@ -160,9 +170,10 @@ const props = defineProps<Resume>();
     display: flex;
     gap: 8px;
     justify-content: flex-start;
-    @include tablet-desktop {
+    @include tablet {
       flex-direction: column;
       align-items: center;
+      gap: 16px;
     }
     @include desktop {
       gap: 16px;
@@ -184,9 +195,10 @@ const props = defineProps<Resume>();
     display: flex;
     gap: 8px;
     justify-content: flex-start;
-    @include tablet-desktop {
+    @include tablet {
       flex-direction: column;
       align-items: center;
+      gap: 16px;
     }
     @include desktop {
       gap: 16px;
@@ -207,7 +219,7 @@ const props = defineProps<Resume>();
     list-style-type: disc;
     padding-left: 24px;
     @include tablet {
-      padding-left: 14px;
+      padding-left: 26px;
     }
     @include desktop {
       padding-left: 28px;
@@ -233,7 +245,8 @@ const props = defineProps<Resume>();
     gap: 8px;
     flex-wrap: wrap;
     @include tablet {
-      gap: 12px;
+      gap: 12px 13px;
+      padding: 2px 0 0 2px;
     }
   }
   &__stack-item {
@@ -256,9 +269,10 @@ const props = defineProps<Resume>();
     right: -6px;
     @include tablet {
       bottom: -90px;
-      right: -10px;
-      width: 144px;
-      height: 144px;
+      right: -25px;
+      width: 154px;
+      height: 154px;
+      transform: rotate(9deg);
     }
     @include desktop {
       width: 187px;

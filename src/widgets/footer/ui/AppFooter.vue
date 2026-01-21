@@ -33,7 +33,7 @@
 
 <style scoped lang="scss">
 .footer {
-  padding: 40px 16px 60px;
+  padding: 39px 16px 60px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

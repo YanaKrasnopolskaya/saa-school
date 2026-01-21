@@ -29,9 +29,10 @@ const props = defineProps<Learning>()
   border-radius: 12px;
   position: relative;
   overflow: hidden;
-  @include tablet-desktop {
+  @include tablet {
+    width: 100%;
     flex-direction: row;
-    padding-bottom: 0;
+    overflow: inherit;
   }
   &__content {
     display: flex;
@@ -42,8 +43,8 @@ const props = defineProps<Learning>()
     gap: 20px;
     padding: 20px 20px 12px 20px;
     @include tablet {
-      padding: 30px 30px 20px;
-      gap: 24px;
+      padding: 30px 30px 20px 28px;
+      gap: 20px;
     }
     @include desktop {
       gap: 20px;
@@ -72,12 +73,16 @@ const props = defineProps<Learning>()
   &__list li::before {
     content: "";
     position: absolute;
-    top: 6px;
-    left: 0;
+    top: 3px;
+    left: 2px;
     border-radius: 50%;
     background: $secondary-color;
     width: 14px;
     height: 14px;
+    @include tablet {
+      top: 5px;
+      left: 4px;
+    }
   }
   &__list-item {
     width: 228px;
@@ -92,6 +97,7 @@ const props = defineProps<Learning>()
       font-size: 1.125rem;
       line-height: 23px;
       padding: 0 16px 0 27px;
+      width: 266px;
     }
     @include desktop {
       line-height: 25px;
@@ -131,20 +137,43 @@ const props = defineProps<Learning>()
   height: 260px;
   padding-top: 15px;
   padding-left: 12px;
+  @include tablet {
+    width: 370px;
+    height: 304px;
+  }
 }
 .learning-card--format {
   padding-bottom: 6px;
+  @include tablet {
+    padding-bottom: 0;
+  }
+}
+.learning-card--format .learning-card__content {
+  gap: 16px;
+  @include tablet {
+    padding-right: 0;
+    gap: 23px;
+  }
 }
 .learning-card--format .learning-card__img{
   width: 276px;
   height: 244px;
   padding-top: 10px;
+  @include tablet {
+    width: 286px;
+    height: 254px;
+    padding-top: 0;
+  }
 }
 .learning-card--format .learning-card__list-item {
   width: 273px;
+  @include tablet {
+    width: 320px;
+  }
 }
 .learning-card--course .learning-card__content{
   padding-bottom: 0;
+  gap: 23px;
 }
 .learning-card--course .learning-card__list {
   gap: 12px;
@@ -158,34 +187,62 @@ const props = defineProps<Learning>()
   width: 257px;
   height: 236px;
   padding-bottom: 8px;
+  @include tablet {
+    width: 277px;
+    height: 256px;
+    padding-bottom: 0;
+  }
 }
-.learning-card--tools {
-  padding-bottom: 23px;
+.learning-card--tools .learning-card__content {
+  padding-bottom: 34px;
+  @include tablet {
+    padding-right: 0;
+    gap: 23px;
+  }
 }
 .learning-card--tools .learning-card__list-item{
   width: 263px;
-}
-.learning-card--tools .learning-card__img-wrapper {
-  padding-top: 40px;
-  padding-left: 20px;
+  @include tablet {
+    width: 293px;
+  }
 }
 .learning-card--tools .learning-card__img {
   width: 284px;
   height: 216px;
+  @include tablet {
+    width: 304px;
+    height: 236px;
+  }
 }
-.learning-card--feedback {
-  padding-bottom: 6px;
+.learning-card--feedback .learning-card__content {
+  padding-top: 15px;
+  padding-bottom: 18px;
+  gap: 20px;
+  @include tablet {
+    padding-top: 30px;
+    gap: 23px;
+  }
 }
 .learning-card--feedback .learning-card__list-item {
   width: 270px;
   font-size: 18px;
   line-height: 23px;
+  @include tablet {
+    width: 290px;
+  }
 }
 .learning-card--feedback .learning-card__img-wrapper {
   padding-top: 16px;
+  @include tablet {
+    padding-top: 24px;
+  }
 }
 .learning-card--feedback .learning-card__img {
   width: 278px;
   height: 260px;
+  @include tablet {
+    width: 298px;
+    height: 280px;
+  }
 }
 </style>

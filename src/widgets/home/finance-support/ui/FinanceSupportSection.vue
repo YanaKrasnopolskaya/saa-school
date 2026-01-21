@@ -8,7 +8,7 @@ import {FINANCE_SUPPORT_CARDS, FinanceSupportCard} from "@/entities/finance-supp
       <div class="finance-support">
         <h2 class="finance-support__title">Всегда на твоей стороне</h2>
         <div class="finance-support__card-wrapper">
-          <FinanceSupportCard v-for="card in FINANCE_SUPPORT_CARDS" :title="card.title" :image="card.image" :description="card.description" :more-info="card.moreInfo"/>
+          <FinanceSupportCard v-for="card in FINANCE_SUPPORT_CARDS" :title="card.title" :image="card.image" :description="card.description" :more-info="card.moreInfo" class="card"/>
         </div>
       </div>
     </div>
@@ -19,7 +19,7 @@ import {FINANCE_SUPPORT_CARDS, FinanceSupportCard} from "@/entities/finance-supp
 .finance-support-section {
   padding: 40px 4px 40px;
   @include tablet {
-    padding: 78px 16px 40px;
+    padding: 60px 14px 40px;
   }
   @include desktop {
     padding: 50px 68px 40px;
@@ -44,6 +44,7 @@ import {FINANCE_SUPPORT_CARDS, FinanceSupportCard} from "@/entities/finance-supp
     text-align: left;
     padding-left: 12px;
     @include tablet {
+      width: fit-content;
       font-size: 2.5rem;
       padding-left: 0;
     }
@@ -63,9 +64,14 @@ import {FINANCE_SUPPORT_CARDS, FinanceSupportCard} from "@/entities/finance-supp
       gap: 12px;
     }
     @include desktop {
-
       gap: 14px;
     }
   }
+}
+.card:last-child :deep(.card__img) {
+  top: -48px;
+  right: 12px;
+  width: 133px;
+  height: 141px;
 }
 </style>

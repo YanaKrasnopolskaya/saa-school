@@ -43,7 +43,7 @@ import {COURSE_PROGRAM} from "@/entities/course-program/const/COURSE_PROGRAM";
 .course-section {
   padding: 40px 0 37px;
   @include tablet {
-    padding: 34px 10px 40px;
+    padding: 40px 16px 40px;
   }
   @include desktop {
     padding: 68px 50px 40px;
@@ -56,7 +56,7 @@ import {COURSE_PROGRAM} from "@/entities/course-program/const/COURSE_PROGRAM";
   justify-content: flex-start;
   padding: 4px;
   @include tablet {
-    gap: 30px;
+    gap: 24px;
   }
   @include desktop {
     gap: 60px;
@@ -85,9 +85,11 @@ import {COURSE_PROGRAM} from "@/entities/course-program/const/COURSE_PROGRAM";
     }
   }
   &__title-icon {
-    @include tablet-desktop {
-      width: 60px;
-      height: 60px;
+    @include tablet {
+      width: 68px;
+      height: 68px;
+      position: relative;
+      top: -20px;
     }
   }
   &__card-wrapper {
@@ -95,16 +97,17 @@ import {COURSE_PROGRAM} from "@/entities/course-program/const/COURSE_PROGRAM";
     flex-direction: column;
     gap: 20px;
     @include tablet {
-      gap: 30px;
+      gap: 28px;
     }
     @include desktop {
-      display: flex;
-      flex-direction: column;
       gap: 28px;
     }
   }
   &__card:first-child :deep(.course-card__title) {
     width: 250px;
+    @include tablet {
+      width: 357px;
+    }
   }
   &__dropdown-items {
     list-style: disc;
@@ -121,5 +124,9 @@ import {COURSE_PROGRAM} from "@/entities/course-program/const/COURSE_PROGRAM";
 .course__card-wrapper .course__card:last-of-type {
   gap: 31px;
   padding-bottom: 16px;
+  @include tablet {
+    gap: 56px;
+    padding-bottom: 16px;
+  }
 }
 </style>

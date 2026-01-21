@@ -33,7 +33,7 @@ const handleInput = (e) => {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 18px;
+  gap: 16px;
   &__label {
     font-size: 1.25rem;
     font-weight: 700;
@@ -67,7 +67,7 @@ const handleInput = (e) => {
     width: 100%;
     border: none;
     background: transparent;
-    padding: 7px 0;
+    padding: 7px 0 9px;
     font-size: 1rem;
     &::placeholder {
       font-size: 1rem;
@@ -75,6 +75,7 @@ const handleInput = (e) => {
       line-height: 20px;
       letter-spacing: 0;
       text-align: left;
+      color: rgba(0, 44, 62, 0.4);
     }
     &:focus-visible {
       outline: none;
@@ -84,6 +85,9 @@ const handleInput = (e) => {
 .app-input--dark .app-input__label,
 .app-input--dark .app-input__field {
   color: rgba(255, 255, 255, 1);
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
 }
 .app-input--dark .app-input__wrapper {
   border-color: rgba(255, 255, 255, 0.3);

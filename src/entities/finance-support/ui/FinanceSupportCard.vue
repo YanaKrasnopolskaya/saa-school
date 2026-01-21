@@ -42,8 +42,10 @@ const props = defineProps<FinanceSupportCardInterface>();
     top: -15px;
     right: 17px;
     @include tablet {
-      width: 113px;
-      height: 111px;
+      top: -26px;
+      right: 30px;
+      width: 115px;
+      height: 110px;
     }
     @include desktop {
       width: 128px;

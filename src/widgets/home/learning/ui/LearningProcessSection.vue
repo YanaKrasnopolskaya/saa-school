@@ -56,6 +56,9 @@ import {LearningCard} from "@/entities/learning/index.ts";
 <style scoped lang="scss">
 .learning-section {
   padding: 40px 16px 60px;
+  @include tablet {
+    padding: 46px 12px 72px;
+  }
   @include desktop {
     padding: 108px 68px 60px;
   }
@@ -66,7 +69,7 @@ import {LearningCard} from "@/entities/learning/index.ts";
   gap: 16px;
   position: relative;
   @include tablet {
-    gap: 20px;
+    gap: 15px;
   }
   @include desktop {
     gap: 48px;
@@ -105,8 +108,9 @@ import {LearningCard} from "@/entities/learning/index.ts";
     top: -10px;
     left: 3px;
     @include tablet {
-      width: 60px;
-      height: 60px;
+      width: 68px;
+      height: 68px;
+      left: -12px;
     }
     @include desktop {
       width: 68px;
@@ -118,7 +122,7 @@ import {LearningCard} from "@/entities/learning/index.ts";
     flex-direction: column;
     gap: 10px;
     @include tablet {
-      gap: 20px;
+      gap: 16px;
     }
   }
   &__additional-top {
@@ -160,8 +164,8 @@ import {LearningCard} from "@/entities/learning/index.ts";
     transform: rotate(-2.47deg);
     bottom: -12px;
     @include tablet {
-      bottom: 0;
-      left: 30px;
+      bottom: -3px;
+      left: 38px;
     }
     @include desktop {
       margin-left: 0;
@@ -171,6 +175,9 @@ import {LearningCard} from "@/entities/learning/index.ts";
     position: absolute;
     top: -6px;
     right: -6px;
+    @include tablet {
+      right: 2px;
+    }
   }
   &__additional-bottom {
     font-size: 1rem;
@@ -182,7 +189,7 @@ import {LearningCard} from "@/entities/learning/index.ts";
     margin-bottom: 20px;
     @include tablet {
       position: absolute;
-      bottom: -16px;
+      bottom: -50px;
     }
     @include desktop {
       position: relative;
@@ -200,7 +207,10 @@ import {LearningCard} from "@/entities/learning/index.ts";
     transform: rotate(2.43deg);
     padding: 12px 16px;
     width: 285px;
-    top: -17px;
+    top: -19px;
+    @include tablet {
+      top: -17px;
+    }
   }
   &__additional-bottom-svg svg {
     position: absolute;
@@ -209,7 +219,7 @@ import {LearningCard} from "@/entities/learning/index.ts";
   }
   &__additional-bottom-text {
     position: absolute;
-    bottom: -2px;
+    bottom: 0;
     right: 47px;
     display: flex;
     flex-direction: row;
@@ -223,6 +233,9 @@ import {LearningCard} from "@/entities/learning/index.ts";
     transform: rotate(-1.40deg);
     max-width: 128px;
     z-index: 2;
+    @include tablet {
+      bottom: -2px;
+    }
   }
 }
 </style>

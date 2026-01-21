@@ -13,7 +13,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
         <h2 class="offer__title">Предложение для компаний</h2>
         <div class="offer__info">
           <p class="offer__info-text">Вы можете обучить сотрудников на&nbsp;этом курсе. <b>Адаптируем программу под ваш бизнес</b>
-            и&nbsp;предоставим отчёты об успеваемости. При обучении сразу нескольких сотрудников — более выгодная стоимость.</p>
+            и предоставим отчёты об успеваемости. При обучении сразу нескольких сотрудников — более выгодная стоимость.</p>
           <span class="offer__info-text">Оставьте заявку, и мы вышлем вам <a href="#"><b>индивидуальное предложение.</b></a></span>
         </div>
         <img class="offer__img" src="/images/b2b.png" alt="Предложение для компаний">
@@ -31,6 +31,9 @@ const {isOpenModal, openModal, closeModal} = useModal();
 <style scoped lang="scss">
 .offer-for-companies-section {
   padding: 44px 16px;
+  @include tablet {
+    padding: 45px 14px;
+  }
   @include desktop {
     padding: 100px 68px;
   }
@@ -42,7 +45,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
   gap: 28px;
   align-items: flex-start;
   @include tablet {
-    gap: 40px;
+    gap: 41px;
   }
   @include desktop {
     grid-template-rows: repeat(2, auto);
@@ -56,6 +59,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
     letter-spacing: 0;
     text-align: left;
     @include tablet {
+      width: fit-content;
       font-size: 2.5rem;
     }
     @include desktop {
@@ -68,7 +72,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
     gap: 26px;
     @include tablet {
       gap: 20px;
-      max-width: 450px;
+      max-width: 470px;
     }
     @include desktop {
       max-width: 720px;
@@ -83,6 +87,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
     letter-spacing: 0;
     text-align: left;
     @include tablet-desktop {
+      width: 100%;
       font-size: 1.25rem;
     }
   }
@@ -92,11 +97,11 @@ const {isOpenModal, openModal, closeModal} = useModal();
     margin: 0 auto;
     @include tablet {
       position: absolute;
-      right: 40px;
-      top: 70%;
+      right: 20px;
+      top: 284px;
       transform: translateY(-70%);
-      width: 281px;
-      height: 282px;
+      width: 300px;
+      height: 290px;
     }
     @include desktop {
       width: 281px;

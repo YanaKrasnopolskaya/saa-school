@@ -12,7 +12,7 @@ const props = defineProps<CostCardInterface>();
     </div>
     <div class="cost-card__price-wrapper">
       <span class="cost-card__price">{{price}}
-        <span class="cost-card__text">{{priceDesc}}</span>
+        <span class="cost-card__text cost-card__text--price">{{priceDesc}}</span>
       </span>
       <span class="cost-card__text">{{discount}}<b>{{discountedPrice}}</b></span>
     </div>
@@ -35,9 +35,9 @@ const props = defineProps<CostCardInterface>();
   flex-direction: column;
   gap: 22px;
   @include tablet {
-    flex: 0 0 70%;
+    flex: 0 0 496px;
     padding: 40px;
-    gap: 40px;
+    gap: 50px;
   }
   @include desktop {
     flex: 1;
@@ -46,6 +46,9 @@ const props = defineProps<CostCardInterface>();
     display: flex;
     flex-direction: column;
     gap: 10px;
+    @include tablet {
+      gap: 12px;
+    }
   }
   &__info-title {
     font-size: 1.5rem;
@@ -62,6 +65,11 @@ const props = defineProps<CostCardInterface>();
     text-align: left;
     color: $text-secondary-color;
   }
+  &__text--price {
+    @include tablet {
+      margin-top: 11px;
+    }
+  }
   &__text b {
     display: block;
     color: $text-color;
@@ -73,6 +81,9 @@ const props = defineProps<CostCardInterface>();
     display: flex;
     flex-direction: column;
     gap: 22px;
+    @include tablet {
+      gap: 23px;
+    }
   }
   &__price {
     font-size: 2rem;

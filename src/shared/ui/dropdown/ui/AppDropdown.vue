@@ -46,7 +46,7 @@ const toggle = () => {
     letter-spacing: 0;
     text-align: left;
     @include tablet {
-      gap: 80px;
+      gap: 220px;
     }
   }
   &__icon {

@@ -26,7 +26,7 @@ import {QUESTIONS} from "@/entities/questions";
 
 <style scoped lang="scss">
 .questions-section {
-  padding: 56px 4px 40px;
+  padding: 55px 4px 40px;
   @include tablet {
     padding: 44px 56px 90px;
   }

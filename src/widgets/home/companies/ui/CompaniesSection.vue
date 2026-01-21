@@ -9,7 +9,7 @@ import {COMPANY_LOGOS} from "@/entities/companies/index.ts";
       <div class="companies">
         <h2 class="companies__title">Наши студенты работают в&nbsp;ведущих компаниях</h2>
         <ul class="companies__list">
-          <li v-for="logo in COMPANY_LOGOS" class="companies__list-item">
+          <li v-for="(logo, index) in COMPANY_LOGOS" class="companies__item" :class="`item-${index}`">
             <img :src="logo.src" :alt="logo.alt">
           </li>
         </ul>
@@ -22,7 +22,7 @@ import {COMPANY_LOGOS} from "@/entities/companies/index.ts";
 .companies-section {
   padding: 41px 4px 0;
   @include tablet {
-    padding: 54px 0 0;
+    padding: 47px 0 0;
   }
   @include desktop {
     padding: 104px 70px 0;
@@ -31,7 +31,18 @@ import {COMPANY_LOGOS} from "@/entities/companies/index.ts";
 .companies {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 39px;
+  @include tablet {
+    gap: 46px;
+    .item-0 { order: 1; }
+    .item-1 { order: 2; }
+    .item-2 { order: 5; }
+    .item-3 { order: 6; }
+    .item-4 { order: 3; }
+    .item-5 { order: 7; }
+    .item-6 { order: 4; }
+    .item-7 { order: 8; }
+  }
   &__title {
     font-size: 2rem;
     font-weight: 700;
@@ -40,7 +51,7 @@ import {COMPANY_LOGOS} from "@/entities/companies/index.ts";
     text-align: left;
     padding: 0 35px 0 14px;
     @include tablet {
-      padding: 0 0 0 20px;
+      padding: 0 0 0 14px;
       font-size: 2.5rem;
       line-height: 50px;
     }
@@ -53,19 +64,19 @@ import {COMPANY_LOGOS} from "@/entities/companies/index.ts";
   }
   &__list {
     background: rgb(230, 248, 252) url(/images/certificate-mobile-bg.png) top right / cover no-repeat;
-    padding: 7px 17px;
+    padding: 10px 17px 8px;
     margin-left: -8px;
     margin-right: -8px;
-    display: grid;
-    grid-template-columns: repeat(2, auto);
+    display: flex;
+    flex-wrap: wrap;
     gap: 14px 0;
     justify-content: center;
     @include tablet {
       margin-left: 0;
       margin-right: 0;
-      padding: 22px 20px;
+      padding: 22px 22px;
       grid-template-columns: repeat(4, auto);
-      gap: 20px 14px;
+      gap: 20px 0;
     }
     @include desktop {
       padding: 29px 0;
@@ -74,11 +85,15 @@ import {COMPANY_LOGOS} from "@/entities/companies/index.ts";
       gap: 32px 80px;
     }
   }
-  &__list-item {
-    width: 161px;
-    height: 57px;
+  &__item {
+    width: 160px;
+    height: 56px;
+    @include tablet {
+      width: 170px;
+      height: 60px;
+    }
   }
-  &__list-item svg {
+  &__item svg {
     width: 100%;
     height: 100%;
     object-fit: contain;

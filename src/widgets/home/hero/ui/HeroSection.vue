@@ -19,7 +19,7 @@ import {AdvantageCard, ADVANTAGES} from "@/entities/advantage";
                        :key="index"
                        :horizontal="card.horizontal"
                        :reversed="card.reversed"
-                       :class="{'hero-features__horizontal': card.horizontal, 'hero-features__reversed': card.reversed}"
+                       :class="['hero-features__card', {'hero-features__horizontal': card.horizontal, 'hero-features__reversed': card.reversed}]"
         >
           <template #more v-if="card.uniqueClass == 'group'">
             <span class="hero-features__more"><span class="hero-features__more-point"></span>до 10 человек</span>
@@ -74,14 +74,11 @@ import {AdvantageCard, ADVANTAGES} from "@/entities/advantage";
     color: rgba(255, 255, 255, 1);
     margin-bottom: 20px;
     @include tablet {
-      font-size: 4em;
+      font-size: 4.25em;
+      margin-bottom: 15px;
     }
     @include desktop {
       font-size: 4.875em;
-    }
-    @include tablet-desktop {
-      font-weight: 800;
-      margin-bottom: 24px;
     }
   }
   &__title-accent {
@@ -121,8 +118,10 @@ import {AdvantageCard, ADVANTAGES} from "@/entities/advantage";
   grid-template-columns: repeat(2, 1fr);
   gap: 9px;
   margin-bottom: -24px;
-  &__horizontal {
-    grid-column: span 2;
+  @include tablet {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+    margin-bottom: -60px;
   }
   &__more {
     display: flex;
@@ -130,7 +129,7 @@ import {AdvantageCard, ADVANTAGES} from "@/entities/advantage";
     justify-content: flex-start;
     align-items: center;
     gap: 4px;
-    padding: 2.88px 3.6px 2.88px 3.6px;
+    padding: 2.88px 3.6px;
     border-radius: 8.64px;
     background: rgba(51, 196, 233, 0.12);
     font-size: 12px;
@@ -140,6 +139,10 @@ import {AdvantageCard, ADVANTAGES} from "@/entities/advantage";
     text-align: center;
     color: rgba(31, 130, 155, 1);
     white-space: nowrap;
+    @include tablet {
+      font-size: 1rem;
+      padding: 4px 5px;
+    }
   }
   &__more-point {
     display: block;
@@ -147,6 +150,10 @@ import {AdvantageCard, ADVANTAGES} from "@/entities/advantage";
     height: 8.65px;
     background: rgba(17, 127, 155, 1);
     border-radius: 50%;
+    @include tablet {
+      width: 12px;
+      height: 12px;
+    }
   }
 }
 </style>
