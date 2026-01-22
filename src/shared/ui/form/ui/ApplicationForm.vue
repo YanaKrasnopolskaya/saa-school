@@ -142,8 +142,16 @@ const emit = defineEmits(['submit']);
 }
 .application-form--dark {
   background: rgba(0, 44, 62, 1);
+  padding: 11px 20px;
+  @include tablet {
+    padding: 40px 40px 36px;
+  }
 }
 .application-form--dark .application-form__consent {
   color: rgba(255, 255, 255, 1);
+  @include tablet {
+    margin-top: -2px;
+    width: 490px;
+  }
 }
 </style>

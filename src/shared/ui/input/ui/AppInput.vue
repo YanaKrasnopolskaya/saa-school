@@ -67,8 +67,9 @@ const handleInput = (e) => {
     width: 100%;
     border: none;
     background: transparent;
-    padding: 7px 0 9px;
+    padding: 3px 0 11px;
     font-size: 1rem;
+    font-family: inherit;
     &::placeholder {
       font-size: 1rem;
       font-weight: 400;

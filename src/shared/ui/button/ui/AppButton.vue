@@ -30,6 +30,7 @@ withDefaults(defineProps<ButtonProps>(), {
   text-align: center;
   text-transform: uppercase;
   border: none;
+  font-family: inherit;
   &__primary {
     background: $primary-button-color;
     &:hover:not(:disabled) {

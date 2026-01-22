@@ -25,9 +25,6 @@
   @include tablet {
     padding: 40px 16px;
   }
-  @include tablet {
-    padding: 68px 80px;
-  }
 }
 .feedback {
   padding: 20px 19px 36px;
@@ -35,22 +32,28 @@
   background: rgba(230, 248, 252, 1);
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 28px;
   justify-content: center;
   align-items: center;
+  position: relative;
   @include tablet {
-    padding: 8px 24px 8px;
-    flex-direction: row-reverse;
-  }
-  @include desktop {
-
+    gap: 30px;
+    align-items: flex-start;
+    padding: 21px 22px 22px;
   }
   &__img {
     width: 200px;
     height: 140px;
+    position: relative;
+    top: 6px;
+    left: 6px;
     @include tablet {
-      width: 182px;
-      height: 205px;
+      width: 270px;
+      height: 245px;
+      position: absolute;
+      top: -6px;
+      right: -18px;
+      left: auto;
     }
     @include desktop {
       width: 360px;
@@ -62,7 +65,7 @@
     flex-direction: column;
     gap: 36px;
     @include tablet {
-      gap: 30px;
+      gap: 29px;
     }
     @include desktop {
       gap: 40px;
@@ -78,6 +81,7 @@
       font-size: 2.5rem;
       line-height: 50px;
       text-align: left;
+      width: 445px;
     }
     @include desktop {
       font-size: 3rem;
@@ -90,6 +94,7 @@
     gap: 12px;
     @include tablet {
       flex-direction: row;
+      gap: 9px;
     }
   }
   &__btn {
@@ -104,6 +109,7 @@
     letter-spacing: 0;
     text-align: center;
     text-transform: uppercase;
+    font-family: inherit;
   }
 }
 .feedback__btn--call {

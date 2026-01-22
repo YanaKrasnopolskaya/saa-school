@@ -45,8 +45,9 @@ const toggle = () => {
     line-height: 112%;
     letter-spacing: 0;
     text-align: left;
+    font-family: inherit;
     @include tablet {
-      gap: 220px;
+      gap: 80px;
     }
   }
   &__icon {
@@ -57,11 +58,17 @@ const toggle = () => {
   &__icon-rotated {
     transform: rotate(180deg);
     color: rgba(0, 44, 62, 1);
+    position: relative;
+    top: -6px;
+    @include tablet {
+      top: 2px;
+    }
   }
   &__content {
     padding: 20px 0 0 30px;
     @include tablet {
       max-width: 480px;
+      padding: 18px 0 0 30px;
     }
     @include desktop {
       padding: 18px 0 0 24px;

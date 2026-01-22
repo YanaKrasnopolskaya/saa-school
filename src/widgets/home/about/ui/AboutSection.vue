@@ -10,17 +10,16 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
         <div class="about__info-wrapper">
           <div class="about__info">
             <h2 class="about__info-title">Знаем индустрию изнутри</h2>
-            <p class="about__text">Наша команда&nbsp;&mdash; это действующие специалисты в&nbsp;аккредитованной it&nbsp;-компании <b>с&nbsp;опытом 7+&nbsp;лет,</b>  которые работают с&nbsp;лидерами рынка:</p>
+            <p class="about__text">Наша команда&nbsp;&mdash; это действующие специалисты в&nbsp;аккредитованной it&#8209;компании <b>с&nbsp;опытом 7+&nbsp;лет,</b>  которые работают с&nbsp;лидерами рынка:</p>
           </div>
           <ul class="about__leaders">
-            <li v-for="leader in MARKET_LEADERS" class="about__leaders-item">
+            <li v-for="(leader, index) in MARKET_LEADERS" class="about__item" :class="`item-${index}`">
               <img :src="leader.src" :alt="leader.alt">
             </li>
           </ul>
           <p class="about__text">Поэтому в нашем курсе мы собрали только то, что действительно пригодится на практике. Теория не ради голочки, разберем реальные кейсы, и будем ипользовать актуальные инструмены.</p>
         </div>
         <div class="about__img-wrapper">
-          <img class="about__img" src="/images/teammates.png" alt="Команда">
           <div class="about__img-desc">Наша команда</div>
         </div>
       </div>
@@ -32,7 +31,8 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
 .about-section {
   padding: 36px 16px 20px;
   @include tablet {
-    padding-bottom: 20px;
+    padding: 36px 13px 20px;
+    margin-bottom: 12px;
   }
   @include desktop {
     padding: 8px 68px 46px;
@@ -43,8 +43,13 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
   flex-direction: column;
   gap: 36px;
   justify-content: center;
+  position: relative;
   @include tablet {
     gap: 40px;
+    .item-0 { order: 2; }
+    .item-1 { order: 1; }
+    .item-2 { order: 4; }
+    .item-3 { order: 3; }
   }
   @include desktop {
     gap: 50px;
@@ -65,7 +70,7 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
     flex-direction: column;
     gap: 20px;
     @include tablet {
-      margin-bottom: 24px;
+      margin-bottom: 25px;
     }
     @include desktop {
       gap: 30px;
@@ -100,8 +105,8 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
   }
   &__leaders {
     background: rgb(230, 248, 252) url(/images/certificate-mobile-bg.png) top right / cover no-repeat;
-    display: grid;
-    grid-template-columns: repeat(2, auto);
+    display: flex;
+    flex-wrap: wrap;
     padding: 23px 14px;
     gap: 12px 0;
     justify-content: center;
@@ -110,7 +115,8 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
     @include tablet {
       margin-left: -16px;
       margin-right: -16px;
-      padding: 10px;
+      padding: 12px 100px;
+      gap: 12px 42px;
     }
     @include desktop {
       margin-left: -46px;
@@ -118,19 +124,26 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
       padding: 10px;
     }
   }
-  &__leaders-item {
+  &__item {
     width: 163px;
     height: 52px;
+    @include tablet {
+      width: 194px;
+      height: 60px;
+    }
   }
   &__img-wrapper {
-    position: relative;
-  }
-  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 313px;
     height: 310px;
+    margin: 0 auto;
     border-radius: 12px;
-    background: rgba(196, 196, 196, 1);
+    overflow: hidden;
+    background: url("/images/teammates.png") 63% center / cover no-repeat;
     @include tablet {
+      margin-top: 8px;
       width: 613px;
       height: 447px;
     }
@@ -152,19 +165,39 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
     letter-spacing: 0;
     text-align: center;
     position: absolute;
-    bottom: -8px;
+    bottom: -9px;
     left: -2px;
     @include tablet {
       width: 192px;
-      left: 40px;
+      left: 84px;
       font-size: 1.25rem;
-      bottom: -24px;
+      bottom: -22px;
     }
     @include desktop {
       width: 220px;
       left: -60px;
       bottom: -8px;
     }
+  }
+}
+.item-1 img{
+  width: 200px;
+  position: relative;
+  left: -20px;
+  top: -10px;
+  @include tablet {
+    width: 220px;
+    height: 90px;
+    left: -10px;
+    top: -13px;
+  }
+}
+.item-0 img,
+.item-2 img,
+.item-3 img {
+  @include tablet {
+    width: 194px;
+    height: 60px;
   }
 }
 </style>

@@ -28,10 +28,7 @@ import {QUESTIONS} from "@/entities/questions";
 .questions-section {
   padding: 55px 4px 40px;
   @include tablet {
-    padding: 44px 56px 90px;
-  }
-  @include tablet {
-    padding: 110px 28px 90px;
+    padding: 46px 56px 90px 50px;
   }
 }
 .questions {
@@ -69,8 +66,9 @@ import {QUESTIONS} from "@/entities/questions";
     bottom: 0;
     right: -70px;
     @include tablet {
-      width: 60px;
-      height: 60px;
+      width: 68px;
+      height: 68px;
+      bottom: -12px;
     }
     @include desktop {
       width: 66px;
@@ -86,6 +84,7 @@ import {QUESTIONS} from "@/entities/questions";
     align-items: flex-start;
     @include tablet {
       gap: 12px;
+      margin-left: 7px;
     }
     @include desktop {
       flex-direction: row;
@@ -101,6 +100,9 @@ import {QUESTIONS} from "@/entities/questions";
     line-height: 112%;
     width: 283px;
     margin-left: -30px;
+    @include tablet {
+      width: 480px;
+    }
   }
 }
 </style>

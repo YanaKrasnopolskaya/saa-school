@@ -41,7 +41,7 @@
   @include tablet {
     flex-direction: row;
     justify-content: space-between;
-    padding: 40px 44px 96px;
+    padding: 40px 42px 96px;
   }
   @include desktop {
     padding: 48px 50px 171px;
@@ -64,6 +64,9 @@
     flex-direction: row;
     gap: 16px;
     align-items: center;
+    @include tablet {
+      gap: 14px;
+    }
   }
   &__contact-social {
     border: 1px solid rgba(0, 44, 62, 0.12);
@@ -109,6 +112,21 @@
     text-align: left;
     @include tablet {
       width: 313px;
+    }
+  }
+  &__documents-link:nth-of-type(4) {
+    @include tablet {
+      order: 2;
+    }
+  }
+  &__documents-link:nth-of-type(2) {
+    @include tablet {
+      order: 3;
+    }
+  }
+  &__documents-link:nth-of-type(3) {
+    @include tablet {
+      order: 4;
     }
   }
   &__documents-link--super {
