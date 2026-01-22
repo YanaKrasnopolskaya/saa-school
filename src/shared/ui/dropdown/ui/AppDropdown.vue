@@ -12,7 +12,7 @@ const toggle = () => {
 <template>
   <div class="dropdown">
     <button class="dropdown__button" @click="toggle" type="button">
-      {{label}}
+      <span>{{label}}</span>
       <svg class="dropdown__icon" :class="{'dropdown__icon-rotated': isOpen}" width="24" height="24" aria-hidden="true">
         <use href="@/app/assets/icons/sprite.svg#dropdown-open-icon"></use>
       </svg>
@@ -48,6 +48,11 @@ const toggle = () => {
     font-family: inherit;
     @include tablet {
       gap: 80px;
+    }
+  }
+  &__button span {
+    @include tablet {
+      width: 370px;
     }
   }
   &__icon {
