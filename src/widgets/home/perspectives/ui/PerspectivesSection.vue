@@ -46,7 +46,7 @@ import {GRADES} from "@/entities/grade/const/GRADES";
 
 <style scoped lang="scss">
 .perspectives-section {
-  padding: 34px 17px;
+  padding: 34px 16px;
   @include tablet {
     padding: 58px 20px 40px;
   }
@@ -124,6 +124,7 @@ import {GRADES} from "@/entities/grade/const/GRADES";
     box-shadow: 0 4px 16px 0 rgba(0, 44, 62, 0.08);
     background: $background-color;
     @include tablet {
+      top: -3px;
       flex-direction: row;
       padding: 18px 24px;
       align-items: center;
@@ -170,7 +171,7 @@ import {GRADES} from "@/entities/grade/const/GRADES";
   &__mark-icon {
     position: absolute;
     top: -15px;
-    right: 0;
+    right: -6px;
     @include tablet {
       transform: rotate(-28.75deg);
       top: -8px;
@@ -194,35 +195,35 @@ import {GRADES} from "@/entities/grade/const/GRADES";
   }
   &__card-wrapper {
     display: flex;
+    justify-content: flex-start;
     gap: 8px;
-    height: 204px;
     width: 100vw;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    padding: 0 30px;
     overflow-x: auto; // горизонтальный скролл
     scroll-behavior: smooth; // плавный скролл по пользовательскому свайпу
+    margin: 0 -30px;
+    padding: 0 30px;
     &::-webkit-scrollbar {
       display: none; // скрываем скроллбар
     }
-    @include tablet-desktop {
+    @include tablet {
       overflow: visible;
-      justify-content: center;
-      height: 255px;
+      margin: 0 -8px;
+      padding: 0;
+      gap: 13px;
     }
     @include desktop {
-      padding-top: 16px;
+      padding-top: 13px;
+      margin: 0;
     }
   }
   &__card {
-    flex: 0 0 58%; // ширина карточки относительно контейнера
+    flex: 0 0 183.18px;// ширина карточки относительно контейнера
     scroll-snap-align: start; // каждая карточка прилипает к началу
-    @include tablet-desktop {
-      flex: auto;
-      max-width: 334px;
+    @include tablet {
+      flex: 0 0 226px;
+    }
+    @include desktop {
+      flex: 0 0 324px;
     }
   }
 }

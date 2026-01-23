@@ -56,6 +56,9 @@ const emit = defineEmits(['submit']);
   @include tablet {
     padding: 40px 40px 36px 40px;
   }
+  @include desktop {
+    gap: 35px;
+  }
   &__notification {
     width: 100%;
     display: flex;
@@ -85,6 +88,9 @@ const emit = defineEmits(['submit']);
     margin-bottom: -20px;
     @include tablet {
       margin-top: 30px;
+    }
+    @include desktop {
+      margin-top: 34px;
     }
   }
   &__consent {

@@ -27,7 +27,7 @@ import {COURSE_PROGRAM} from "@/entities/course-program/const/COURSE_PROGRAM";
               <AppDropdown v-for="item in program.items" :label="item.name">
                 <template #dropdown-text>
                   <ul class="course__dropdown-items">
-                    <li class="course__dropdown-item" v-for="text in item.texts">{{text}}</li>
+                    <li class="course__dropdown-item" v-for="text in item.texts" v-html="text"></li>
                   </ul>
                 </template>
               </AppDropdown>
@@ -41,12 +41,12 @@ import {COURSE_PROGRAM} from "@/entities/course-program/const/COURSE_PROGRAM";
 
 <style scoped lang="scss">
 .course-section {
-  padding: 40px 0 37px;
+  padding: 42px 0 37px;
   @include tablet {
-    padding: 40px 16px 40px;
+    padding: 42px 16px 42px;
   }
   @include desktop {
-    padding: 68px 50px 40px;
+    padding: 45px 61px 40px;
   }
 }
 .course {
@@ -59,7 +59,7 @@ import {COURSE_PROGRAM} from "@/entities/course-program/const/COURSE_PROGRAM";
     gap: 24px;
   }
   @include desktop {
-    gap: 60px;
+    gap: 37px;
   }
   &__title-wrapper {
     display: flex;
@@ -82,14 +82,18 @@ import {COURSE_PROGRAM} from "@/entities/course-program/const/COURSE_PROGRAM";
     }
     @include desktop {
       font-size: 3rem;
+      letter-spacing: -0.9px;
     }
   }
   &__title-icon {
+    position: relative;
     @include tablet {
       width: 68px;
       height: 68px;
-      position: relative;
       top: -20px;
+    }
+    @include desktop {
+      height: 78px;
     }
   }
   &__card-wrapper {
@@ -97,10 +101,10 @@ import {COURSE_PROGRAM} from "@/entities/course-program/const/COURSE_PROGRAM";
     flex-direction: column;
     gap: 20px;
     @include tablet {
-      gap: 28px;
+      gap: 30px;
     }
     @include desktop {
-      gap: 28px;
+      gap: 30px;
     }
   }
   &__card:first-child :deep(.course-card__title) {
@@ -119,14 +123,52 @@ import {COURSE_PROGRAM} from "@/entities/course-program/const/COURSE_PROGRAM";
     display: flex;
     flex-direction: column;
     gap: 4px;
+    @include desktop {
+      gap: 0;
+    }
+  }
+  &__dropdown-item {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 112%;
+    letter-spacing: 0;
+    text-align: left;
+    @include desktop {
+      left: -2px;
+      line-height: 110%;
+      letter-spacing: -0.2px;
+    }
   }
 }
-.course__card-wrapper .course__card:last-of-type {
+.course-card:nth-child(4){
+  @include desktop {
+    :deep(.course-card__title) {
+      width: 280px;
+    }
+  }
+}
+.course__card:last-of-type {
   gap: 31px;
   padding-bottom: 16px;
   @include tablet {
     gap: 56px;
     padding-bottom: 16px;
+  }
+  @include desktop {
+    gap: 17px;
+    padding-bottom: 16px;
+    :deep(.dropdown) {
+      padding: 13px 15px;
+    }
+    :deep(.dropdown__icon) {
+      top: 2px;
+    }
+    .course__dropdown-item {
+      top: -2px;
+      left: -1px;
+      letter-spacing: -0.3px;
+    }
   }
 }
 </style>

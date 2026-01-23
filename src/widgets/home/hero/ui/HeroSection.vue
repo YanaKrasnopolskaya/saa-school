@@ -111,6 +111,7 @@ import {AdvantageCard, ADVANTAGES} from "@/entities/advantage";
     background-size: 286px;
     @include tablet {
       background-image: url("/images/hero-description-tablet-bg.svg");
+      background-size: 555px;
       padding: 12px 24px;
       font-size: 1.25em;
       line-height: 25px;

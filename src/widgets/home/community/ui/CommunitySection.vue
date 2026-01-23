@@ -18,7 +18,7 @@
         <div class="community__advantages-wrapper">
           <div class="community__advantages">
             <p class="community__advantages-item">
-              Доверительная<br> атмосфера&nbsp;&mdash; здесь никто не&nbsp;осуждает и&nbsp;не&nbsp;критикует за&nbsp;&laquo;неправильные&raquo; вопросы
+              Доверительная<br> атмосфера&nbsp;&mdash; здесь никто не&nbsp;осуждает и&nbsp;не&nbsp;критикует за&nbsp;&laquo;неправильные&raquo;&nbsp;вопросы
               <svg class="community__advantages-icon" width="80" height="80" aria-hidden="true">
                 <use href="@/app/assets/icons/sprite.svg#community-icon1"></use>
               </svg>
@@ -48,14 +48,14 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 20px 0 30px;
+  margin: 19px 0 30px;
   @include tablet {
     background-image: url("/images/community-tablet-bg.png");
     margin: 14px 0 40px;
   }
   @include desktop {
     background-image: url("/images/community-desktop-bg.png");
-    margin: 80px 0 20px;
+    margin: 76px 0 20px;
   }
 }
 .community {
@@ -69,14 +69,14 @@
   }
   @include desktop {
     gap: 43px;
-    padding: 70px 48px 0;
+    padding: 63px 66px 0;
   }
   &__info {
     display: flex;
     flex-direction: column;
     gap: 20px;
     @include desktop {
-      gap: 26px;
+      gap: 24px;
     }
   }
   &__info-title {
@@ -97,9 +97,13 @@
       max-width: 821px;
       font-size: 3rem;
       line-height: 60px;
+      letter-spacing: -0.9px;
     }
     & span {
       display: block;
+      @include desktop {
+        display: inline;
+      }
     }
   }
   &__info-icon {
@@ -111,6 +115,12 @@
       right: -54px;
       width: 70px;
       height: 70px;
+    }
+    @include desktop {
+      top: -13px;
+      right: -13px;
+      width: 76px;
+      height: 76px;
     }
   }
   &__info-description {
@@ -128,6 +138,7 @@
     }
     @include desktop {
       max-width: 743px;
+      letter-spacing: -0.3px;
     }
   }
   &__advantages-wrapper {
@@ -143,7 +154,8 @@
     }
     @include desktop {
       background-image: url("/images/community-desktop.png");
-      background-size: 530px;
+      background-size: 515px;
+      padding-top: 28px;
     }
   }
   &__advantages {
@@ -155,7 +167,7 @@
       padding: 126px 64px 0;
     }
     @include desktop {
-      padding: 103px 100px 50px;
+      padding: 8px 100px 50px;
     }
   }
   &__advantages-item {
@@ -177,11 +189,11 @@
       font-size: 1.125rem;
     }
     @include desktop {
-      max-width: 320px;
+      width: 310px;
       font-size: 1.25rem;
       transform: rotate(1.65deg);
-      left: -50px;
-      top: 10px;
+      left: -58px;
+      top: 64px;
     }
   }
   &__advantages-item--center {
@@ -190,17 +202,19 @@
     border-radius: 12px 0 12px 12px;
     top: 3px;
     @include tablet {
-      top: -14px;
+      top: -13px;
       width: 283px;
       margin-top: 180px;
       margin-left: auto;
       transform: translateX(0);
     }
     @include desktop {
+      width: 300px;
       transform: rotate(0);
       margin-top: 0;
-      left: 30px;
-      top: -60px;
+      left: 28px;
+      top: -4px;
+      padding-left: 16px;
     }
   }
   &__advantages-item--bottom {
@@ -213,9 +227,9 @@
     }
     @include desktop {
       transform: rotate(-5.27deg);
-      left: -40px;
-      top: -100px;
-      margin-left: 10px;
+      left: -44px;
+      top: -42px;
+      width: 284px;
     }
   }
   &__advantages-item svg {
@@ -228,12 +242,21 @@
       top: -16px;
       left: -91px;
     }
+    @include tablet {
+      width: 130px;
+      height: 130px;
+      top: -16px;
+      left: -107px;
+    }
   }
   &__advantages-item--center svg {
     left: auto;
     right: -68px;
     @include tablet {
       right: -90px;
+    }
+    @include desktop {
+      right: -104px;
     }
   }
 }

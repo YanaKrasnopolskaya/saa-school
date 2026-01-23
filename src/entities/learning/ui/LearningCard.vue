@@ -22,7 +22,7 @@ const props = defineProps<Learning>()
 
 <style lang="scss" scoped>
 .learning-card {
-  width: 313px;
+  width: 315px;
   display: flex;
   flex-direction: column;
   border: 2px solid rgba(240, 243, 244, 1);
@@ -48,7 +48,7 @@ const props = defineProps<Learning>()
     }
     @include desktop {
       gap: 20px;
-      padding: 40px;
+      padding: 36px;
     }
   }
   &__title {
@@ -57,17 +57,24 @@ const props = defineProps<Learning>()
     line-height: 25px;
     letter-spacing: 0;
     text-align: left;
-    @include tablet-desktop {
+    @include tablet {
       font-size: 24px;
       line-height: 30px;
+    }
+    @include desktop {
+      letter-spacing: -0.4px;
     }
   }
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 12px;
     @include tablet {
       gap: 10px;
+    }
+    @include desktop {
+      margin-top: 5px;
+      gap: 12px;
     }
   }
   &__list li::before {
@@ -100,27 +107,32 @@ const props = defineProps<Learning>()
       width: 266px;
     }
     @include desktop {
+      font-size: 1.2rem;
       line-height: 25px;
+      width: 395px;
     }
   }
   &__img-wrapper {
+    overflow: hidden;
     height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(50.00% 50.00% at 50% 50%, rgba(244, 249, 250, 1), rgba(244, 249, 250, 0.51) 100%);
+    background: radial-gradient(50.00% 50.00% at 50% 50%,rgba(244, 249, 250, 1),rgba(244, 249, 250, 0.51));
     @include tablet {
       width: 351px;
       padding: 20px 30px;
     }
     @include desktop {
+      height: 293px;
       width: 513px;
-      padding: 20px 30px;
+      padding: 0;
     }
   }
   &__img {
     object-position: top;
     object-fit: contain;
+    position: relative;
   }
 }
 .learning-card--reverse {
@@ -133,36 +145,54 @@ const props = defineProps<Learning>()
   line-height: 30px;
 }
 .learning-card--time .learning-card__img{
-  width: 313px;
-  height: 260px;
-  padding-top: 15px;
-  padding-left: 12px;
+  width: 320px;
+  height: 276px;
+  top: 18px;
+  left: 10px;
   @include tablet {
-    width: 370px;
+    top: 14px;
+    width: 356px;
     height: 304px;
+  }
+  @include desktop {
+    width: 400px;
+    height: 300px;
+    top: 2px;
+    left: 16px;
+  }
+}
+.learning-card--time .learning-card__list {
+  @include tablet {
+    gap: 12px;
   }
 }
 .learning-card--format {
-  padding-bottom: 6px;
-  @include tablet {
-    padding-bottom: 0;
-  }
+  height: 503px;
 }
 .learning-card--format .learning-card__content {
-  gap: 16px;
+  gap: 19px;
   @include tablet {
     padding-right: 0;
     gap: 23px;
   }
+  @include desktop {
+    padding-left: 19px;
+    gap: 14px;
+  }
 }
 .learning-card--format .learning-card__img{
-  width: 276px;
-  height: 244px;
-  padding-top: 10px;
+  width: 280px;
+  height: 254px;
+  top: 5px;
   @include tablet {
     width: 286px;
     height: 254px;
-    padding-top: 0;
+    top: 0;
+    left: -2px;
+  }
+  @include desktop {
+    top: 8px;
+    left: 5px;
   }
 }
 .learning-card--format .learning-card__list-item {
@@ -170,10 +200,22 @@ const props = defineProps<Learning>()
   @include tablet {
     width: 320px;
   }
+  @include desktop {
+    width: 420px;
+  }
+}
+.learning-card--course {
+  height: 643px;
 }
 .learning-card--course .learning-card__content{
-  padding-bottom: 0;
-  gap: 23px;
+  gap: 19px;
+  @include tablet {
+    gap: 24px;
+  }
+  @include desktop {
+    gap: 16px;
+    padding-right: 0;
+  }
 }
 .learning-card--course .learning-card__list {
   gap: 12px;
@@ -182,45 +224,85 @@ const props = defineProps<Learning>()
   font-size: 18px;
   line-height: 23px;
   width: 100%;
+  @include desktop {
+    font-size: 20px;
+    letter-spacing: -0.4px;
+  }
 }
 .learning-card--course .learning-card__img {
   width: 257px;
   height: 236px;
-  padding-bottom: 8px;
+  top: -2px;
   @include tablet {
     width: 277px;
     height: 256px;
-    padding-bottom: 0;
+  }
+  @include desktop {
+    width: 320px;
+    height: 300px;
+    top: 2px;
+    left: 22px;
   }
 }
+.learning-card--tools {
+  height: 560px;
+}
 .learning-card--tools .learning-card__content {
-  padding-bottom: 34px;
+  padding-top: 16px;
   @include tablet {
-    padding-right: 0;
-    gap: 23px;
+    padding: 30px 0 20px 28px;
+    gap: 25px;
+  }
+  @include desktop {
+    padding: 39px 0 20px 19px;
+    gap: 12px;
+  }
+}
+.learning-card--tools .learning-card__list {
+  @include desktop {
+    gap: 16px;
   }
 }
 .learning-card--tools .learning-card__list-item{
   width: 263px;
   @include tablet {
-    width: 293px;
+    width: 300px;
+  }
+  @include desktop {
+    width: 100%;
   }
 }
 .learning-card--tools .learning-card__img {
   width: 284px;
   height: 216px;
+  left: 5px;
   @include tablet {
     width: 304px;
     height: 236px;
+    top: 2px;
+    left: -2px;
+  }
+  @include desktop {
+    width: 333px;
+    height: 300px;
+    top: 22px;
+    left: -14px;
   }
 }
+.learning-card--feedback {
+  height: 482px;
+}
 .learning-card--feedback .learning-card__content {
-  padding-top: 15px;
-  padding-bottom: 18px;
-  gap: 20px;
+  gap: 18px;
+  padding-top: 18px;
   @include tablet {
     padding-top: 30px;
     gap: 23px;
+  }
+  @include desktop {
+    padding-top: 38px;
+    padding-right: 10px;
+    gap: 16px;
   }
 }
 .learning-card--feedback .learning-card__list-item {
@@ -230,19 +312,36 @@ const props = defineProps<Learning>()
   @include tablet {
     width: 290px;
   }
-}
-.learning-card--feedback .learning-card__img-wrapper {
-  padding-top: 16px;
-  @include tablet {
-    padding-top: 24px;
+  @include desktop {
+    width: 100%;
+    font-size: 20px;
+    letter-spacing: -0.4px;
   }
 }
 .learning-card--feedback .learning-card__img {
   width: 278px;
   height: 260px;
+  top: 6px;
   @include tablet {
     width: 298px;
     height: 280px;
+  }
+  @include desktop {
+    height: 300px;
+    top: 7px;
+    left: 10px;
+  }
+}
+.learning-card--time,
+.learning-card--format,
+.learning-card--course,
+.learning-card--tools,
+.learning-card--feedback {
+  @include tablet {
+    height: 304px;
+  }
+  @include desktop {
+    height: 293px;
   }
 }
 </style>

@@ -40,6 +40,9 @@ const handleInput = (e) => {
     line-height: 25px;
     letter-spacing: 0;
     text-align: left;
+    @include desktop {
+      letter-spacing: -0.3px;
+    }
   }
   &__label-prefix {
     color: rgba(0, 44, 62, 0.4);

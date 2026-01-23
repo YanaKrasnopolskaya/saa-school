@@ -5,7 +5,7 @@ defineProps<Advantages>();
 </script>
 
 <template>
-  <div class="advantage-card" :class="[`advantage-card--${uniqueClass}`, {'advantage-card--reversed' : reversed, 'advantage-card--horizontal' : horizontal}]">
+  <div class="advantage-card" :class="[`advantage-card--${uniqueClass}`, {'advantage-card--reversed' : reversed, 'advantage-card--horizontal' : horizontal, 'advantage-card--bg' : differentBg}]">
     <div class="advantage-card__img-wrapper">
       <img class="advantage-card__img" :src="image.src" :alt="image.alt" />
     </div>
@@ -55,6 +55,7 @@ defineProps<Advantages>();
     position: relative;
   }
   &__content {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -84,6 +85,7 @@ defineProps<Advantages>();
     }
   }
   &__description {
+    position: relative;
     font-size: 0.75rem;
     font-weight: 400;
     line-height: 14px;
@@ -150,14 +152,13 @@ defineProps<Advantages>();
     padding-top: 0;
   }
   @include desktop {
-    position: relative;
     left: 13px;
   }
 }
 .advantage-card--reversed .advantage-card__description {
-  position: relative;
   top: 2px;
-  left: 5px;
+  left: 1px;
+  letter-spacing: 0.1px;
 }
 .advantage-card--group .advantage-card__img{
   width: 120px;
@@ -187,7 +188,6 @@ defineProps<Advantages>();
 }
 .advantage-card--ai .advantage-card__description {
   @include tablet {
-    position: relative;
     top: 2px;
   }
 }
@@ -261,7 +261,6 @@ defineProps<Advantages>();
 }
 .advantage-card--certificate .advantage-card__content {
   gap: 12px;
-  position: relative;
   left: -8px;
   @include tablet {
     top: 2px;
@@ -272,5 +271,8 @@ defineProps<Advantages>();
     top: 15px;
     left: -13px;
   }
+}
+.advantage-card--bg {
+  background: $primary-background-color;
 }
 </style>

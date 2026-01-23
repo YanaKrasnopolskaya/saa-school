@@ -16,8 +16,8 @@ const props = defineProps({
         <span class="course-card__term">{{term}}</span>
       </div>
       <div class="course-card__about">
-        <h3 class="course-card__title">{{name}}</h3>
-        <p class="course-card__description">{{description}}</p>
+        <h3 class="course-card__title" v-html="name"></h3>
+        <p class="course-card__description" v-html="description"></p>
       </div>
     </div>
     <div class="course-card__dropdown">
@@ -39,12 +39,14 @@ const props = defineProps({
   padding: 15px 12px 20px;
   @include tablet {
     width: 100%;
-    gap: 50px;
+    gap: 51px;
     padding: 15px 16px 16px 20px;
   }
   @include desktop {
     flex-direction: row;
     justify-content: space-between;
+    gap: 17px;
+    padding: 13px 16px 16px 10px;
   }
   &__content {
     width: 100%;
@@ -60,11 +62,12 @@ const props = defineProps({
     @include desktop {
       flex-direction: column-reverse;
       max-width: 420px;
-      gap: 12px;
+      gap: 34px;
       padding: 0 10px;
     }
   }
   &__term-wrapper {
+    position: relative;
     border-radius: 21.31px;
     background: $primary-background-color;
     padding: 6px 12px 6px 6px;
@@ -72,6 +75,9 @@ const props = defineProps({
     align-items: center;
     justify-content: center;
     gap: 6px;
+    @include desktop {
+      top: 3px;
+    }
   }
   &__term {
     font-size: 1rem;
@@ -80,6 +86,9 @@ const props = defineProps({
     letter-spacing: 0;
     text-align: left;
     white-space: nowrap;
+    @include desktop {
+      letter-spacing: -0.3px;
+    }
   }
   &__about {
     display: flex;
@@ -96,6 +105,9 @@ const props = defineProps({
     line-height: 112%;
     letter-spacing: 0;
     text-align: left;
+    @include desktop {
+      letter-spacing: -0.4px;
+    }
   }
   &__description {
     font-size: 1rem;
@@ -105,7 +117,8 @@ const props = defineProps({
     text-align: left;
     max-width: 490px;
     @include desktop {
-      max-width: 384px;
+      max-width: 370px;
+      letter-spacing: -0.3px;
     }
   }
   &__dropdown {
@@ -114,7 +127,10 @@ const props = defineProps({
     flex-direction: column;
     gap: 16px;
     @include tablet {
-      gap: 20px;
+      gap: 18px;
+    }
+    @include desktop {
+      gap: 14px;
     }
   }
 }

@@ -3,7 +3,7 @@ import type {Learning} from "@/entities/learning/model/types/Learning";
 export const LEARNING_PROGRAM: Learning[] = [
     {
         title: "Время на обучение:",
-        description: ["3 занятия <b>по часу</b> в день <b>по будням</b>", "3-5 часов на практику <b>в&nbsp;любое удобное время</b>"],
+        description: ["3 занятия <b>по часу</b> в день <b>по будням</b>", "3-5 часов на практику<br> <b>в&nbsp;любое удобное время</b>"],
         image: {
             src: "/images/learning-time.webp",
             alt: "Время обучения",
@@ -23,7 +23,7 @@ export const LEARNING_PROGRAM: Learning[] = [
     },
     {
         title: "Что внутри курса:",
-        description: ["<b>Онлайн-лекции</b> <br>от профессионалов", "<b>Тренажеры</b> с десятками заданий", "<b>Домашки</b> и проекты <br>с проверкой от ментора"],
+        description: ["<b>Онлайн-лекции</b> от&nbsp;профессионалов", "<b>Тренажеры</b> с десятками заданий", "<b>Домашки</b> и проекты с&nbsp;проверкой от&nbsp;ментора"],
         image: {
             src: "/images/learning-course.webp",
             alt: "Что внутри курса",
@@ -44,7 +44,7 @@ export const LEARNING_PROGRAM: Learning[] = [
     },
     {
         title: "Обратная связь:",
-        description: ["Менторы с богатым опытом в тестировании будут <b>поддерживать тебя</b> и отвечать на все вопросы"],
+        description: ["Менторы с богатым опытом в&nbsp;тестировании будут <b>поддерживать тебя</b> и отвечать на все вопросы"],
         image: {
             src: "/images/learning-connection.webp",
             alt: "Контакты",

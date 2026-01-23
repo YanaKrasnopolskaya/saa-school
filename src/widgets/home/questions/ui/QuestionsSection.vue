@@ -92,7 +92,10 @@ import {QUESTIONS} from "@/entities/questions";
     }
   }
   &__list {
-    flex: 0 0 48%;
+    :deep(.dropdown__button span) {
+      width: 600px;
+    }
+
   }
   &__answer {
     font-size: 1rem;

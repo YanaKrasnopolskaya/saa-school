@@ -11,7 +11,7 @@ const props = defineProps<Grade>()
       <p class="perspectives-card__desc-period">{{period}}</p>
     </div>
     <div class="perspectives-card__line"></div>
-    <div class="perspectives-card__price" :class="`perspectives-card__price-${name?.toLowerCase()}`">
+    <div class="perspectives-card__price">
       <span class="perspectives-card__price-min">
         <slot  name="min-price"></slot>
       </span>
@@ -25,174 +25,186 @@ const props = defineProps<Grade>()
 
 <style scoped lang="scss">
 .perspectives-card {
-  position: relative;
+  height: 203px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
-  width: 100%;
+  justify-content: space-between;
+  gap: 8px;
+  @include tablet {
+    height: 250px;
+  }
+  @include desktop {
+    height: 254px;
+  }
   &__desc {
-    display: flex;
-    gap: 8px;
-    align-items: center;
     position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin-left: -8px;
+    @include tablet {
+      gap: 10.65px;
+    }
+    @include desktop {
+      gap: 8px;
+    }
   }
   &__desc-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 4.32px 8.63px;
     border-radius: 17.27px;
-    background: $primary-background-color;
-    color: $text-color;
-    font-size: 1.125rem;
+    background: rgba(230, 248, 252, 1);
+    font-size: 18px;
     font-weight: 500;
     line-height: 112%;
     letter-spacing: 0;
-    text-align: center;
-    padding: 4px 8px;
-    @include tablet{
-      position: relative;
-      left: -8px;
-      font-size: 1.375rem;
+    text-align: left;
+    @include tablet-desktop {
+      font-size: 22px;
       padding: 5.33px 10.65px;
-    }
-    @include desktop{
-      left: 5px;
     }
   }
   &__desc-period {
-    color: $text-secondary-color;
-    font-size: 1.125rem;
+    color: rgba(90, 118, 130, 1);
+    font-size: 18px;
     font-weight: 400;
     line-height: 112%;
     letter-spacing: 0;
     text-align: left;
-    @include tablet{
-      font-size: 1.375rem;
-      position: relative;
-      left: -3px;
-    }
-    @include desktop{
-      left: 5px;
+    @include tablet-desktop {
+      font-size: 22px;
     }
   }
   &__line {
-    position: absolute;
-    top: 42px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: calc(100% - 42px);
-    border: 1px dashed rgba(210, 218, 221, 1);
+    width: 161.3px;
+    height: 0;
+    transform: rotate(-90.00deg);
+    border: 0.8px dashed rgba(210, 218, 221, 1);
+    position: relative;
+    top: 50px;
+    @include tablet {
+      width: 199px;
+      top: 64px;
+    }
+    @include desktop {
+      width: 194px;
+    }
   }
   &__price {
-    padding: 30px 25px;
-    background: $primary-background-color;
+    position: relative;
+    width: 100%;
+    height: 97px;
     border-radius: 9.73px;
-    color: $text-color;
-    font-size: 2rem;
+    background: $primary-background-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+    font-size: 32px;
     font-weight: 700;
     line-height: 112%;
     letter-spacing: 0;
-    text-align: center;
-    white-space: nowrap;
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    @include tablet{
-      font-size: 2.5rem;
-      padding: 42px 30px 32px;
+    text-align: left;
+    @include tablet {
+      top: 3px;
+      height: 119px;
+      font-size: 40px;
     }
-    @include desktop{
-      padding: 33px 67px;
-      font-size: 3rem;
+    @include desktop {
+      top: -6px;
+      height: 115px;
+      font-size: 48px;
       letter-spacing: -0.8px;
     }
   }
-  &__price-junior {
+  &__price-min {
+    font-size: 18px;
     @include tablet {
-      padding: 40px 0;
+      font-size: 20px;
     }
     @include desktop {
-      padding: 24px 76px;
+      font-size: 24px;
     }
   }
-  &__price-middle,
-  &__price-senior {
-    padding: 12px 25px;
-  }
-  &__price-middle {
-    padding: 10.5px 0 0 2px;
-    @include tablet{
-      padding: 10px 30px 10px;
-    }
-    @include desktop{
-      padding: 0 60px;
-      & .perspectives-card__price-max {
-        position: relative;
-        top: -10px;
-      }
-    }
-  }
-  &__price-senior {
-    @include tablet{
-      padding: 15px 18px;
-    }
-    @include desktop{
-      padding: 6px 53px;
-    }
-  }
-  &__price-min {
-    font-size: 1.125rem;
-    @include tablet{
-      font-size: 1.25rem;
-    }
-    @include desktop{
-      font-size: 1.5rem;
-    }
+  &__price-max {
+    position: relative;
   }
   &__more-info {
     position: absolute;
-    bottom: -18px;
-    left: 50%;
-    font-size: 1.25rem;
+    bottom: -20px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 25px;
     letter-spacing: 0;
-    text-align: center;
-    transform: translateX(-50%) rotate(-2.47deg);
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 2px 10px 2px 10px;
+    transform: rotate(-2.47deg);
     border-radius: 300px;
     background: $background-color;
-    box-shadow: 0 4px 16px 0 rgba(0, 44, 62, 0.08);
-    padding: 2px 10px;
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.16);
     @include tablet {
-      bottom: -14px;
+      bottom: -12px;
     }
     @include desktop {
-      left: auto;
-      right: 26px;
-      transform: rotate(-2.47deg);
+      bottom: -20px;
+      right: 14px;
     }
   }
 }
 .perspectives-card--junior {
-  justify-content: space-between;
+  .perspectives-card__desc {
+    @include desktop {
+      left: 4px;
+    }
+  }
 }
 .perspectives-card--middle {
-  gap: 44px;
-  @include tablet {
-    gap: 60px;
+  .perspectives-card__price {
+    bottom: 32px;
+    @include tablet {
+      top: auto;
+      bottom: 39px;
+    }
+    @include desktop {
+      bottom: 48px;
+      left: -3px;
+    }
   }
-  @include desktop {
-    gap: 59px;
+  .perspectives-card__price-max {
+    bottom: 5px;
+  }
+  .perspectives-card__desc {
+    @include desktop {
+      left: -3px;
+    }
   }
 }
 .perspectives-card--senior {
-  gap: 10px;
-  @include tablet {
-    gap: 14px;
+  .perspectives-card__price {
+    bottom: 70px;
+    @include tablet {
+      top: auto;
+      bottom: 80px;
+    }
+    @include desktop {
+      bottom: 87px;
+      left: -4px;
+    }
   }
-  @include desktop {
-    gap: 19px;
+  .perspectives-card__price-max {
+    bottom: 5px;
   }
 }
 </style>

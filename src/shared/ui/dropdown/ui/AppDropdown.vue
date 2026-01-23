@@ -52,7 +52,10 @@ const toggle = () => {
   }
   &__button span {
     @include tablet {
-      width: 500px;
+      width: 360px;
+    }
+    @include desktop {
+      letter-spacing: -0.25px;
     }
   }
   &__icon {
@@ -68,6 +71,9 @@ const toggle = () => {
     @include tablet {
       top: 2px;
     }
+    @include desktop {
+      top: -6px;
+    }
   }
   &__content {
     padding: 20px 0 0 30px;
@@ -76,7 +82,7 @@ const toggle = () => {
       padding: 18px 0 0 30px;
     }
     @include desktop {
-      padding: 18px 0 0 24px;
+      padding: 18px 0 0 26px;
     }
   }
 }

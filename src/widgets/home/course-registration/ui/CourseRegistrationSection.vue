@@ -21,22 +21,24 @@ const props = defineProps<{
 
 <style scoped lang="scss">
 .course-registration-section {
-  padding: 60px 4px 51px;
+  padding: 58px 4px 51px;
   @include tablet {
     padding: 48px 56px 40px;
   }
   @include desktop {
-    padding: 50px 10px 40px 20px;
+    padding: 117px 40px 40px 20px;
   }
 }
 .course-registration {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  justify-content: center;
   @include desktop {
     flex-direction: row;
-    margin-left: -58px;
-    margin-right: -38px;
+    margin-left: -60px;
+    margin-right: -80px;
+    gap: 12px;
   }
   &__info {
     background: rgba(230, 248, 252, 1) url("/images/certificate-mobile-bg.png") top right / cover no-repeat;
@@ -46,8 +48,8 @@ const props = defineProps<{
       padding: 40px 120px 40px 40px;
     }
     @include desktop {
-      padding: 40px 90px 40px 40px;
-      width: 75%;
+      padding: 38px 40px 40px 38px;
+      flex: 1;
     }
   }
   &__info-title {
@@ -63,7 +65,13 @@ const props = defineProps<{
     @include desktop {
       font-size: 3rem;
       line-height: 60px;
+      letter-spacing: -0.8px;
     }
+  }
+}
+.course-registration__form {
+  @include desktop {
+    flex: 1;
   }
 }
 .course-registration__info--dark {

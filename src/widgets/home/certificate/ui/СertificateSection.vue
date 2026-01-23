@@ -29,15 +29,17 @@ import AppButton from "@/shared/ui/button/ui/AppButton.vue";
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 40px 0;
+  margin: 38px 0;
+  padding-bottom: 10px;
   @include tablet {
     background-image: url("/images/certificate-tablet-bg.png");
     padding: 24px 8px 16px;
+    margin-bottom: 42px;
   }
   @include desktop {
     background-image: url("/images/certificate-desktop-bg.png");
-    padding: 60px 50px 40px;
-    margin: 68px 0 40px;
+    padding: 66px 50px 40px;
+    margin: 90px 0 40px;
   }
 }
 .certificate {
@@ -52,9 +54,9 @@ import AppButton from "@/shared/ui/button/ui/AppButton.vue";
   }
   @include desktop {
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 6px;
+    gap: 0;
   }
   &__content {
     display: flex;
@@ -66,6 +68,7 @@ import AppButton from "@/shared/ui/button/ui/AppButton.vue";
     }
     @include desktop {
       gap: 26px;
+      width: 633px;
     }
   }
   &__title {
@@ -82,7 +85,8 @@ import AppButton from "@/shared/ui/button/ui/AppButton.vue";
     @include desktop {
       max-width: 633px;
       font-size: 3rem;
-      line-height: 60px;
+      line-height: 58px;
+      letter-spacing: -0.8px;
     }
   }
   &__description {
@@ -92,40 +96,63 @@ import AppButton from "@/shared/ui/button/ui/AppButton.vue";
     letter-spacing: 0;
     text-align: left;
     padding-right: 14px;
-    @include tablet-desktop {
+    @include tablet {
       max-width: 444px;
       font-size: 1.5rem;
       line-height: 30px;
       margin-bottom: 23px;
       padding-right: 10px;
     }
+    @include desktop {
+      letter-spacing: -0.27px;
+      line-height: 30px;
+      margin-bottom: 26px;
+    }
   }
   &__link {
     width: 100%;
     margin-bottom: 10px;
+    position: relative;
+    @include desktop {
+      margin-bottom: 0;
+      top: -6px;
+    }
   }
   &__link-button {
     width: 100%;
     @include tablet {
       width: auto;
     }
+    @include desktop {
+      letter-spacing: -0.3px;
+    }
   }
   &__image-wrapper {
-    width: 100%;
+    max-width: 310px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     @include tablet {
       max-width: 360px;
-      margin: 0 auto;
+      margin: 0  auto;
+    }
+    @include desktop {
+      max-width: 336px;
     }
   }
   &__image {
     width: 100%;
     height: auto;
+    @include desktop {
+      position: relative;
+      left: -18px;
+    }
   }
   &__extra-image {
     position: absolute;
-    bottom: -28px;
-    right: -16px;
+    bottom: -40px;
+    right: -20px;
     z-index: 2;
     width: 131px;
     height: 138px;
@@ -137,15 +164,15 @@ import AppButton from "@/shared/ui/button/ui/AppButton.vue";
     @include desktop {
       width: 147px;
       height: 151px;
-      bottom: 50px;
-      right: -50px;
+      bottom: 30px;
+      right: -66px;
     }
   }
   &__success-text {
     position: absolute;
     z-index: 1;
-    bottom: 12px;
-    left: 36%;
+    bottom: 4px;
+    left: 32px;
     display: block;
     border-radius: 10.66px;
     box-shadow: 0 7.1px 17.761272430419922px 0 rgba(0, 44, 62, 0.12);
@@ -157,7 +184,7 @@ import AppButton from "@/shared/ui/button/ui/AppButton.vue";
     text-align: left;
     padding: 18px 22px;
     width: 210px;
-    transform: translateX(-40%) rotate(-5.59deg);
+    transform: rotate(-5.59deg);
     @include tablet {
       font-size: 1.25rem;
       width: 252px;
@@ -168,7 +195,9 @@ import AppButton from "@/shared/ui/button/ui/AppButton.vue";
     }
     @include desktop {
       left: auto;
-      right: 50px;
+      right: 30px;
+      bottom: -12px;
+      letter-spacing: -0.2px;
     }
   }
 }
