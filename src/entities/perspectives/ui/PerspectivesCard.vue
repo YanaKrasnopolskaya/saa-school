@@ -53,6 +53,9 @@ const props = defineProps<Grade>()
       font-size: 1.375rem;
       padding: 5.33px 10.65px;
     }
+    @include desktop{
+      left: 5px;
+    }
   }
   &__desc-period {
     color: $text-secondary-color;
@@ -65,6 +68,9 @@ const props = defineProps<Grade>()
       font-size: 1.375rem;
       position: relative;
       left: -3px;
+    }
+    @include desktop{
+      left: 5px;
     }
   }
   &__line {
@@ -99,11 +105,15 @@ const props = defineProps<Grade>()
     @include desktop{
       padding: 33px 67px;
       font-size: 3rem;
+      letter-spacing: -0.8px;
     }
   }
   &__price-junior {
     @include tablet {
       padding: 40px 0;
+    }
+    @include desktop {
+      padding: 24px 76px;
     }
   }
   &__price-middle,
@@ -116,7 +126,11 @@ const props = defineProps<Grade>()
       padding: 10px 30px 10px;
     }
     @include desktop{
-      padding: 6px 67px;
+      padding: 0 60px;
+      & .perspectives-card__price-max {
+        position: relative;
+        top: -10px;
+      }
     }
   }
   &__price-senior {

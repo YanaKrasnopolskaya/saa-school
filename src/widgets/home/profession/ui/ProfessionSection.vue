@@ -35,6 +35,9 @@
   @include tablet {
     padding: 153px 3px 40px;
   }
+  @include desktop {
+    padding: 164px 48px 40px;
+  }
 }
 .profession {
   display: flex;
@@ -74,7 +77,8 @@
       font-size: 2.5em;
     }
     @include desktop {
-      margin-bottom: 78px;
+      letter-spacing: -0.8px;
+      margin-bottom: 74px;
       font-size: 3em;
     }
   }
@@ -100,9 +104,9 @@
       max-height: 42px;
     }
     @include desktop {
-      bottom: 0;
-      right: 30px;
-      width: 215px;
+      bottom: 3px;
+      right: 12px;
+      width: 210px;
       max-height: 42px;
     }
   }
@@ -119,6 +123,7 @@
       max-width: 403px;
     }
     @include desktop {
+      letter-spacing: -0.4px;
       font-size: 1.5rem;
       max-width: 450px;
     }
@@ -142,6 +147,7 @@
     }
     @include desktop {
       width: 482px;
+      left: -24px;
     }
   }
   &__image-content-text {
@@ -178,7 +184,7 @@
     }
     @include desktop {
       top: -18px;
-      left: -100px
+      left: -109px
     }
   }
   &__text--diff {
@@ -195,7 +201,7 @@
     }
     @include desktop {
       top: -70px;
-      left: -55px;
+      left: -50px;
     }
   }
   &__star-icon {
@@ -210,6 +216,10 @@
       width: 76px;
       height: 76px;
     }
+    @include desktop {
+      top: -30px;
+      left: -36px;
+    }
   }
   &__spiral-icon {
     position: absolute;
@@ -221,6 +231,10 @@
       bottom: -47px;
       width: 150px;
       height: 120px;
+    }
+    @include desktop {
+      right: -114px;
+      bottom: -44px;
     }
   }
 }

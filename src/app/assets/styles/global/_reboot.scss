@@ -24,6 +24,7 @@ body {
   color: $text-color;
   @include desktop {
     border-radius: 32px;
+    margin: 20px 23px 0;
   }
 }
 

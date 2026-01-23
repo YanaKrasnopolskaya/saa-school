@@ -52,7 +52,7 @@ const toggle = () => {
   }
   &__button span {
     @include tablet {
-      width: 370px;
+      width: 500px;
     }
   }
   &__icon {

@@ -51,7 +51,7 @@ import {GRADES} from "@/entities/grade/const/GRADES";
     padding: 58px 20px 40px;
   }
   @include desktop {
-    padding: 55px 70px 80px;
+    padding: 27px 64px 80px;
   }
 }
 .perspectives {
@@ -97,6 +97,7 @@ import {GRADES} from "@/entities/grade/const/GRADES";
     }
     @include desktop {
       font-size: 3rem;
+      letter-spacing: -0.8px;
       white-space: nowrap;
     }
   }
@@ -128,7 +129,8 @@ import {GRADES} from "@/entities/grade/const/GRADES";
       align-items: center;
     }
     @include desktop {
-      top: 28px;
+      top: 34px;
+      left: 9px;
     }
   }
   &__hh-num {
@@ -143,6 +145,7 @@ import {GRADES} from "@/entities/grade/const/GRADES";
     }
     @include desktop {
       font-size: 3rem;
+      letter-spacing: -0.8px;
     }
   }
   &__hh-desc {
@@ -174,6 +177,12 @@ import {GRADES} from "@/entities/grade/const/GRADES";
       left: -28px;
       width: 57px;
       height: 57px;
+    }
+    @include desktop {
+      top: -16px;
+      left: -50px;
+      width: 87px;
+      height: 87px;
     }
   }
   &__hh-desc-icon {

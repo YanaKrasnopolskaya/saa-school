@@ -62,13 +62,20 @@ const {isOpenModal, openModal, closeModal} = useModal();
     max-width: calc(100% - 36px);
   }
   @include desktop {
-    top: 15px;
-    height: 72px;
+    top: 35px;
+    height: 70px;
+    max-width: calc(100% - 86px);
+    padding: 2px;
   }
   &__logo {
-    @include tablet-desktop {
+    @include tablet {
       width: 210px;
       height: 37px;
+    }
+    @include desktop {
+      width: 220px;
+      height: 47px;
+      padding-left: 18px;
     }
   }
   &__nav {
@@ -90,6 +97,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
     @include desktop {
       display: block;
       pointer-events: auto;
+      width: 186px;
     }
   }
   &__menu-btn {

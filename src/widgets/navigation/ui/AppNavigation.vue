@@ -17,6 +17,7 @@
   gap: 20px;
   @include desktop {
     flex-direction: row;
+    gap: 14px;
   }
   &__link {
     font-weight: 700;

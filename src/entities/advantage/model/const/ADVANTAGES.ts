@@ -39,8 +39,8 @@ export  const ADVANTAGES: Advantages[] = [
         uniqueClass: 'project'
     },
     {
-        title: "Помогаем с поиском работы",
-        description: "Вместе составляем резюме и проводим тестовое собеседование",
+        title: "Помогаем с&nbsp;поиском работы",
+        description: "Вместе составляем резюме и&nbsp;проводим тестовое собеседование",
         image: {
             src: '/images/hero-img-4.webp',
             alt: "Поиск работы фото",

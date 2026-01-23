@@ -10,9 +10,9 @@ defineProps<Advantages>();
       <img class="advantage-card__img" :src="image.src" :alt="image.alt" />
     </div>
     <div class="advantage-card__content">
-      <h3 class="advantage-card__title">{{title}}</h3>
+      <h3 class="advantage-card__title" v-html="title"></h3>
       <slot name="more"></slot>
-      <p class="advantage-card__description">{{description}}</p>
+      <p class="advantage-card__description" v-html="description"></p>
     </div>
   </div>
 </template>
@@ -29,24 +29,37 @@ defineProps<Advantages>();
   align-items: center;
   padding: 10px 6.19px 21px 7.19px;
   @include tablet {
-    padding: 14px 10px 34px 10px;
+    padding: 14px 10px 8px 10px;
     grid-column: span 2;
+  }
+  @include desktop {
+    padding: 20px 30px 20px;
+    height: 310px;
   }
   &__img-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 120px;
     height: 87.25px;
     @include tablet {
+      width: 166px;
       height: 121px;
     }
+    @include desktop {
+      width: 201px;
+      height: 140px;
+    }
+  }
+  &__img {
+    position: relative;
   }
   &__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 6px;
+    gap: 7px;
     @include tablet {
       gap: 11px;
     }
@@ -67,12 +80,13 @@ defineProps<Advantages>();
     @include desktop {
       font-size: 1.5rem;
       line-height: 30px;
+      width: 240px;
     }
   }
   &__description {
     font-size: 0.75rem;
     font-weight: 400;
-    line-height: 15px;
+    line-height: 14px;
     letter-spacing: 0;
     text-align: center;
     color: $text-secondary-color;
@@ -95,6 +109,10 @@ defineProps<Advantages>();
     padding: 0 24px 15px 24px;
     grid-column: span 3;
     align-items: center;
+  }
+  @include desktop {
+    flex-direction: row;
+    padding: 0 24px 30px 24px;
   }
 }
 .advantage-card--horizontal .advantage-card__img-wrapper {
@@ -122,16 +140,29 @@ defineProps<Advantages>();
     align-items: center;
     padding: 13px 24px 15px 24px;
   }
+  @include desktop {
+    flex-direction: row-reverse;
+  }
 }
 .advantage-card--reversed .advantage-card__content {
   padding-top: 8px;
   @include tablet {
     padding-top: 0;
   }
+  @include desktop {
+    position: relative;
+    left: 13px;
+  }
+}
+.advantage-card--reversed .advantage-card__description {
+  position: relative;
+  top: 2px;
+  left: 5px;
 }
 .advantage-card--group .advantage-card__img{
   width: 120px;
   height: 79px;
+  top: -3px;
   @include tablet {
     width: 166px;
     height: 109px;
@@ -144,6 +175,7 @@ defineProps<Advantages>();
 .advantage-card--ai .advantage-card__img {
   width: 104px;
   height: 61px;
+  top: -3px;
   @include tablet {
     width: 144px;
     height: 84px;
@@ -153,41 +185,26 @@ defineProps<Advantages>();
     height: 102px;
   }
 }
-
+.advantage-card--ai .advantage-card__description {
+  @include tablet {
+    position: relative;
+    top: 2px;
+  }
+}
 .advantage-card--project .advantage-card__img {
-  width: 97.35px;
-  height: 74.27px;
+  width: 100px;
+  height: 90px;
+  left: 6px;
   @include tablet {
-    width: 135px;
-    height: 103px;
-  }
-  @include desktop {
-    width: 163px;
-    height: 124px;
-  }
-}
-.advantage-card--help .advantage-card__img {
-  width: 78px;
-  height: 78px;
-  @include tablet {
-    width: 97px;
-    height: 97px;
-  }
-  @include desktop {
-    width: 117px;
-    height: 117px;
-  }
-}
-.advantage-card--certificate .advantage-card__img {
-  width: 96px;
-  height: 81px;
-  @include tablet {
-    width: 140px;
-    height: 114px;
+    top: 8px;
+    width: 155px;
+    height: 123px;
   }
   @include desktop {
     width: 183px;
-    height: 150px;
+    height: 144px;
+    top: 4px;
+    left: 0;
   }
 }
 .advantage-card--project {
@@ -201,6 +218,59 @@ defineProps<Advantages>();
       gap: 12px;
       width: 218px;
     }
+  }
+  @include desktop {
+    padding: 20px 30px 36px;
+    height: 310px;
+    & .advantage-card__content {
+      gap: 10px;
+      width: 300px;
+    }
+  }
+}
+.advantage-card--help .advantage-card__img {
+  width: 78px;
+  height: 78px;
+  @include tablet {
+    width: 97px;
+    height: 97px;
+  }
+  @include desktop {
+    top: 3px;
+    left: 20px;
+    width: 117px;
+    height: 117px;
+  }
+}
+.advantage-card--certificate .advantage-card__img {
+  width: 96px;
+  height: 81px;
+  left: -3px;
+  @include tablet {
+    top: 6px;
+    left: 3px;
+    width: 140px;
+    height: 114px;
+  }
+  @include desktop {
+    top: 20px;
+    left: -3px;
+    width: 183px;
+    height: 150px;
+  }
+}
+.advantage-card--certificate .advantage-card__content {
+  gap: 12px;
+  position: relative;
+  left: -8px;
+  @include tablet {
+    top: 2px;
+    left: 0;
+    gap: 14px;
+  }
+  @include desktop {
+    top: 15px;
+    left: -13px;
   }
 }
 </style>
