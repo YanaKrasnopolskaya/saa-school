@@ -9,8 +9,8 @@ const props = defineProps<{
 <template>
   <section class="course-registration-section">
     <div class="container">
-      <div class="course-registration">
-        <div class="course-registration__info" :class="{'course-registration__info--dark' : darkTheme}">
+      <div class="course-registration" :class="{'course-registration--dark' : darkTheme}">
+        <div class="course-registration__info">
           <h2 class="course-registration__info-title">Записаться на&nbsp;курс<br> или получить консультацию</h2>
         </div>
         <IndividualForm :dark-theme="darkTheme" :class="['course-registration__form', {'course-registration__form--dark' : darkTheme}]"/>
@@ -26,7 +26,7 @@ const props = defineProps<{
     padding: 48px 56px 40px;
   }
   @include desktop {
-    padding: 117px 40px 40px 20px;
+    padding: 48px 40px 40px 20px;
   }
 }
 .course-registration {
@@ -74,10 +74,14 @@ const props = defineProps<{
     flex: 1;
   }
 }
-.course-registration__info--dark {
+.course-registration--dark {
+  padding-top: 20px;
+  padding-bottom: 28px;
+}
+.course-registration--dark .course-registration__info {
   background: rgba(0, 44, 62, 1) url("/images/certificate-mobile-bg.png") top right / cover no-repeat;
 }
-.course-registration__info--dark .course-registration__info-title {
+.course-registration--dark .course-registration__info-title {
   color: rgba(255, 255, 255, 1);
 }
 </style>

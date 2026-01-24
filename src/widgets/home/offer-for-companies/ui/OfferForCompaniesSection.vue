@@ -35,7 +35,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
     padding: 45px 14px;
   }
   @include desktop {
-    padding: 100px 68px;
+    padding: 98px 65px 68px;
   }
 }
 .offer {
@@ -49,7 +49,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
   }
   @include desktop {
     grid-template-rows: repeat(2, auto);
-    gap: 30px;
+    gap: 28px;
   }
   &__title {
     width: 264px;
@@ -64,6 +64,8 @@ const {isOpenModal, openModal, closeModal} = useModal();
     }
     @include desktop {
       font-size: 3rem;
+      letter-spacing: -0.9px;
+      line-height: 100%;
     }
   }
   &__info {
@@ -76,7 +78,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
     }
     @include desktop {
       max-width: 720px;
-      gap: 26px;
+      gap: 24px;
     }
   }
   &__info-text {
@@ -86,17 +88,24 @@ const {isOpenModal, openModal, closeModal} = useModal();
     line-height: 120%;
     letter-spacing: 0;
     text-align: left;
-    @include tablet-desktop {
+    @include tablet {
       width: 100%;
       font-size: 1.25rem;
     }
+    @include desktop {
+      letter-spacing: -0.35px;
+    }
   }
   &__img {
-    width: 253px;
-    height: 254px;
+    position: relative;
+    top: -10px;
+    left: -10px;
+    width: 283px;
+    height: 284px;
     margin: 0 auto;
     @include tablet {
       position: absolute;
+      left: auto;
       right: 20px;
       top: 284px;
       transform: translateY(-70%);
@@ -104,15 +113,21 @@ const {isOpenModal, openModal, closeModal} = useModal();
       height: 290px;
     }
     @include desktop {
-      width: 281px;
-      height: 282px;
+      right: -20px;
+      top: 200px;
+      width: 321px;
+      height: 322px;
     }
   }
   &__btn {
-    margin-top: 16px;
+    margin-top: -15px;
     @include tablet {
       width: 240px;
       margin-top: 0;
+    }
+    @include desktop {
+      width: 234px;
+      margin-top: 4px;
     }
   }
 }

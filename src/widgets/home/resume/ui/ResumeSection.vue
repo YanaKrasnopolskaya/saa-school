@@ -17,7 +17,9 @@ import {ResumeCard, RESUMES} from "@/entities/resume/index.ts";
                     :salary="resume.salary"
                     :education="resume.education"
                     :experience="resume.experience"
-                    :stacks="resume.stacks" />
+                    :stacks="resume.stacks"
+                    class="resume__card"
+        />
       </div>
     </div>
   </section>
@@ -30,7 +32,7 @@ import {ResumeCard, RESUMES} from "@/entities/resume/index.ts";
     padding: 46px 12px 40px;
   }
   @include desktop {
-    padding: 98px 68px 40px;
+    padding: 93px 65px 40px;
   }
 }
 .resume {
@@ -59,6 +61,7 @@ import {ResumeCard, RESUMES} from "@/entities/resume/index.ts";
     @include desktop {
       font-size: 3rem;
       line-height: 60px;
+      letter-spacing: -0.8px;
     }
   }
   &__title svg {
@@ -72,8 +75,8 @@ import {ResumeCard, RESUMES} from "@/entities/resume/index.ts";
       top: -14px;
     }
     @include desktop {
-      width: 66px;
-      height: 66px;
+      width: 70px;
+      height: 70px;
     }
   }
 }

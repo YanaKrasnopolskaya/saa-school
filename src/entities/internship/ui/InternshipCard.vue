@@ -32,7 +32,7 @@ const props = defineProps<Card>()
     gap: 8.5px;
   }
   @include desktop {
-    padding-bottom: 40px;
+    padding: 4px 10px 36px 20px;
     flex: 1;
   }
   &__img {
@@ -68,6 +68,15 @@ const props = defineProps<Card>()
 }
 .internship-card--bg2 {
   background-position: left center;
+}
+.internship-card--bg2 img{
+  @include desktop {
+    position: relative;
+    top: -16px;
+    margin-bottom: 0;
+    width: 145px;
+    height: 173px;
+  }
 }
 .internship-card--bg3 {
   background-position: bottom;

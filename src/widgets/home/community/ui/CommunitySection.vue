@@ -55,7 +55,7 @@
   }
   @include desktop {
     background-image: url("/images/community-desktop-bg.png");
-    margin: 76px 0 20px;
+    margin: 76px 0 87px;
   }
 }
 .community {

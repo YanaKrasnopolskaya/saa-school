@@ -17,12 +17,12 @@ import {FINANCE_SUPPORT_CARDS, FinanceSupportCard} from "@/entities/finance-supp
 
 <style scoped lang="scss">
 .finance-support-section {
-  padding: 40px 4px 40px;
+  padding: 42px 4px 40px;
   @include tablet {
     padding: 60px 14px 40px;
   }
   @include desktop {
-    padding: 50px 68px 40px;
+    padding: 58px 62px 40px;
   }
 }
 .finance-support {
@@ -33,7 +33,7 @@ import {FINANCE_SUPPORT_CARDS, FinanceSupportCard} from "@/entities/finance-supp
     gap: 68px;
   }
   @include desktop {
-    gap: 66px;
+    gap: 62px;
   }
   &__title {
     width: 256px;
@@ -50,6 +50,7 @@ import {FINANCE_SUPPORT_CARDS, FinanceSupportCard} from "@/entities/finance-supp
     }
     @include desktop {
       font-size: 3rem;
+      letter-spacing: -0.8px;
     }
   }
   &__card-wrapper {
@@ -73,5 +74,16 @@ import {FINANCE_SUPPORT_CARDS, FinanceSupportCard} from "@/entities/finance-supp
   right: 12px;
   width: 133px;
   height: 141px;
+  @include desktop {
+    top: -52px;
+    right: 3px;
+    width: 163px;
+    height: 161px;
+  }
+}
+.card:last-child :deep(.card__info-description) {
+  @include desktop {
+    width: 407px;
+  }
 }
 </style>

@@ -31,6 +31,9 @@ withDefaults(defineProps<ButtonProps>(), {
   text-transform: uppercase;
   border: none;
   font-family: inherit;
+  @include desktop {
+    letter-spacing: -0.4px;
+  }
   &__primary {
     background: $primary-button-color;
     &:hover:not(:disabled) {

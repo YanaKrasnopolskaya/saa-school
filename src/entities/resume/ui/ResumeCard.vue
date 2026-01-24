@@ -62,6 +62,9 @@ const props = defineProps<Resume>();
   @include tablet {
     margin: 0 4px;
   }
+  @include desktop {
+    margin: 0;
+  }
   &__points {
     padding: 12px 14px;
     border-bottom: 1px solid rgba(210, 218, 221, 1);
@@ -69,7 +72,7 @@ const props = defineProps<Resume>();
       padding: 8px 14px 10px;
     }
     @include desktop {
-      padding: 20px 14px;
+      padding: 22px 19px 18px;
     }
   }
   &__points svg {
@@ -101,8 +104,8 @@ const props = defineProps<Resume>();
       gap: 20px;
     }
     @include desktop {
-      padding: 32px 56px 108px;
-      gap: 14px;
+      padding: 32px 58px 102px 52px;
+      gap: 17px;
     }
   }
   &__about-wrapper {
@@ -120,9 +123,13 @@ const props = defineProps<Resume>();
   &__about-wrapper img {
     width: 94px;
     height: 94px;
-    @include tablet-desktop {
+    @include tablet {
       width: 230px;
       height: 230px;
+    }
+    @include desktop {
+      width: 220px;
+      height: 220px;
     }
   }
   &__about {
@@ -135,7 +142,7 @@ const props = defineProps<Resume>();
       align-items: center;
     }
     @include desktop {
-      gap: 16px;
+      gap: 14px;
     }
   }
   &__label {
@@ -162,8 +169,8 @@ const props = defineProps<Resume>();
       padding: 16px 12px 24px 0;
     }
     @include desktop {
-      padding: 30px 59px 32px 40px;
-      gap: 36px;
+      gap: 34px;
+      padding: 30px 40px 20px 44px;
     }
   }
   &__salary-wrapper {
@@ -185,6 +192,9 @@ const props = defineProps<Resume>();
     line-height: 20px;
     letter-spacing: 0;
     text-align: left;
+    @include desktop {
+      letter-spacing: -0.3px;
+    }
   }
   &__text--center {
     @include tablet-desktop {
@@ -223,12 +233,17 @@ const props = defineProps<Resume>();
     }
     @include desktop {
       padding-left: 28px;
-      gap: 20px;
+      gap: 17.5px;
     }
   }
   &__experience-item {
     @include desktop {
       font-size: 1.25rem;
+    }
+  }
+  &__experience-item:first-child {
+    @include desktop {
+      width: 330px;
     }
   }
   &__stack-wrapper {
@@ -247,6 +262,10 @@ const props = defineProps<Resume>();
     @include tablet {
       gap: 12px 13px;
       padding: 2px 0 0 2px;
+    }
+    @include desktop {
+      padding: 0;
+      gap: 11px 9px;
     }
   }
   &__stack-item {

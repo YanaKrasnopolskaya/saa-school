@@ -25,7 +25,7 @@ import {COMPANY_LOGOS} from "@/entities/companies/index.ts";
     padding: 47px 0 0;
   }
   @include desktop {
-    padding: 104px 70px 0;
+    padding: 97px 65px 0;
   }
 }
 .companies {
@@ -43,6 +43,16 @@ import {COMPANY_LOGOS} from "@/entities/companies/index.ts";
     .item-6 { order: 4; }
     .item-7 { order: 8; }
   }
+  @include desktop {
+    .item-0 img,
+    .item-1 img,
+    .item-2 img,
+    .item-3 img,
+    .item-4 img,
+    .item-5 img,
+    .item-6 img,
+    .item-7 img { width:  200px; height: 40px}
+  }
   &__title {
     font-size: 2rem;
     font-weight: 700;
@@ -59,7 +69,8 @@ import {COMPANY_LOGOS} from "@/entities/companies/index.ts";
       width: 640px;
       padding: 0;
       font-size: 3rem;
-      line-height: 60px;
+      line-height: 58px;
+      letter-spacing: -0.8px;
     }
   }
   &__list {
@@ -79,10 +90,10 @@ import {COMPANY_LOGOS} from "@/entities/companies/index.ts";
       gap: 20px 0;
     }
     @include desktop {
-      padding: 29px 0;
+      padding: 26px 0;
       margin-left: -64px;
       margin-right: -64px;
-      gap: 32px 80px;
+      gap: 26px;
     }
   }
   &__item {
@@ -91,6 +102,13 @@ import {COMPANY_LOGOS} from "@/entities/companies/index.ts";
     @include tablet {
       width: 170px;
       height: 60px;
+    }
+    @include desktop {
+      width: 231px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
   &__item svg {

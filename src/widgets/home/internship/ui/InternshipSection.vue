@@ -26,7 +26,7 @@ import {INTERNSHIP_CARDS} from "@/entities/internship/index.ts";
     padding: 41px 13px;
   }
   @include desktop {
-    padding: 80px 68px;
+    padding: 73px 66px 72px;
   }
 }
 .internship {
@@ -37,7 +37,7 @@ import {INTERNSHIP_CARDS} from "@/entities/internship/index.ts";
     gap: 40px;
   }
   @include desktop {
-    gap: 60px;
+    gap: 56px;
   }
   &__info {
     display: flex;
@@ -51,7 +51,7 @@ import {INTERNSHIP_CARDS} from "@/entities/internship/index.ts";
       max-width: 626px;
     }
     @include desktop {
-      gap: 26px;
+      gap: 22px;
       max-width: 750px;
     }
   }
@@ -69,6 +69,7 @@ import {INTERNSHIP_CARDS} from "@/entities/internship/index.ts";
     @include desktop {
       font-size: 3rem;
       max-width: 880px;
+      letter-spacing: -0.9px;
     }
   }
   &__info-description {
@@ -82,6 +83,7 @@ import {INTERNSHIP_CARDS} from "@/entities/internship/index.ts";
     }
     @include desktop {
       font-size: 1.5rem;
+      letter-spacing: -0.4px;
     }
   }
   &__card-wrapper {

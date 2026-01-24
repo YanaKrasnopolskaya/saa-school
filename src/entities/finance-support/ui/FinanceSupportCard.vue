@@ -33,7 +33,7 @@ const props = defineProps<FinanceSupportCardInterface>();
     padding: 83px 30px 30px 30px;
   }
   @include desktop {
-     padding: 30px 69px 40px 30px;
+    padding: 28px 60px 40px 30px;
   }
   &__img {
     width: 100px;
@@ -48,6 +48,8 @@ const props = defineProps<FinanceSupportCardInterface>();
       height: 110px;
     }
     @include desktop {
+      top: -22px;
+      right: 36px;
       width: 128px;
       height: 126px;
     }
@@ -66,6 +68,11 @@ const props = defineProps<FinanceSupportCardInterface>();
     letter-spacing: 0;
     text-align: left;
     max-width: 270px;
+    @include desktop {
+      letter-spacing: -0.5px;
+      line-height: 29px;
+      max-width: 260px;
+    }
   }
   &__info-description {
     font-size: 1rem;
@@ -73,9 +80,10 @@ const props = defineProps<FinanceSupportCardInterface>();
     line-height: 20px;
     letter-spacing: 0;
     text-align: left;
-    max-width: 282px;
+    width: 282px;
     @include desktop {
-      max-width: 407px;
+      letter-spacing: -0.3px;
+      width: 304px;
     }
   }
   &__link {
@@ -85,6 +93,9 @@ const props = defineProps<FinanceSupportCardInterface>();
     letter-spacing: 0;
     text-align: left;
     text-decoration-line: underline;
+    @include desktop {
+      letter-spacing: -0.3px;
+    }
   }
 }
 </style>

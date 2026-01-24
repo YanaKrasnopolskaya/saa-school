@@ -40,7 +40,9 @@ const props = defineProps<CostCardInterface>();
     gap: 50px;
   }
   @include desktop {
+    padding: 36px 36px;
     flex: 1;
+    gap: 47px;
   }
   &__info {
     display: flex;
@@ -56,6 +58,9 @@ const props = defineProps<CostCardInterface>();
     line-height: 30px;
     letter-spacing: 0;
     text-align: left;
+    @include desktop {
+      letter-spacing: -0.6px;
+    }
   }
   &__text {
     font-size: 1rem;
@@ -64,10 +69,16 @@ const props = defineProps<CostCardInterface>();
     letter-spacing: 0;
     text-align: left;
     color: $text-secondary-color;
+    @include desktop {
+      letter-spacing: -0.25px;
+    }
   }
   &__text--price {
     @include tablet {
       margin-top: 11px;
+    }
+    @include desktop {
+      margin-top: 10px;
     }
   }
   &__text b {
@@ -84,6 +95,9 @@ const props = defineProps<CostCardInterface>();
     @include tablet {
       gap: 23px;
     }
+    @include desktop {
+      gap: 21px;
+    }
   }
   &__price {
     font-size: 2rem;
@@ -91,8 +105,11 @@ const props = defineProps<CostCardInterface>();
     line-height: 40px;
     letter-spacing: 0;
     text-align: left;
-    @include tablet-desktop {
+    @include tablet {
       font-size: 3rem;
+    }
+    @include desktop {
+      letter-spacing: -0.8px;
     }
   }
   &__price span {
@@ -104,6 +121,9 @@ const props = defineProps<CostCardInterface>();
     display: flex;
     flex-direction: column;
     gap: 8px;
+    @include desktop {
+      gap: 7px;
+    }
   }
   &__list-item {
     font-size: 1rem;
@@ -111,6 +131,9 @@ const props = defineProps<CostCardInterface>();
     line-height: 20px;
     letter-spacing: 0;
     text-align: left;
+    @include desktop {
+      letter-spacing: -0.3px;
+    }
   }
 }
 .cost-card--unique {

@@ -30,6 +30,10 @@ import {QUESTIONS} from "@/entities/questions";
   @include tablet {
     padding: 46px 56px 90px 50px;
   }
+  @include desktop {
+    padding: 0;
+    margin: 78px 26px;
+  }
 }
 .questions {
   display: flex;
@@ -55,7 +59,8 @@ import {QUESTIONS} from "@/entities/questions";
     }
     @include desktop {
       font-size: 3rem;
-      padding-left: 41px;
+      letter-spacing: -0.9px;
+      padding-left: 38px;
       max-width: 630px;
     }
   }
@@ -71,9 +76,9 @@ import {QUESTIONS} from "@/entities/questions";
       bottom: -12px;
     }
     @include desktop {
-      width: 66px;
-      height: 66px;
-      right: -30px;
+      width: 76px;
+      height: 76px;
+      right: -15px;
     }
   }
   &__cards {
@@ -89,13 +94,19 @@ import {QUESTIONS} from "@/entities/questions";
     @include desktop {
       flex-direction: row;
       gap: 12px 24px;
+      margin-left: 0;
     }
   }
   &__list {
     :deep(.dropdown__button span) {
       width: 600px;
     }
+    @include desktop {
+      :deep(.dropdown) {
+        width: 548px;
+      }
 
+    }
   }
   &__answer {
     font-size: 1rem;

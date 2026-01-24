@@ -10,7 +10,7 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
         <div class="about__info-wrapper">
           <div class="about__info">
             <h2 class="about__info-title">Знаем индустрию изнутри</h2>
-            <p class="about__text">Наша команда&nbsp;&mdash; это действующие специалисты в&nbsp;аккредитованной it&#8209;компании <b>с&nbsp;опытом 7+&nbsp;лет,</b>  которые работают с&nbsp;лидерами рынка:</p>
+            <p class="about__text">Наша команда&nbsp;&mdash; это действующие специалисты в аккредитованной it&#8209;компании <b>с&nbsp;опытом 7+&nbsp;лет,</b>  которые работают с&nbsp;лидерами рынка:</p>
           </div>
           <ul class="about__leaders">
             <li v-for="(leader, index) in MARKET_LEADERS" class="about__item" :class="`item-${index}`">
@@ -20,6 +20,7 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
           <p class="about__text">Поэтому в нашем курсе мы собрали только то, что действительно пригодится на практике. Теория не ради голочки, разберем реальные кейсы, и будем ипользовать актуальные инструмены.</p>
         </div>
         <div class="about__img-wrapper">
+          <img class="about__img" src="/images/teammates.png" alt="Наша команда">
           <div class="about__img-desc">Наша команда</div>
         </div>
       </div>
@@ -29,13 +30,15 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
 
 <style scoped lang="scss">
 .about-section {
-  padding: 36px 16px 20px;
+  padding: 36px 16px 22px;
   @include tablet {
     padding: 36px 13px 20px;
     margin-bottom: 12px;
   }
   @include desktop {
-    padding: 8px 68px 46px;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 .about {
@@ -52,17 +55,20 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
     .item-3 { order: 3; }
   }
   @include desktop {
-    gap: 50px;
+    padding: 24px 0 42px;
     flex-direction: row-reverse;
     align-items: center;
+    gap: 0;
+
   }
   &__info-wrapper {
     display: flex;
     flex-direction: column;
     gap: 24px;
     @include desktop {
-      padding-left: 40px;
-      gap: 16px;
+      flex: 0 562px;
+      padding: 4px 0 0 38px;
+      gap: 18px;
     }
   }
   &__info {
@@ -73,8 +79,8 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
       margin-bottom: 25px;
     }
     @include desktop {
-      gap: 30px;
-      margin-bottom: 21px;
+      margin-bottom: 15px;
+      gap: 26px;
     }
   }
   &__info-title {
@@ -88,6 +94,7 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
     }
     @include desktop {
       font-size: 3rem;
+      letter-spacing: -0.9px;
     }
   }
   &__text {
@@ -96,11 +103,15 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
     line-height: 23px;
     letter-spacing: 0;
     text-align: left;
-    max-width: 315px;
+    width: 315px;
     @include tablet {
       font-size: 1.25rem;
       line-height: 25px;
-      max-width: fit-content;
+      width: fit-content;
+    }
+    @include desktop {
+      width: 500px;
+      letter-spacing: -0.3px;
     }
   }
   &__leaders {
@@ -115,13 +126,14 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
     @include tablet {
       margin-left: -16px;
       margin-right: -16px;
-      padding: 12px 100px;
+      padding: 10px 100px 14px;
       gap: 12px 42px;
     }
     @include desktop {
-      margin-left: -46px;
-      margin-right: -60px;
-      padding: 10px;
+      margin-left: -38px;
+      margin-right: 0;
+      padding: 15px;
+      gap: 12px;
     }
   }
   &__item {
@@ -133,23 +145,33 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
     }
   }
   &__img-wrapper {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 313px;
-    height: 310px;
-    margin: 0 auto;
-    border-radius: 12px;
-    overflow: hidden;
-    background: url("/images/teammates.png") 63% center / cover no-repeat;
     @include tablet {
       margin-top: 8px;
-      width: 613px;
-      height: 447px;
     }
     @include desktop {
-      width: 468px;
-      height: 460px;
+      margin-top: 15px;
+      flex: 0 562px;
+    }
+  }
+  &__img {
+    width: 313px;
+    height: 310px;
+    border-radius: 12px;
+    object-fit: cover;
+    object-position: -110px 3px;
+    @include tablet {
+      width: 613px;
+      height: 447px;
+      object-position: -62px center;
+    }
+    @include desktop {
+      width: 456px;
+      height: 450px;
+      object-position: -160px 4px;
     }
   }
   &__img-desc {
@@ -174,9 +196,9 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
       bottom: -22px;
     }
     @include desktop {
-      width: 220px;
-      left: -60px;
-      bottom: -8px;
+      width: 192px;
+      left: 19px;
+      bottom: 55px;
     }
   }
 }
@@ -187,16 +209,21 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
   top: -10px;
   @include tablet {
     width: 220px;
-    height: 90px;
+    height: 85px;
     left: -10px;
     top: -13px;
+  }
+  @include desktop {
+    width: 200px;
+    height: 85px;
+    left: 0;
   }
 }
 .item-0 img,
 .item-2 img,
 .item-3 img {
   @include tablet {
-    width: 194px;
+    width: 190px;
     height: 60px;
   }
 }

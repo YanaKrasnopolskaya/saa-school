@@ -52,7 +52,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
     padding: 41.5px 0;
   }
   @include desktop {
-    padding: 88px 60px;
+    padding: 88px 53px;
   }
 }
 .cost {
@@ -65,7 +65,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
     padding: 0 13px;
   }
   @include desktop {
-    gap: 66px;
+    gap: 64px;
   }
   &__info {
     padding-left: 12px;
@@ -77,7 +77,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
       padding-left: 0;
     }
     @include desktop {
-      gap: 26px;
+      gap: 30px;
     }
   }
   &__info-icon {
@@ -85,8 +85,8 @@ const {isOpenModal, openModal, closeModal} = useModal();
     @include desktop {
       display: block;
       position: absolute;
-      top: -20px;
-      right: -80px;
+      top: -16px;
+      right: -90px;
     }
   }
   &__info-title {
@@ -101,6 +101,8 @@ const {isOpenModal, openModal, closeModal} = useModal();
     }
     @include desktop {
       font-size: 3rem;
+      letter-spacing: -0.9px;
+      line-height: 96%;
     }
   }
   &__info-description {
@@ -110,9 +112,12 @@ const {isOpenModal, openModal, closeModal} = useModal();
     letter-spacing: 0;
     text-align: left;
     width: 244px;
-    @include tablet-desktop {
+    @include tablet {
       width: 483px;
       font-size: 1.25rem;
+    }
+    @include desktop {
+      letter-spacing: -0.4px;
     }
   }
   &__card-wrapper {
@@ -154,8 +159,8 @@ const {isOpenModal, openModal, closeModal} = useModal();
       left: 22px;
     }
     @include desktop {
-      bottom: -20px;
-      left: 0;
+      bottom: -58px;
+      left: -70px;
     }
   }
   &__btn {
