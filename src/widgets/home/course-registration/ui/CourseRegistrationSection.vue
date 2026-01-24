@@ -75,8 +75,10 @@ const props = defineProps<{
   }
 }
 .course-registration--dark {
-  padding-top: 20px;
-  padding-bottom: 28px;
+  @include desktop {
+    padding-top: 20px;
+    padding-bottom: 28px;
+  }
 }
 .course-registration--dark .course-registration__info {
   background: rgba(0, 44, 62, 1) url("/images/certificate-mobile-bg.png") top right / cover no-repeat;

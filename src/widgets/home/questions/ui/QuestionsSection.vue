@@ -12,12 +12,21 @@ import {QUESTIONS} from "@/entities/questions";
             <use href="@/app/assets/icons/sprite.svg#course-program-star-icon"></use>
           </svg>
         </h2>
-        <div class="questions__cards">
-          <AppDropdown v-for="question in QUESTIONS" :label="question.question" class="questions__list">
-            <template #dropdown-text>
-              <p class="questions__answer">{{question.answer}}</p>
-            </template>
-          </AppDropdown>
+        <div class="questions__cards-wrapper">
+          <div class="cards-top">
+            <AppDropdown v-for="(question, index) in QUESTIONS.slice(0, 4)" :label="question.question" class="questions__list" :class="`item-${index}`">
+              <template #dropdown-text>
+                <p class="questions__answer">{{question.answer}}</p>
+              </template>
+            </AppDropdown>
+          </div>
+          <div class="cards-bottom">
+            <AppDropdown v-for="(question, index) in QUESTIONS.slice(4)" :label="question.question" class="questions__list" :class="`item-${index}`">
+              <template #dropdown-text>
+                <p class="questions__answer">{{question.answer}}</p>
+              </template>
+            </AppDropdown>
+          </div>
         </div>
       </div>
     </div>
@@ -32,7 +41,7 @@ import {QUESTIONS} from "@/entities/questions";
   }
   @include desktop {
     padding: 0;
-    margin: 78px 26px;
+    margin: 78px 26px 66px;
   }
 }
 .questions {
@@ -81,19 +90,17 @@ import {QUESTIONS} from "@/entities/questions";
       right: -15px;
     }
   }
-  &__cards {
+  &__cards-wrapper {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     gap: 12.5px;
     align-items: flex-start;
     @include tablet {
-      gap: 12px;
-      margin-left: 7px;
+      margin-left: 8px;
+      gap: 10px;
     }
     @include desktop {
       flex-direction: row;
-      gap: 12px 24px;
       margin-left: 0;
     }
   }
@@ -116,6 +123,30 @@ import {QUESTIONS} from "@/entities/questions";
     margin-left: -30px;
     @include tablet {
       width: 480px;
+    }
+    @include desktop {
+      letter-spacing: -0.3px;
+    }
+  }
+}
+.cards-top,
+.cards-bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12.5px;
+  @include desktop {
+    flex: 1;
+    width: 530px;
+    :deep(.dropdown) {
+      padding: 13px 14px 16px 15px;
+    }
+    :deep(.dropdown__content) {
+      padding: 14px 0 0 30px;
+    }
+    :deep(.dropdown__icon-rotated) {
+      top: 2px;
+      left: -2px;
     }
   }
 }

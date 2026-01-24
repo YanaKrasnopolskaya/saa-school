@@ -44,7 +44,8 @@
     padding: 40px 42px 96px;
   }
   @include desktop {
-    padding: 48px 50px 171px;
+    padding: 60px 64px 171px;
+    gap: 176px;
   }
   &__contact {
     display: flex;
@@ -58,6 +59,9 @@
     line-height: 25px;
     letter-spacing: 0;
     text-align: left;
+    @include desktop {
+      letter-spacing: -0.4px;
+    }
   }
   &__contact-socials {
     display: flex;
@@ -66,6 +70,9 @@
     align-items: center;
     @include tablet {
       gap: 14px;
+    }
+    @include desktop {
+      gap: 16px;
     }
   }
   &__contact-social {
@@ -78,6 +85,10 @@
   &__contact-social svg {
     width: 52px;
     height: 52px;
+    @include desktop {
+      width: 48px;
+      height: 48px;
+    }
   }
   &__documents {
     display: flex;
@@ -91,7 +102,7 @@
     @include desktop {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 20px 48px;
+      gap: 18px 36px;
       justify-content: space-between;
     }
   }
@@ -113,20 +124,34 @@
     @include tablet {
       width: 313px;
     }
+    @include desktop {
+      letter-spacing: -0.3px;
+    }
   }
   &__documents-link:nth-of-type(4) {
     @include tablet {
       order: 2;
+    }
+    @include desktop {
+      order: 3;
     }
   }
   &__documents-link:nth-of-type(2) {
     @include tablet {
       order: 3;
     }
+    @include desktop {
+      order: 4;
+      position: relative;
+      top: -18px;
+    }
   }
   &__documents-link:nth-of-type(3) {
     @include tablet {
       order: 4;
+    }
+    @include desktop {
+      order: 2;
     }
   }
   &__documents-link--super {

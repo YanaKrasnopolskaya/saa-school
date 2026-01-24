@@ -25,6 +25,9 @@
   @include tablet {
     padding: 40px 16px;
   }
+  @include desktop {
+    padding: 70px 64px;
+  }
 }
 .feedback {
   padding: 20px 19px 36px;
@@ -41,6 +44,9 @@
     align-items: flex-start;
     padding: 21px 22px 22px;
   }
+  @include desktop {
+    padding: 36px 40px;
+  }
   &__img {
     width: 200px;
     height: 140px;
@@ -56,8 +62,10 @@
       left: auto;
     }
     @include desktop {
-      width: 360px;
+      width: 368px;
       height: 304px;
+      top: -8px;
+      right: 30px;
     }
   }
   &__info {
@@ -68,7 +76,7 @@
       gap: 29px;
     }
     @include desktop {
-      gap: 40px;
+      gap: 38px;
     }
   }
   &__info-title {
@@ -85,7 +93,9 @@
     }
     @include desktop {
       font-size: 3rem;
-      line-height: 60px;
+      line-height: 58px;
+      letter-spacing: -0.9px;
+      width: 650px;
     }
   }
   &__btn-wrapper {
@@ -110,6 +120,10 @@
     text-align: center;
     text-transform: uppercase;
     font-family: inherit;
+    @include desktop {
+      width: 168px;
+      letter-spacing: -0.4px;
+    }
   }
 }
 .feedback__btn--call {
