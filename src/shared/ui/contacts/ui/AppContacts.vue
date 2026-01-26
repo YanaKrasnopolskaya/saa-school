@@ -48,16 +48,18 @@
 <style scoped lang="scss">
 .contacts-wrapper {
   position: fixed;
-  z-index: 9999999999999999;
+  z-index: 100000000;
   display: flex;
   flex-direction: column;
   gap: 6px;
   top: 65%;
   right: 13px;
   @include tablet {
+    top: 60%;
     right: 20px;
   }
   @include desktop {
+    top: 65%;
     right: 36px;
     .contact--call {
       display: none;
