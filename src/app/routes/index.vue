@@ -17,6 +17,7 @@ import { AboutSection } from "@/widgets/home/about";
 import { QuestionsSection } from "@/widgets/home/questions";
 import { FeedbackSection } from "@/widgets/home/feedback";
 import { CookieBanner } from "@/features/cookie";
+import {AppContacts} from "@/shared/ui/contacts";
 </script>
 
 <template>
@@ -40,6 +41,7 @@ import { CookieBanner } from "@/features/cookie";
     <QuestionsSection />
     <FeedbackSection />
     <CookieBanner />
+    <AppContacts />
   </div>
 </template>
 
