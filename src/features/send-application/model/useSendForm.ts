@@ -1,10 +1,17 @@
 // отправка заявки
 export async function useSendForm<T extends Record<string, string>>(data: T) {
     try {
-        console.log('Отправка формы', data);
-        await new Promise(resolve => setTimeout(resolve, 800)); // типа ждём отправку
-        console.log('Отправлено успешно');
+        const response = await fetch('https://httpbin.org/post', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
 
+        const result = await response.json();
+
+        console.log('Отправлено успешно', result.data);
         return {success: true};
     }
     catch (error) {

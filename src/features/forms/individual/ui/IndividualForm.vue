@@ -37,7 +37,7 @@ const { value: telegram, errorMessage: telegramError, meta: telegramMeta } = use
 });
 
 const submit = handleSubmit(async (values) => {
-  const payload: Record<string, any> = {
+  const payload: Record<string, string> = {
     name: values.name,
     phone: values.phone,
   };
