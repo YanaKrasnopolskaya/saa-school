@@ -47,6 +47,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
 
 <style scoped lang="scss">
 .cost-section {
+  scroll-margin-top: 40px;
   padding: 47px 4px 40px;
   @include tablet {
     padding: 41.5px 0;
@@ -136,7 +137,6 @@ const {isOpenModal, openModal, closeModal} = useModal();
       margin-right: -20px;
       padding-left: 20px;
       padding-right: 20px;
-      overflow: inherit;
       &::-webkit-scrollbar {
         display: none;
       }

@@ -48,7 +48,7 @@
 <style scoped lang="scss">
 .contacts-wrapper {
   position: fixed;
-  z-index: 100000000;
+  z-index: 100;
   display: flex;
   flex-direction: column;
   gap: 6px;

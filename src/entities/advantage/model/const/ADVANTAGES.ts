@@ -5,7 +5,7 @@ export  const ADVANTAGES: Advantages[] = [
         title: "Небольшие группы",
         description: "Поддерживаем каждого студента и всегда рядом, если что-то не понятно",
         image: {
-            src: '/images/hero-img-1.webp',
+            src: '/images/hero-img-1.png',
             alt: "",
         },
         reversed: false,
@@ -18,7 +18,7 @@ export  const ADVANTAGES: Advantages[] = [
         title: "AI ассистенты",
         description: "Учим использовать искусственный интеллект для автоматизации процессов",
         image: {
-            src: '/images/hero-img-2.webp',
+            src: '/images/hero-img-2.png',
             alt: "AI ассистенты фото",
         },
         reversed: false,
@@ -30,7 +30,7 @@ export  const ADVANTAGES: Advantages[] = [
         title: "Как в настоящем проекте",
         description: "На курсе полностью повторяем рабочие процессы и задачи",
         image: {
-            src: '/images/hero-img-3.webp',
+            src: '/images/hero-img-3.png',
             alt: "Настоящий проект фото",
         },
         reversed: false,
@@ -42,7 +42,7 @@ export  const ADVANTAGES: Advantages[] = [
         title: "Помогаем с&nbsp;поиском работы",
         description: "Вместе составляем резюме и&nbsp;проводим тестовое собеседование",
         image: {
-            src: '/images/hero-img-4.webp',
+            src: '/images/hero-img-4.png',
             alt: "Поиск работы фото",
         },
         reversed: true,
@@ -54,7 +54,7 @@ export  const ADVANTAGES: Advantages[] = [
         title: "Сертификат Минцифры",
         description: "Помогаем получить сертификат, который подтвердит твои навыки",
         image: {
-            src: '/images/hero-img-5.webp',
+            src: '/images/hero-img-5.png',
             alt: "Сертификат Минцифры фото",
         },
         reversed: false,

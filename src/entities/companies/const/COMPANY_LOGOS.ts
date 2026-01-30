@@ -2,35 +2,35 @@ import type {CompanyLogo} from "@/entities/companies/types/CompanyLogo";
 
 export const COMPANY_LOGOS: CompanyLogo[] = [
     {
-        src: 'images/otp.webp',
+        src: 'images/otp.png',
         alt: 'отп банк'
     },
     {
-        src: 'images/gazprom.webp',
+        src: 'images/gazprom.png',
         alt: 'газпром банк'
     },
     {
-        src: 'images/alfa.webp',
+        src: 'images/alfa.png',
         alt: 'альфа банк'
     },
     {
-        src: 'images/yandex.webp',
+        src: 'images/yandex.png',
         alt: 'яндекс'
     },
     {
-        src: 'images/rfz.webp',
+        src: 'images/rfz.png',
         alt: 'райффайзен банк'
     },
     {
-        src: 'images/vk.webp',
+        src: 'images/vk.png',
         alt: 'вконтакте'
     },
     {
-        src: 'images/mail.webp',
+        src: 'images/mail.png',
         alt: 'мэйл'
     },
     {
-        src: 'images/moex.webp',
+        src: 'images/moex.png',
         alt: 'московская биржа'
     },
 ]

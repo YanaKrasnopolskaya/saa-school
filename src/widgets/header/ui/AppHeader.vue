@@ -43,7 +43,7 @@ const {isOpenModal, openModal, closeModal} = useModal();
 <style scoped lang="scss">
 .header {
   position: fixed;
-  z-index: 10000000;
+  z-index: 100;
   top: 15px;
   left: 50%;
   transform: translateX(-50%);

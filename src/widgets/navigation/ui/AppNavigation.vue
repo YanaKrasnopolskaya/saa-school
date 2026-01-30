@@ -49,6 +49,5 @@
       display: block;
     }
   }
-
 }
 </style>

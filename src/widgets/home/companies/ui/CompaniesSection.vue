@@ -43,16 +43,6 @@ import {COMPANY_LOGOS} from "@/entities/companies/index.ts";
     .item-6 { order: 4; }
     .item-7 { order: 8; }
   }
-  @include desktop {
-    .item-0 img,
-    .item-1 img,
-    .item-2 img,
-    .item-3 img,
-    .item-4 img,
-    .item-5 img,
-    .item-6 img,
-    .item-7 img { width:  200px; height: 40px}
-  }
   &__title {
     font-size: 2rem;
     font-weight: 700;
@@ -99,6 +89,9 @@ import {COMPANY_LOGOS} from "@/entities/companies/index.ts";
   &__item {
     width: 160px;
     height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @include tablet {
       width: 170px;
       height: 60px;
@@ -106,15 +99,104 @@ import {COMPANY_LOGOS} from "@/entities/companies/index.ts";
     @include desktop {
       width: 231px;
       height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
   }
-  &__item svg {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+
+}
+.item-0 img {
+  width: 106px;
+  height: 21px;
+  @include tablet {
+    width: 112px;
+    height: 22px;
+  }
+  @include desktop {
+    width: 129px;
+    height: 26px;
+  }
+}
+.item-1 img {
+  width: 82px;
+  height: 40px;
+  @include tablet {
+    width: 88px;
+    height: 42px;
+  }
+  @include desktop {
+    width: 113px;
+    height: 54px;
+  }
+}
+.item-2 img {
+  width: 102px;
+  height: 36px;
+  @include tablet {
+    width: 108px;
+    height: 38px;
+  }
+  @include desktop {
+    width: 125px;
+    height: 44px;
+  }
+}
+.item-3 img {
+  width: 98px;
+  height: 28px;
+  @include tablet {
+    width: 115px;
+    height: 34px;
+  }
+  @include desktop {
+    width: 129px;
+    height: 38px;
+  }
+}
+.item-4 img {
+  width: 125px;
+  height: 27px;
+  @include tablet {
+    width: 142px;
+    height: 31px;
+  }
+  @include desktop {
+    width: 160px;
+    height: 35px;
+  }
+}
+.item-5 img {
+  width: 138px;
+  height: 24px;
+  @include tablet {
+    width: 155px;
+    height: 27px;
+  }
+  @include desktop {
+    width: 179px;
+    height: 31px;
+  }
+}
+.item-6 img {
+  width: 98px;
+  height: 32px;
+  @include tablet {
+    width: 103px;
+    height: 33px;
+  }
+  @include desktop {
+    width: 119px;
+    height: 38px;
+  }
+}
+.item-7 img {
+  width: 123px;
+  height: 36px;
+  @include tablet {
+    width: 139px;
+    height: 40px;
+  }
+  @include desktop {
+    width: 160px;
+    height: 46px;
   }
 }
 </style>

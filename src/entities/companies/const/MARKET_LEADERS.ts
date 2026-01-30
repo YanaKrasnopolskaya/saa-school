@@ -2,19 +2,19 @@ import type {CompanyLogo} from "@/entities/companies/types/CompanyLogo";
 
 export const MARKET_LEADERS: CompanyLogo[] = [
     {
-        src: 'images/gazprom.webp',
+        src: 'images/gazprom.png',
         alt: 'газпром банк',
     },
     {
-        src: 'images/otp.webp',
+        src: 'images/otp.png',
         alt: 'отп банк',
     },
     {
-        src: 'images/alfa.webp',
+        src: 'images/alfa.png',
         alt: 'альфа банк',
     },
     {
-        src: 'images/moex.webp',
+        src: 'images/moex.png',
         alt: 'московская биржа',
     },
 ]

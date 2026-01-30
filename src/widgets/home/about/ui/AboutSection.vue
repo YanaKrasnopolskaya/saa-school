@@ -121,6 +121,7 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
     padding: 23px 14px;
     gap: 12px 0;
     justify-content: center;
+    align-items: center;
     margin-left: -20px;
     margin-right: -20px;
     @include tablet {
@@ -139,6 +140,9 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
   &__item {
     width: 163px;
     height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @include tablet {
       width: 194px;
       height: 60px;
@@ -202,29 +206,36 @@ import {MARKET_LEADERS} from "@/entities/companies/index.ts";
     }
   }
 }
-.item-1 img{
-  width: 200px;
-  position: relative;
-  left: -20px;
-  top: -10px;
-  @include tablet {
-    width: 220px;
-    height: 85px;
-    left: -10px;
-    top: -13px;
-  }
-  @include desktop {
-    width: 200px;
-    height: 85px;
-    left: 0;
+.item-0 img {
+  width: 87px;
+  height: 42px;
+  @include tablet-desktop {
+    width: 100px;
+    height: 48px;
   }
 }
-.item-0 img,
-.item-2 img,
+.item-1 img {
+  width: 141px;
+  height: 28px;
+  @include tablet-desktop {
+    width: 158px;
+    height: 32px;
+  }
+}
+.item-2 img {
+  width: 109px;
+  height: 39px;
+  @include tablet-desktop {
+    width: 125px;
+    height: 44px;
+  }
+}
 .item-3 img {
-  @include tablet {
-    width: 190px;
-    height: 60px;
+  width: 140px;
+  height: 39px;
+  @include tablet-desktop {
+    width: 156px;
+    height: 41px;
   }
 }
 </style>

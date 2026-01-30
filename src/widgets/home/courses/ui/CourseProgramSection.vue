@@ -41,6 +41,7 @@ import {COURSE_PROGRAM} from "@/entities/course-program/const/COURSE_PROGRAM";
 
 <style scoped lang="scss">
 .course-section {
+  scroll-margin-top: 80px;
   padding: 42px 0 37px;
   @include tablet {
     padding: 42px 16px 42px;
